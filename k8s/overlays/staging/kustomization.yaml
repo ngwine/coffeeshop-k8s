@@ -1,0 +1,107 @@
+# ============================================================
+# CoffeeShop — Staging Overlay
+# Lower replicas, fewer resources for cost savings
+# ============================================================
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: staging
+
+resources:
+  - ../../base
+
+commonLabels:
+  environment: staging
+
+# ── Override replicas for staging ──
+replicas:
+  - name: backend
+    count: 1
+  - name: frontend
+    count: 1
+
+# ── Patch: reduce resource limits in staging ──
+patches:
+  # Backend: lower resources
+  - target:
+      kind: Deployment
+      name: backend
+    patch: |
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: backend
+      spec:
+        template:
+          spec:
+            containers:
+              - name: backend
+                resources:
+                  requests:
+                    cpu: 50m
+                    memory: 128Mi
+                  limits:
+                    cpu: 250m
+                    memory: 256Mi
+
+  # Frontend: lower resources
+  - target:
+      kind: Deployment
+      name: frontend
+    patch: |
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: frontend
+      spec:
+        template:
+          spec:
+            containers:
+              - name: frontend
+                resources:
+                  requests:
+                    cpu: 25m
+                    memory: 32Mi
+                  limits:
+                    cpu: 100m
+                    memory: 64Mi
+
+  # Disable HPA in staging
+  - target:
+      kind: HorizontalPodAutoscaler
+      name: backend-hpa
+    patch: |
+      apiVersion: autoscaling/v2
+      kind: HorizontalPodAutoscaler
+      metadata:
+        name: backend-hpa
+      spec:
+        minReplicas: 1
+        maxReplicas: 2
+
+  - target:
+      kind: HorizontalPodAutoscaler
+      name: frontend-hpa
+    patch: |
+      apiVersion: autoscaling/v2
+      kind: HorizontalPodAutoscaler
+      metadata:
+        name: frontend-hpa
+      spec:
+        minReplicas: 1
+        maxReplicas: 2
+
+  # ConfigMap: staging-specific values
+  - target:
+      kind: ConfigMap
+      name: coffeeshop-config
+    patch: |
+      apiVersion: v1
+      kind: ConfigMap
+      metadata:
+        name: coffeeshop-config
+      data:
+        CORS_ORIGINS: "https://staging.coffeeshop.xyz"
+        FRONTEND_URL: "https://staging.coffeeshop.xyz"
+        API_BASE_URL: "https://staging.coffeeshop.xyz/api"
+        GOOGLE_REDIRECT_URI: "https://staging.coffeeshop.xyz/api/auth/google/callback"

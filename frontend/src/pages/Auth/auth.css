@@ -1,0 +1,590 @@
+/* ==========================
+   Double slider auth page
+   ========================== */
+
+:root {
+  --auth-bg: #0f1115;
+  --auth-card: #ffffff;
+  --auth-accent: #c28f4a; /* coffee gold */
+  --auth-text: #161616;
+
+  /* will be set from React or index.html */
+  --hero-image: none;
+  --overlay-image: none;
+}
+
+/* ===== Wrapper ===== */
+.auth-wrapper {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(80rem 40rem at 80% -10%, rgba(255, 255, 255, 0.06), transparent 100%),
+    var(--hero-image),
+    var(--auth-bg);
+  background-position: center, center, center;
+  background-size: auto, cover, auto;
+  background-repeat: no-repeat, no-repeat, repeat;
+  padding: 32px 16px;
+}
+
+/* ===== Card container ===== */
+.auth-wrapper .auth-container {
+  background: var(--auth-card);
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  width: min(960px, 100%);
+  max-width: 100%;
+  min-height: 560px;
+}
+
+/* ===== Forms (left/right slide) ===== */
+.auth-wrapper .form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.auth-wrapper .sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.auth-wrapper .auth-container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.auth-wrapper .sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.auth-wrapper .auth-container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: auth-show 0.6s;
+}
+
+@keyframes auth-show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+/* ===== Form layout ===== */
+.auth-wrapper .auth-form {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;      /* bám trên */
+  padding: 24px 32px 40px;
+  height: 100%;
+  text-align: center;
+  gap: 14px;
+  overflow-y: auto;                 /* nếu form cao hơn card -> cuộn trong form */
+}
+
+/* Scrollbar nhỏ gọn cho form */
+.auth-wrapper .auth-form::-webkit-scrollbar {
+  width: 6px;
+}
+.auth-wrapper .auth-form::-webkit-scrollbar-thumb {
+  background: rgba(194, 143, 74, 0.7);
+  border-radius: 999px;
+}
+.auth-wrapper .auth-form::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.auth-wrapper .auth-form h1,
+.auth-wrapper .auth-form h2 {
+  font-family: "Playfair Display", serif;
+  padding-top: 36px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #1c1c1c;
+}
+
+.auth-wrapper .auth-form h1 {
+  font-size: clamp(26px, 2.4vw + 8px, 34px);
+  margin-bottom: 6px;
+}
+
+.auth-wrapper .auth-form h2 {
+  font-size: clamp(20px, 1.8vw + 6px, 26px);
+}
+
+.auth-wrapper .input-group {
+  width: 100%;
+}
+
+.auth-wrapper .input-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  outline: none;
+  font-size: 14px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.auth-wrapper .input-group input:focus {
+  border-color: var(--auth-accent);
+  box-shadow: 0 0 0 4px rgba(194, 143, 74, 0.15);
+}
+
+/* Extra row (remember + forgot) */
+.auth-wrapper .extra {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #555;
+  margin: 6px 0 4px;
+}
+
+.auth-wrapper .extra .remember {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.auth-wrapper .extra .link {
+  color: var(--auth-accent);
+  text-decoration: none;
+}
+
+/* Main auth buttons */
+.auth-wrapper .auth-btn,
+.auth-wrapper .ghost {
+  border-radius: 24px;
+  border: 2px solid var(--auth-accent);
+  background: var(--auth-accent);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 36px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: transform 0.1s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.auth-wrapper .auth-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-wrapper .auth-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(194, 143, 74, 0.35);
+}
+
+.auth-wrapper .ghost {
+  background: transparent;
+  color: var(--auth-card);
+  border-color: #fff;
+}
+
+/* ===== Overlay ===== */
+.auth-wrapper .auth-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  transition: transform 0.6s ease-in-out;
+}
+
+.auth-wrapper .auth-container.right-panel-active .auth-overlay-container {
+  transform: translateX(-100%);
+}
+
+.auth-wrapper .auth-overlay {
+  position: relative;
+  overflow: hidden;
+  background:
+    var(--overlay-image),
+    linear-gradient(120deg, #081016, #1b1b1b);
+  background-position: center right, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, auto;
+  background-blend-mode: overlay;
+  color: #fff;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.auth-wrapper .auth-container.right-panel-active .auth-overlay {
+  transform: translateX(50%);
+}
+
+/* Video inside overlay */
+.auth-wrapper .auth-overlay__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Overlay panels */
+.auth-wrapper .auth-overlay-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 56px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.auth-wrapper .auth-overlay-panel h2 {
+  font-weight: 800;
+  font-size: clamp(30px, 3.2vw + 6px, 52px);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+
+.auth-wrapper .auth-overlay-panel p {
+  font-size: clamp(14px, 1.1vw + 6px, 18px);
+  line-height: 1.7;
+  margin: 8px 0 28px;
+  max-width: 460px;
+  opacity: 0.95;
+}
+
+.auth-wrapper .auth-overlay-left {
+  left: 0;
+  transform: translateX(-20%);
+}
+
+.auth-wrapper .auth-container.right-panel-active .auth-overlay-left {
+  transform: translateX(0);
+}
+
+.auth-wrapper .auth-overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.auth-wrapper .auth-container.right-panel-active .auth-overlay-right {
+  transform: translateX(20%);
+}
+
+/* ===== Message below card ===== */
+/* Toast message – không đẩy layout */
+.auth-wrapper .auth-message {
+  position: fixed;              /* cố định theo viewport */
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 1300;
+
+  margin: 0;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+  border-left: 4px solid var(--auth-accent);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+
+  font-size: 14px;
+  color: #111827;
+  white-space: nowrap;
+}
+
+/* Mobile: cho phép xuống dòng và thu nhỏ 1 chút */
+@media (max-width: 768px) {
+  .auth-wrapper .auth-message {
+    max-width: calc(100% - 32px);
+    white-space: normal;
+    text-align: center;
+    bottom: 16px;
+    padding: 10px 14px;
+  }
+}
+
+
+/* ===== Divider ===== */
+.auth-wrapper .auth-divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 12px;
+  color: #9aa0a6;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  justify-content: center;
+}
+
+.auth-wrapper .auth-divider::before,
+.auth-wrapper .auth-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #e5e7eb;
+  max-width: 120px;
+}
+
+/* ===== Google button ===== */
+.auth-wrapper .google-btn {
+  width: 100%;
+  max-width: 320px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
+  border-radius: 9999px;
+  padding: 10px 16px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: box-shadow 0.2s, transform 0.06s, border-color 0.2s;
+  margin-top: 4px;
+}
+
+.auth-wrapper .google-btn:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: #d9dde3;
+}
+
+.auth-wrapper .google-btn:active {
+  transform: translateY(1px);
+}
+
+.auth-wrapper .google-icon {
+  display: inline-block;
+}
+
+/* giữ text trên 1 dòng nếu có thể */
+.auth-wrapper .google-btn span {
+  white-space: nowrap;
+}
+
+/* ===== Panel switch buttons (ghost) – arrow effect ===== */
+.auth-wrapper .auth-overlay-panel .ghost {
+  position: relative;
+  display: inline-flex;
+  height: 54px;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  padding: 12px 34px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  font-weight: 800;
+  transition:
+    padding 0.24s ease,
+    letter-spacing 0.24s ease,
+    box-shadow 0.2s ease,
+    transform 0.06s ease,
+    color 0.24s ease;
+  will-change: padding, letter-spacing;
+}
+
+/* RIGHT panel → arrow on the right */
+.auth-wrapper .auth-overlay-right .ghost {
+  padding-right: 46px;
+}
+
+.auth-wrapper .auth-overlay-right .ghost::after {
+  content: "→";
+  position: absolute;
+  right: 30px;
+  top: 44%;
+  translate: 0 -50%;
+  font-size: 30px;
+  font-weight: 900;
+  opacity: 0;
+  transform: translateX(-10px) scale(1);
+  transition: opacity 0.18s ease 0.06s, transform 0.18s ease 0.06s;
+}
+
+.auth-wrapper .auth-overlay-right .ghost:hover,
+.auth-wrapper .auth-overlay-right .ghost:focus-visible {
+  padding-right: 72px;
+  letter-spacing: 1.8px;
+}
+
+.auth-wrapper .auth-overlay-right .ghost:hover::after,
+.auth-wrapper .auth-overlay-right .ghost:focus-visible::after {
+  opacity: 1;
+  transform: translateX(0) scale(1.08);
+}
+
+/* LEFT panel ← arrow on the left */
+.auth-wrapper .auth-overlay-left .ghost {
+  padding-left: 46px;
+}
+
+.auth-wrapper .auth-overlay-left .ghost::after {
+  content: "←";
+  position: absolute;
+  left: 30px;
+  top: 44%;
+  translate: 0 -50%;
+  font-size: 30px;
+  font-weight: 900;
+  opacity: 0;
+  transform: translateX(10px) scale(1);
+  transition: opacity 0.18s ease 0.06s, transform 0.18s ease 0.06s;
+}
+
+.auth-wrapper .auth-overlay-left .ghost:hover,
+.auth-wrapper .auth-overlay-left .ghost:focus-visible {
+  padding-left: 72px;
+  letter-spacing: 1.8px;
+}
+
+.auth-wrapper .auth-overlay-left .ghost:hover::after,
+.auth-wrapper .auth-overlay-left .ghost:focus-visible::after {
+  opacity: 1;
+  transform: translateX(0) scale(1.08);
+}
+
+.auth-wrapper .auth-overlay-panel .ghost:hover {
+  box-shadow: 0 10px 22px rgba(194, 143, 74, 0.28);
+}
+
+.auth-wrapper .auth-overlay-panel .ghost:active {
+  transform: translateY(1px);
+}
+
+/* ===== Forgot password modal ===== */
+.auth-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200; /* lớn hơn overlay (100) + header */
+}
+
+.auth-modal {
+  width: min(380px, 100% - 40px);
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 24px 20px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+}
+
+.auth-modal h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+
+.auth-modal-desc {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.auth-modal-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.auth-btn--ghost {
+  background: transparent;
+  color: #374151;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.auth-btn--ghost:hover {
+  background: #f3f4f6;
+}
+
+/* nút "Forgot password?" dạng button nhưng giống link */
+.link-button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--auth-accent);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+
+/* Arrow button nhỏ lại một chút trên màn hình vừa */
+@media (max-width: 860px) {
+  .auth-wrapper .auth-overlay-panel .ghost {
+    min-width: 180px;
+  }
+  .auth-wrapper .auth-overlay-right .ghost:hover,
+  .auth-wrapper .auth-overlay-right .ghost:focus-visible {
+    padding-right: 60px;
+  }
+  .auth-wrapper .auth-overlay-left .ghost:hover,
+  .auth-wrapper .auth-overlay-left .ghost:focus-visible {
+    padding-left: 60px;
+  }
+}
+
+/* Mobile width */
+@media (max-width: 768px) {
+  .auth-wrapper {
+    padding: 16px 8px;
+  }
+
+  .auth-wrapper .auth-container {
+    width: min(420px, 100%);
+    min-height: 520px;
+  }
+
+  .auth-wrapper .auth-form {
+    padding: 20px 20px 32px;
+  }
+
+  .auth-wrapper .google-btn {
+    max-width: 100%;
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}

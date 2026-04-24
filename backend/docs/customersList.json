@@ -1,0 +1,3842 @@
+[
+  {
+    "firstName": "Admin",
+    "lastName": "Admin",
+    "fullName": "Admin",
+    "email": "admin@gmail.com",
+    "password": "$2b$10$sTmq9zUEoiLhDrP60R/mQuR4TvirhIygM9fNMfKNgTPWCt8BqxOI2",
+    "gender": "other",
+    "avatarUrl": "https://i.pravatar.cc/150?img=12",
+    "status": "active",
+    "role": "admin",
+    "provider": "local",
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "bronze",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "addresses": [],
+    "paymentMethods": [],
+    "wishlist": [],
+    "createdAt": {
+      "$date": "2025-11-29T06:31:18.246Z"
+    },
+    "updatedAt": {
+      "$date": "2025-11-29T06:31:18.252Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303f4"
+    },
+    "firstName": "Linh",
+    "lastName": "Ngo",
+    "fullName": "Linh Ngo",
+    "email": "linh.ngo.1@example.com",
+    "phone": "0904593166",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=11",
+    "country": "Vietnam",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Linh Ngo",
+        "phone": "0904593166",
+        "addressLine1": "123 Nguyen Hue Street",
+        "district": "1",
+        "city": "Hồ Chí Minh",
+        "country": "VN",
+        "ward": "Bến Nghé"
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "platinum",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-12-11T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 1,
+        "dateAdded": "2025-06-30T22:17:33.405Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-10-07T11:31:17.707Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 5,
+        "dateAdded": "2025-10-11T10:30:02.200Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 7,
+        "dateAdded": "2025-09-10T15:15:20.821Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 9,
+        "dateAdded": "2025-07-30T10:30:23.841Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 11,
+        "dateAdded": "2025-11-02T18:17:55.668Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 24,
+        "dateAdded": "2025-10-14T10:20:23.806Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 14,
+        "dateAdded": "2025-06-25T08:08:46.906Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 16,
+        "dateAdded": "2025-07-23T07:04:20.331Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 18,
+        "dateAdded": "2025-10-15T12:26:03.030Z",
+        "isOnSale": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303f5"
+    },
+    "firstName": "Dao",
+    "lastName": "Do",
+    "fullName": "Dao Do",
+    "email": "dao.do.2@example.com",
+    "phone": "0928510599",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=12",
+    "country": "United States",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Dao Do",
+        "phone": "0928510599",
+        "addressLine1": "123 Broadway",
+        "district": "Manhattan",
+        "city": "New York",
+        "country": "US",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Dao Do"
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "gold",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2024-01-15T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 10,
+        "dateAdded": "2025-07-17T02:05:47.854Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 4,
+        "dateAdded": "2025-07-06T06:35:05.089Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-11-18T08:35:41.506Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 15,
+        "dateAdded": "2025-06-09T21:37:44.123Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-07-15T15:24:58.672Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 19,
+        "dateAdded": "2025-09-21T21:50:48.072Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 21,
+        "dateAdded": "2025-10-18T20:23:23.725Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 27,
+        "dateAdded": "2025-10-22T07:20:17.406Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-10-29T17:40:04.045Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 26,
+        "dateAdded": "2025-08-24T03:18:33.864Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 25,
+        "dateAdded": "2025-07-20T12:57:00.332Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 27,
+        "dateAdded": "2025-07-05T19:38:35.631Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 29,
+        "dateAdded": "2025-07-05T23:26:12.499Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 1,
+        "dateAdded": "2025-07-21T18:51:37.140Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-10-16T00:42:28.312Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303f6"
+    },
+    "firstName": "Hanh",
+    "lastName": "Nguyen",
+    "fullName": "Hanh Nguyen",
+    "email": "hanh.nguyen.3@example.com",
+    "phone": "0928126980",
+    "gender": "male",
+    "avatarUrl": "https://i.pravatar.cc/150?img=13",
+    "country": "Canada",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Hanh Nguyen",
+        "phone": "0928126980",
+        "addressLine1": "123 Yonge Street",
+        "district": "Downtown",
+        "city": "Toronto",
+        "country": "CA",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "momo",
+        "wallet": "0123456789",
+        "isDefault": false
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 319,
+      "currentPoints": 319,
+      "tier": "platinum",
+      "lastAccrualAt": "2025-10-21T11:13:17.892Z",
+      "history": [
+        {
+          "orderId": "ORD-2025-0084",
+          "orderDate": "2025-08-27T18:33:40.235Z",
+          "type": "earned",
+          "points": 201,
+          "description": "Earned 201 points from order ORD-2025-0084",
+          "createdAt": "2025-08-27T18:33:40.235Z"
+        },
+        {
+          "orderId": "ORD-2025-0096",
+          "orderDate": "2025-10-21T11:13:17.892Z",
+          "type": "earned",
+          "points": 118,
+          "description": "Earned 118 points from order ORD-2025-0096",
+          "createdAt": "2025-10-21T11:13:17.892Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-10-23T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 23,
+        "dateAdded": "2025-10-20T19:53:40.016Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 21,
+        "dateAdded": "2025-09-29T16:57:59.828Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 23,
+        "dateAdded": "2025-07-26T20:57:10.753Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-06-07T08:23:09.876Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 26,
+        "dateAdded": "2025-09-11T10:20:24.489Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 15,
+        "dateAdded": "2025-10-23T01:59:40.395Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-06-23T06:09:06.577Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 7,
+        "dateAdded": "2025-07-29T21:54:27.800Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-07-01T02:02:58.999Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-06-17T19:05:45.251Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 4,
+        "dateAdded": "2025-05-31T23:15:57.983Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 6,
+        "dateAdded": "2025-07-29T00:07:22.534Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303f7"
+    },
+    "firstName": "Chi",
+    "lastName": "Duong",
+    "fullName": "Chi Duong",
+    "email": "chi.duong.4@example.com",
+    "phone": "0968641984",
+    "gender": "male",
+    "avatarUrl": "https://i.pravatar.cc/150?img=14",
+    "country": "Singapore",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Chi Duong",
+        "phone": "0968641984",
+        "addressLine1": "123 Orchard Road",
+        "district": "Marina Bay",
+        "city": "Singapore",
+        "country": "SG",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Chi Duong",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "platinum",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-11-14T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 26,
+        "dateAdded": "2025-11-04T17:25:06.835Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 28,
+        "dateAdded": "2025-11-11T12:17:25.240Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-09-08T06:32:02.200Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-11-01T20:36:54.416Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303f8"
+    },
+    "firstName": "Vy",
+    "lastName": "Phan",
+    "fullName": "Vy Phan",
+    "email": "vy.phan.5@example.com",
+    "phone": "0974333837",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=15",
+    "country": "Japan",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Vy Phan",
+        "phone": "0974333837",
+        "addressLine1": "123 Shibuya Street",
+        "district": "Shibuya",
+        "city": "Tokyo",
+        "country": "JP",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Vy Phan"
+      },
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Vy Phan",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    ],
+    "preferences": {
+      "language": "en",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "bronze",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-11-04T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 29,
+        "dateAdded": "2025-07-30T09:35:38.657Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-08-21T05:10:45.961Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303f9"
+    },
+    "firstName": "Thao",
+    "lastName": "Pham",
+    "fullName": "Thao Pham",
+    "email": "thao.pham.6@example.com",
+    "phone": "0925590188",
+    "gender": "male",
+    "avatarUrl": "https://i.pravatar.cc/150?img=16",
+    "country": "Australia",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Thao Pham",
+        "phone": "0925590188",
+        "addressLine1": "123 George Street",
+        "district": "CBD",
+        "city": "Sydney",
+        "country": "AU",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 602,
+      "currentPoints": 602,
+      "tier": "gold",
+      "lastAccrualAt": "2025-09-13T16:53:05.597Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0024",
+          "orderDate": "2024-06-16T12:51:53.508Z",
+          "type": "earned",
+          "points": 67,
+          "description": "Earned 67 points from order ORD-2024-0024",
+          "createdAt": "2024-06-16T12:51:53.508Z"
+        },
+        {
+          "orderId": "ORD-2024-0045",
+          "orderDate": "2024-09-30T11:53:43.504Z",
+          "type": "earned",
+          "points": 301,
+          "description": "Earned 301 points from order ORD-2024-0045",
+          "createdAt": "2024-09-30T11:53:43.504Z"
+        },
+        {
+          "orderId": "ORD-2025-0088",
+          "orderDate": "2025-09-13T16:53:05.597Z",
+          "type": "earned",
+          "points": 234,
+          "description": "Earned 234 points from order ORD-2025-0088",
+          "createdAt": "2025-09-13T16:53:05.597Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2024-01-24T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 21,
+        "dateAdded": "2025-07-22T08:44:29.065Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 22,
+        "dateAdded": "2025-06-05T09:20:17.626Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-08-13T17:23:50.283Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303fa"
+    },
+    "firstName": "Dao",
+    "lastName": "Vo",
+    "fullName": "Dao Vo",
+    "email": "dao.vo.7@example.com",
+    "phone": "0989950214",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=17",
+    "country": "Germany",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Dao Vo",
+        "phone": "0989950214",
+        "addressLine1": "123 Unter den Linden",
+        "district": "Mitte",
+        "city": "Berlin",
+        "country": "DE",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Dao Vo"
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 450,
+      "currentPoints": 450,
+      "tier": "silver",
+      "lastAccrualAt": "2025-11-04T20:51:59.958Z",
+      "history": [
+        {
+          "orderId": "ORD-2025-0089",
+          "orderDate": "2025-09-17T09:41:57.244Z",
+          "type": "earned",
+          "points": 182,
+          "description": "Earned 182 points from order ORD-2025-0089",
+          "createdAt": "2025-09-17T09:41:57.244Z"
+        },
+        {
+          "orderId": "ORD-2025-0100",
+          "orderDate": "2025-11-04T20:51:59.958Z",
+          "type": "earned",
+          "points": 268,
+          "description": "Earned 268 points from order ORD-2025-0100",
+          "createdAt": "2025-11-04T20:51:59.958Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-10-26T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 1,
+        "dateAdded": "2025-10-22T17:06:52.496Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-10-29T21:11:50.127Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 5,
+        "dateAdded": "2025-08-01T02:57:45.587Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 7,
+        "dateAdded": "2025-08-01T05:52:29.484Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 7,
+        "dateAdded": "2025-07-09T12:42:52.263Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 10,
+        "dateAdded": "2025-08-02T09:33:50.986Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 12,
+        "dateAdded": "2025-09-05T05:38:14.171Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 8,
+        "dateAdded": "2025-08-20T13:35:45.489Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 15,
+        "dateAdded": "2025-10-27T23:04:48.193Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-06-26T10:58:43.238Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-07-28T11:44:47.099Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 19,
+        "dateAdded": "2025-07-20T15:24:10.550Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 21,
+        "dateAdded": "2025-07-02T16:31:31.198Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303fb"
+    },
+    "firstName": "Kiet",
+    "lastName": "Pham",
+    "fullName": "Kiet Pham",
+    "email": "kiet.pham.8@example.com",
+    "phone": "0905065441",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=18",
+    "country": "France",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Kiet Pham",
+        "phone": "0905065441",
+        "addressLine1": "123 Rue de Rivoli",
+        "district": "Palais-Royal",
+        "city": "Paris",
+        "country": "FR",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "momo",
+        "wallet": "0123456789",
+        "isDefault": false
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 319,
+      "currentPoints": 319,
+      "tier": "gold",
+      "lastAccrualAt": "2025-10-14T00:47:10.746Z",
+      "history": [
+        {
+          "orderId": "ORD-2025-0094",
+          "orderDate": "2025-10-14T00:47:10.746Z",
+          "type": "earned",
+          "points": 319,
+          "description": "Earned 319 points from order ORD-2025-0094",
+          "createdAt": "2025-10-14T00:47:10.746Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-10-12T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 10,
+        "dateAdded": "2025-07-15T20:09:15.695Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-09-16T17:46:27.885Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-10-24T17:33:49.458Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 15,
+        "dateAdded": "2025-07-02T19:04:59.512Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 16,
+        "dateAdded": "2025-11-11T07:36:59.835Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 18,
+        "dateAdded": "2025-10-10T06:33:12.146Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 20,
+        "dateAdded": "2025-07-07T11:45:18.102Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 22,
+        "dateAdded": "2025-11-10T04:12:40.229Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 24,
+        "dateAdded": "2025-11-16T13:14:26.561Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 26,
+        "dateAdded": "2025-11-12T17:10:43.512Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 28,
+        "dateAdded": "2025-11-06T17:35:02.494Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-06-15T12:52:08.802Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 27,
+        "dateAdded": "2025-07-14T02:57:21.490Z",
+        "isOnSale": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303fc"
+    },
+    "firstName": "Dao",
+    "lastName": "Truong",
+    "fullName": "Dao Truong",
+    "email": "dao.truong.9@example.com",
+    "phone": "0973527493",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=19",
+    "country": "United Kingdom",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Dao Truong",
+        "phone": "0973527493",
+        "addressLine1": "123 Oxford Street",
+        "district": "Westminster",
+        "city": "London",
+        "country": "GB",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Dao Truong",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "gold",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2024-01-16T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 20,
+        "dateAdded": "2025-06-12T12:07:28.012Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 25,
+        "dateAdded": "2025-06-12T16:31:27.745Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 23,
+        "dateAdded": "2025-07-31T04:12:09.953Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 25,
+        "dateAdded": "2025-06-13T01:21:55.703Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 27,
+        "dateAdded": "2025-06-18T18:33:06.485Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 29,
+        "dateAdded": "2025-05-28T19:35:50.804Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 1,
+        "dateAdded": "2025-07-11T17:54:26.197Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 12,
+        "dateAdded": "2025-11-14T18:59:13.324Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 4,
+        "dateAdded": "2025-11-07T09:00:27.847Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 6,
+        "dateAdded": "2025-11-17T19:48:15.229Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 8,
+        "dateAdded": "2025-10-24T03:18:50.777Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 10,
+        "dateAdded": "2025-08-31T01:54:38.659Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303fd"
+    },
+    "firstName": "Yen",
+    "lastName": "Do",
+    "fullName": "Yen Do",
+    "email": "yen.do.10@example.com",
+    "phone": "0961073468",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=20",
+    "country": "Thailand",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Yen Do",
+        "phone": "0961073468",
+        "addressLine1": "123 Sukhumvit Road",
+        "district": "Sukhumvit",
+        "city": "Bangkok",
+        "country": "TH",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Yen Do"
+      },
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Yen Do",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 255,
+      "currentPoints": 255,
+      "tier": "platinum",
+      "lastAccrualAt": "2025-08-31T10:30:09.961Z",
+      "history": [
+        {
+          "orderId": "ORD-2025-0085",
+          "orderDate": "2025-08-31T10:30:09.961Z",
+          "type": "earned",
+          "points": 255,
+          "description": "Earned 255 points from order ORD-2025-0085",
+          "createdAt": "2025-08-31T10:30:09.961Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-12-16T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 30,
+        "dateAdded": "2025-08-26T22:05:56.514Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-08-14T12:28:36.291Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 20,
+        "dateAdded": "2025-06-19T02:29:00.678Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 5,
+        "dateAdded": "2025-06-14T09:27:01.161Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 7,
+        "dateAdded": "2025-09-08T10:36:02.807Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303fe"
+    },
+    "firstName": "Xuan",
+    "lastName": "Duong",
+    "fullName": "Xuan Duong",
+    "email": "xuan.duong.11@example.com",
+    "phone": "0944942732",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=21",
+    "country": "Malaysia",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Xuan Duong",
+        "phone": "0944942732",
+        "addressLine1": "123 Jalan Bukit Bintang",
+        "district": "Bukit Bintang",
+        "city": "Kuala Lumpur",
+        "country": "MY",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 91,
+      "currentPoints": 91,
+      "tier": "gold",
+      "lastAccrualAt": "2024-09-22T10:44:12.070Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0043",
+          "orderDate": "2024-09-22T10:44:12.070Z",
+          "type": "earned",
+          "points": 91,
+          "description": "Earned 91 points from order ORD-2024-0043",
+          "createdAt": "2024-09-22T10:44:12.070Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2024-01-14T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 24,
+        "dateAdded": "2025-11-06T11:53:57.566Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c7303ff"
+    },
+    "firstName": "Uyen",
+    "lastName": "Vu",
+    "fullName": "Uyen Vu",
+    "email": "uyen.vu.12@example.com",
+    "phone": "0942202827",
+    "gender": "male",
+    "avatarUrl": "https://i.pravatar.cc/150?img=22",
+    "country": "Indonesia",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Uyen Vu",
+        "phone": "0942202827",
+        "addressLine1": "123 Jalan Thamrin",
+        "district": "Gambir",
+        "city": "Jakarta",
+        "country": "ID",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Uyen Vu"
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 27,
+      "currentPoints": 12,
+      "tier": "bronze",
+      "lastAccrualAt": "2024-01-10T01:48:58.762Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0001",
+          "orderDate": "2024-01-10T01:48:58.762Z",
+          "type": "earned",
+          "points": 27,
+          "description": "Earned 27 points from order ORD-2024-0001",
+          "createdAt": "2024-01-10T01:48:58.762Z"
+        },
+        {
+          "orderId": "ORD-2025-0054",
+          "orderDate": "2025-01-09T21:43:19.058Z",
+          "type": "used",
+          "points": 15,
+          "description": "Used 15 points for order ORD-2025-0054",
+          "createdAt": "2025-01-09T21:43:19.058Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-11-12T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 4,
+        "dateAdded": "2025-06-13T02:51:56.967Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 6,
+        "dateAdded": "2025-10-15T20:43:47.508Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 5,
+        "dateAdded": "2025-10-19T09:51:13.667Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 9,
+        "dateAdded": "2025-10-01T03:49:35.816Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 11,
+        "dateAdded": "2025-11-09T23:46:47.917Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-06-02T04:08:42.648Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-11-14T13:46:35.427Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 16,
+        "dateAdded": "2025-09-26T02:07:44.345Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 18,
+        "dateAdded": "2025-11-19T23:39:18.986Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 20,
+        "dateAdded": "2025-10-16T00:54:03.631Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 22,
+        "dateAdded": "2025-11-18T06:52:59.346Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 24,
+        "dateAdded": "2025-06-30T03:16:04.119Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730400"
+    },
+    "firstName": "Xuan",
+    "lastName": "Hoang",
+    "fullName": "Xuan Hoang",
+    "email": "xuan.hoang.13@example.com",
+    "phone": "0972932316",
+    "gender": "male",
+    "avatarUrl": "https://i.pravatar.cc/150?img=23",
+    "country": "Philippines",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Xuan Hoang",
+        "phone": "0972932316",
+        "addressLine1": "123 Ayala Avenue",
+        "district": "Bel-Air One",
+        "city": "Makati",
+        "country": "PH",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "momo",
+        "wallet": "0123456789",
+        "isDefault": false
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 568,
+      "currentPoints": 563,
+      "tier": "gold",
+      "lastAccrualAt": "2025-08-13T10:13:28.040Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0019",
+          "orderDate": "2024-05-17T05:12:54.767Z",
+          "type": "earned",
+          "points": 440,
+          "description": "Earned 440 points from order ORD-2024-0019",
+          "createdAt": "2024-05-17T05:12:54.767Z"
+        },
+        {
+          "orderId": "ORD-2025-0058",
+          "orderDate": "2025-01-23T17:50:05.122Z",
+          "type": "earned",
+          "points": 108,
+          "description": "Earned 108 points from order ORD-2025-0058",
+          "createdAt": "2025-01-23T17:50:05.122Z"
+        },
+        {
+          "orderId": "ORD-2025-0082",
+          "orderDate": "2025-08-13T10:13:28.040Z",
+          "type": "earned",
+          "points": 20,
+          "description": "Earned 20 points from order ORD-2025-0082",
+          "createdAt": "2025-08-13T10:13:28.040Z"
+        },
+        {
+          "orderId": "ORD-2025-0083",
+          "orderDate": "2025-08-24T12:47:52.343Z",
+          "type": "used",
+          "points": 5,
+          "description": "Used 5 points for order ORD-2025-0083",
+          "createdAt": "2025-08-24T12:47:52.343Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2024-01-23T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 14,
+        "dateAdded": "2025-11-04T13:23:37.732Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 16,
+        "dateAdded": "2025-07-02T13:33:30.785Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 18,
+        "dateAdded": "2025-11-02T18:38:44.193Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 20,
+        "dateAdded": "2025-06-26T18:20:58.411Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 22,
+        "dateAdded": "2025-07-13T17:59:36.847Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 21,
+        "dateAdded": "2025-06-30T16:02:31.170Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 28,
+        "dateAdded": "2025-11-19T10:38:03.972Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 26,
+        "dateAdded": "2025-09-26T22:35:34.129Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 28,
+        "dateAdded": "2025-07-01T17:11:07.649Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-08-03T21:45:34.479Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-08-27T17:17:37.842Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 4,
+        "dateAdded": "2025-06-21T06:37:26.578Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 6,
+        "dateAdded": "2025-11-06T01:13:47.171Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 8,
+        "dateAdded": "2025-08-06T19:03:22.244Z",
+        "isOnSale": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730401"
+    },
+    "firstName": "Tam",
+    "lastName": "Dinh",
+    "fullName": "Tam Dinh",
+    "email": "tam.dinh.14@example.com",
+    "phone": "0983682574",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=24",
+    "country": "South Korea",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Tam Dinh",
+        "phone": "0983682574",
+        "addressLine1": "123 Gangnam-daero",
+        "district": "Gangnam-gu",
+        "city": "Seoul",
+        "country": "KR",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Tam Dinh",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "en",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 355,
+      "currentPoints": 355,
+      "tier": "silver",
+      "lastAccrualAt": "2025-04-12T04:54:15.865Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0026",
+          "orderDate": "2024-06-25T15:18:08.483Z",
+          "type": "earned",
+          "points": 172,
+          "description": "Earned 172 points from order ORD-2024-0026",
+          "createdAt": "2024-06-25T15:18:08.483Z"
+        },
+        {
+          "orderId": "ORD-2024-0034",
+          "orderDate": "2024-08-18T05:54:37.371Z",
+          "type": "earned",
+          "points": 148,
+          "description": "Earned 148 points from order ORD-2024-0034",
+          "createdAt": "2024-08-18T05:54:37.371Z"
+        },
+        {
+          "orderId": "ORD-2025-0066",
+          "orderDate": "2025-04-12T04:54:15.865Z",
+          "type": "earned",
+          "points": 35,
+          "description": "Earned 35 points from order ORD-2025-0066",
+          "createdAt": "2025-04-12T04:54:15.865Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2024-01-28T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 18,
+        "dateAdded": "2025-06-23T12:43:05.040Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 27,
+        "dateAdded": "2025-06-08T05:07:02.329Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 29,
+        "dateAdded": "2025-11-06T12:36:17.272Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 1,
+        "dateAdded": "2025-09-10T03:26:05.659Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-05-30T19:29:18.687Z",
+        "isOnSale": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730402"
+    },
+    "firstName": "Yen",
+    "lastName": "Vo",
+    "fullName": "Yen Vo",
+    "email": "yen.vo.15@example.com",
+    "phone": "0997442946",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=25",
+    "country": "India",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Yen Vo",
+        "phone": "0997442946",
+        "addressLine1": "123 Marine Drive",
+        "district": "Colaba",
+        "city": "Mumbai",
+        "country": "IN",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Yen Vo"
+      },
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Yen Vo",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 449,
+      "currentPoints": 449,
+      "tier": "silver",
+      "lastAccrualAt": "2024-09-03T05:07:01.262Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0037",
+          "orderDate": "2024-09-03T05:07:01.262Z",
+          "type": "earned",
+          "points": 449,
+          "description": "Earned 449 points from order ORD-2024-0037",
+          "createdAt": "2024-09-03T05:07:01.262Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-12-01T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 30,
+        "dateAdded": "2025-11-23T16:08:43.304Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-08-05T01:52:36.830Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 4,
+        "dateAdded": "2025-07-23T00:48:47.856Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 6,
+        "dateAdded": "2025-06-29T22:25:54.952Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 8,
+        "dateAdded": "2025-11-09T09:37:14.379Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 10,
+        "dateAdded": "2025-09-20T13:41:30.977Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 12,
+        "dateAdded": "2025-10-04T15:24:11.840Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 14,
+        "dateAdded": "2025-09-07T01:58:47.506Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 16,
+        "dateAdded": "2025-10-17T13:27:11.397Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 18,
+        "dateAdded": "2025-11-22T23:52:48.452Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 20,
+        "dateAdded": "2025-07-19T11:24:24.946Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730403"
+    },
+    "firstName": "Binh",
+    "lastName": "Truong",
+    "fullName": "Binh Truong",
+    "email": "binh.truong.16@example.com",
+    "phone": "0902499711",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=26",
+    "country": "China",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Binh Truong",
+        "phone": "0902499711",
+        "addressLine1": "123 Nanjing Road",
+        "district": "Shanghai Downtown",
+        "city": "Shanghai",
+        "country": "CN",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "bronze",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "inactive",
+    "createdAt": "2023-10-09T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 11,
+        "dateAdded": "2025-10-18T04:23:01.189Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-09-13T23:36:27.595Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 18,
+        "dateAdded": "2025-09-02T16:50:33.516Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 16,
+        "dateAdded": "2025-10-19T09:52:04.956Z",
+        "isOnSale": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730404"
+    },
+    "firstName": "Binh",
+    "lastName": "Nguyen",
+    "fullName": "Binh Nguyen",
+    "email": "binh.nguyen.17@example.com",
+    "phone": "0967359867",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=27",
+    "country": "Spain",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Binh Nguyen",
+        "phone": "0967359867",
+        "addressLine1": "123 Gran Via",
+        "district": "Centro",
+        "city": "Madrid",
+        "country": "ES",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Binh Nguyen"
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 228,
+      "currentPoints": 228,
+      "tier": "gold",
+      "lastAccrualAt": "2024-04-21T11:16:20.125Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0015",
+          "orderDate": "2024-04-21T11:16:20.125Z",
+          "type": "earned",
+          "points": 228,
+          "description": "Earned 228 points from order ORD-2024-0015",
+          "createdAt": "2024-04-21T11:16:20.125Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-10-19T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 14,
+        "dateAdded": "2025-07-20T17:27:56.271Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 16,
+        "dateAdded": "2025-06-11T03:09:46.797Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 18,
+        "dateAdded": "2025-08-28T17:38:52.181Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-06-01T18:05:41.204Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 27,
+        "dateAdded": "2025-11-04T23:54:14.058Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 22,
+        "dateAdded": "2025-06-17T15:55:44.902Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 24,
+        "dateAdded": "2025-06-28T04:11:08.116Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 26,
+        "dateAdded": "2025-08-20T10:01:03.603Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 28,
+        "dateAdded": "2025-08-15T04:08:32.213Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-11-22T00:47:43.639Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 10,
+        "dateAdded": "2025-11-08T19:13:10.305Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-06-17T10:37:36.569Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 5,
+        "dateAdded": "2025-08-01T09:23:59.967Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 7,
+        "dateAdded": "2025-06-06T17:43:51.047Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 28,
+        "dateAdded": "2025-08-02T11:38:03.768Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-08-13T20:21:40.425Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 11,
+        "dateAdded": "2025-09-02T08:13:51.563Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-09-19T15:59:21.835Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730405"
+    },
+    "firstName": "Hieu",
+    "lastName": "Bui",
+    "fullName": "Hieu Bui",
+    "email": "hieu.bui.18@example.com",
+    "phone": "0919950614",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=28",
+    "country": "Italy",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Hieu Bui",
+        "phone": "0919950614",
+        "addressLine1": "123 Via del Corso",
+        "district": "Centro Storico",
+        "city": "Rome",
+        "country": "IT",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "momo",
+        "wallet": "0123456789",
+        "isDefault": false
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 184,
+      "currentPoints": 143,
+      "tier": "platinum",
+      "lastAccrualAt": "2025-09-29T16:49:07.288Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0041",
+          "orderDate": "2024-09-15T19:18:34.774Z",
+          "type": "earned",
+          "points": 105,
+          "description": "Earned 105 points from order ORD-2024-0041",
+          "createdAt": "2024-09-15T19:18:34.774Z"
+        },
+        {
+          "orderId": "ORD-2024-0046",
+          "orderDate": "2024-10-03T21:20:28.999Z",
+          "type": "used",
+          "points": 41,
+          "description": "Used 41 points for order ORD-2024-0046",
+          "createdAt": "2024-10-03T21:20:28.999Z"
+        },
+        {
+          "orderId": "ORD-2024-0046",
+          "orderDate": "2024-10-03T21:20:28.999Z",
+          "type": "earned",
+          "points": 37,
+          "description": "Earned 37 points from order ORD-2024-0046",
+          "createdAt": "2024-10-03T21:20:28.999Z"
+        },
+        {
+          "orderId": "ORD-2025-0090",
+          "orderDate": "2025-09-29T16:49:07.288Z",
+          "type": "earned",
+          "points": 42,
+          "description": "Earned 42 points from order ORD-2025-0090",
+          "createdAt": "2025-09-29T16:49:07.288Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-10-09T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 27,
+        "dateAdded": "2025-08-18T20:02:08.141Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 25,
+        "dateAdded": "2025-10-21T19:41:10.717Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-09-29T21:35:14.990Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-08-08T03:43:30.253Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-07-24T10:39:04.474Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 5,
+        "dateAdded": "2025-07-19T08:19:52.868Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 7,
+        "dateAdded": "2025-08-27T13:09:44.501Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 9,
+        "dateAdded": "2025-10-25T02:29:17.925Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 11,
+        "dateAdded": "2025-07-25T20:40:44.890Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-06-12T00:05:29.320Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 15,
+        "dateAdded": "2025-10-22T08:51:07.616Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730406"
+    },
+    "firstName": "Huong",
+    "lastName": "Dang",
+    "fullName": "Huong Dang",
+    "email": "huong.dang.19@example.com",
+    "phone": "0999724104",
+    "gender": "male",
+    "avatarUrl": "https://i.pravatar.cc/150?img=29",
+    "country": "Brazil",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Huong Dang",
+        "phone": "0999724104",
+        "addressLine1": "123 Avenida Paulista",
+        "district": "Bom Retiro",
+        "city": "Sao Paulo",
+        "country": "BR",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Huong Dang",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 221,
+      "currentPoints": 221,
+      "tier": "platinum",
+      "lastAccrualAt": "2025-09-30T01:55:05.706Z",
+      "history": [
+        {
+          "orderId": "ORD-2025-0070",
+          "orderDate": "2025-05-24T16:04:13.648Z",
+          "type": "earned",
+          "points": 182,
+          "description": "Earned 182 points from order ORD-2025-0070",
+          "createdAt": "2025-05-24T16:04:13.648Z"
+        },
+        {
+          "orderId": "ORD-2025-0091",
+          "orderDate": "2025-09-30T01:55:05.706Z",
+          "type": "earned",
+          "points": 39,
+          "description": "Earned 39 points from order ORD-2025-0091",
+          "createdAt": "2025-09-30T01:55:05.706Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2024-01-27T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 6,
+        "dateAdded": "2025-08-27T00:44:58.656Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 8,
+        "dateAdded": "2025-09-29T18:50:43.989Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 10,
+        "dateAdded": "2025-11-14T15:16:19.109Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 26,
+        "dateAdded": "2025-11-04T00:42:52.247Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-07-19T16:56:09.317Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 15,
+        "dateAdded": "2025-08-30T05:19:14.286Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-08-25T02:04:04.524Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 19,
+        "dateAdded": "2025-10-03T18:06:17.886Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 21,
+        "dateAdded": "2025-11-19T07:52:34.195Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 23,
+        "dateAdded": "2025-08-18T00:08:53.039Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 25,
+        "dateAdded": "2025-07-04T01:45:07.457Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 27,
+        "dateAdded": "2025-07-02T20:56:37.936Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 1,
+        "dateAdded": "2025-08-07T03:19:15.191Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-09-05T12:32:02.415Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730407"
+    },
+    "firstName": "An",
+    "lastName": "Truong",
+    "fullName": "An Truong",
+    "email": "an.truong.20@example.com",
+    "phone": "0907679622",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=30",
+    "country": "Mexico",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "An Truong",
+        "phone": "0907679622",
+        "addressLine1": "123 Avenida Reforma",
+        "district": "Centro Historico",
+        "city": "Mexico City",
+        "country": "MX",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "An Truong"
+      },
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "An Truong",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 135,
+      "currentPoints": 0,
+      "tier": "gold",
+      "lastAccrualAt": "2024-04-15T15:30:16.049Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0013",
+          "orderDate": "2024-04-15T15:30:16.049Z",
+          "type": "earned",
+          "points": 135,
+          "description": "Earned 135 points from order ORD-2024-0013",
+          "createdAt": "2024-04-15T15:30:16.049Z"
+        },
+        {
+          "orderId": "ORD-2024-0028",
+          "orderDate": "2024-07-02T20:12:01.328Z",
+          "type": "used",
+          "points": 135,
+          "description": "Used 135 points for order ORD-2024-0028",
+          "createdAt": "2024-07-02T20:12:01.328Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-12-25T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 18,
+        "dateAdded": "2025-11-06T20:40:45.279Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 15,
+        "dateAdded": "2025-11-20T14:47:09.121Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 21,
+        "dateAdded": "2025-07-13T21:20:11.134Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 22,
+        "dateAdded": "2025-08-21T15:36:06.145Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 24,
+        "dateAdded": "2025-05-28T06:38:31.564Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 26,
+        "dateAdded": "2025-11-04T18:55:55.791Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 28,
+        "dateAdded": "2025-10-28T13:26:36.610Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-11-21T15:43:42.694Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 1,
+        "dateAdded": "2025-11-14T23:50:42.931Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-10-27T00:24:13.693Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 5,
+        "dateAdded": "2025-05-30T08:58:45.197Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 7,
+        "dateAdded": "2025-10-03T05:06:42.473Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 9,
+        "dateAdded": "2025-09-13T17:41:53.277Z",
+        "isOnSale": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730408"
+    },
+    "firstName": "Tu",
+    "lastName": "Dinh",
+    "fullName": "Tu Dinh",
+    "email": "tu.dinh.21@example.com",
+    "phone": "0905343180",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=31",
+    "country": "Netherlands",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Tu Dinh",
+        "phone": "0905343180",
+        "addressLine1": "123 Damrak",
+        "district": "De Pijp",
+        "city": "Amsterdam",
+        "country": "NL",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "en",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 485,
+      "currentPoints": 382,
+      "tier": "bronze",
+      "lastAccrualAt": "2024-08-05T05:22:55.212Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0007",
+          "orderDate": "2024-03-05T02:42:08.109Z",
+          "type": "earned",
+          "points": 264,
+          "description": "Earned 264 points from order ORD-2024-0007",
+          "createdAt": "2024-03-05T02:42:08.109Z"
+        },
+        {
+          "orderId": "ORD-2024-0033",
+          "orderDate": "2024-08-05T05:22:55.212Z",
+          "type": "earned",
+          "points": 221,
+          "description": "Earned 221 points from order ORD-2024-0033",
+          "createdAt": "2024-08-05T05:22:55.212Z"
+        },
+        {
+          "orderId": "ORD-2024-0035",
+          "orderDate": "2024-08-22T15:28:36.331Z",
+          "type": "used",
+          "points": 98,
+          "description": "Used 98 points for order ORD-2024-0035",
+          "createdAt": "2024-08-22T15:28:36.331Z"
+        },
+        {
+          "orderId": "ORD-2025-0057",
+          "orderDate": "2025-01-15T03:26:47.755Z",
+          "type": "used",
+          "points": 5,
+          "description": "Used 5 points for order ORD-2025-0057",
+          "createdAt": "2025-01-15T03:26:47.755Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2024-01-08T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 28,
+        "dateAdded": "2025-05-28T12:58:56.393Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-09-02T21:26:27.581Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 16,
+        "dateAdded": "2025-07-16T02:20:03.869Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-06-20T18:32:05.267Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 5,
+        "dateAdded": "2025-10-15T19:25:45.808Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 7,
+        "dateAdded": "2025-06-11T08:48:45.930Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 9,
+        "dateAdded": "2025-11-07T14:29:00.351Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 19,
+        "dateAdded": "2025-11-16T13:00:58.020Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-05-30T13:58:20.359Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730409"
+    },
+    "firstName": "Nam",
+    "lastName": "Do",
+    "fullName": "Nam Do",
+    "email": "nam.do.22@example.com",
+    "phone": "0927384180",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=32",
+    "country": "Sweden",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Nam Do",
+        "phone": "0927384180",
+        "addressLine1": "123 Drottninggatan",
+        "district": "Gamla Stan",
+        "city": "Stockholm",
+        "country": "SE",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Nam Do"
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 68,
+      "currentPoints": 0,
+      "tier": "silver",
+      "lastAccrualAt": "2025-03-18T09:10:52.562Z",
+      "history": [
+        {
+          "orderId": "ORD-2025-0063",
+          "orderDate": "2025-03-18T09:10:52.562Z",
+          "type": "earned",
+          "points": 68,
+          "description": "Earned 68 points from order ORD-2025-0063",
+          "createdAt": "2025-03-18T09:10:52.562Z"
+        },
+        {
+          "orderId": "ORD-2025-0064",
+          "orderDate": "2025-03-22T04:16:45.072Z",
+          "type": "used",
+          "points": 68,
+          "description": "Used 68 points for order ORD-2025-0064",
+          "createdAt": "2025-03-22T04:16:45.072Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-12-04T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 4,
+        "dateAdded": "2025-10-31T09:21:50.070Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 26,
+        "dateAdded": "2025-10-25T14:07:37.734Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 14,
+        "dateAdded": "2025-06-21T15:51:34.667Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 7,
+        "dateAdded": "2025-06-16T05:23:36.464Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 9,
+        "dateAdded": "2025-06-20T16:39:47.786Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 11,
+        "dateAdded": "2025-10-28T19:40:58.400Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 22,
+        "dateAdded": "2025-11-18T08:44:17.197Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 14,
+        "dateAdded": "2025-08-10T03:19:12.273Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 9,
+        "dateAdded": "2025-10-22T07:55:33.520Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-08-12T14:17:36.358Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 19,
+        "dateAdded": "2025-08-29T17:58:24.104Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c73040a"
+    },
+    "firstName": "Chi",
+    "lastName": "Hoang",
+    "fullName": "Chi Hoang",
+    "email": "chi.hoang.23@example.com",
+    "phone": "0996382342",
+    "gender": "male",
+    "avatarUrl": "https://i.pravatar.cc/150?img=33",
+    "country": "Norway",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Chi Hoang",
+        "phone": "0996382342",
+        "addressLine1": "123 Karl Johans gate",
+        "district": "Sentrum",
+        "city": "Oslo",
+        "country": "NO",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "momo",
+        "wallet": "0123456789",
+        "isDefault": false
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "gold",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-12-11T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 30,
+        "dateAdded": "2025-08-31T20:43:51.047Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 9,
+        "dateAdded": "2025-10-01T09:15:17.408Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 10,
+        "dateAdded": "2025-09-11T14:31:15.131Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 11,
+        "dateAdded": "2025-06-28T19:48:53.222Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-08-24T18:31:10.886Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-10-23T18:33:01.484Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 16,
+        "dateAdded": "2025-09-28T06:12:40.419Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 18,
+        "dateAdded": "2025-10-16T18:49:46.492Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c73040b"
+    },
+    "firstName": "Khanh",
+    "lastName": "Vo",
+    "fullName": "Khanh Vo",
+    "email": "khanh.vo.24@example.com",
+    "phone": "0964720996",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=34",
+    "country": "Finland",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Khanh Vo",
+        "phone": "0964720996",
+        "addressLine1": "123 Mannerheimintie",
+        "district": "Kamppi",
+        "city": "Helsinki",
+        "country": "FI",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Khanh Vo",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 415,
+      "currentPoints": 415,
+      "tier": "platinum",
+      "lastAccrualAt": "2024-07-01T08:37:52.864Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0027",
+          "orderDate": "2024-07-01T08:37:52.864Z",
+          "type": "earned",
+          "points": 415,
+          "description": "Earned 415 points from order ORD-2024-0027",
+          "createdAt": "2024-07-01T08:37:52.864Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-12-03T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 12,
+        "dateAdded": "2025-07-06T13:31:09.515Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 20,
+        "dateAdded": "2025-06-23T13:26:33.245Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 1,
+        "dateAdded": "2025-10-21T14:01:03.183Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 16,
+        "dateAdded": "2025-08-25T07:54:01.471Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 18,
+        "dateAdded": "2025-07-02T22:56:01.422Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 20,
+        "dateAdded": "2025-06-03T21:05:40.719Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 22,
+        "dateAdded": "2025-10-25T17:59:14.584Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 24,
+        "dateAdded": "2025-06-02T04:20:59.005Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 26,
+        "dateAdded": "2025-09-24T14:45:59.268Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-10-25T06:00:28.319Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-08-05T15:21:34.245Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-08-10T05:22:14.913Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-09-14T04:43:03.765Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 4,
+        "dateAdded": "2025-10-05T16:51:07.931Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 6,
+        "dateAdded": "2025-10-13T17:48:24.551Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 8,
+        "dateAdded": "2025-11-07T22:33:24.456Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c73040c"
+    },
+    "firstName": "Son",
+    "lastName": "Le",
+    "fullName": "Son Le",
+    "email": "son.le.25@example.com",
+    "phone": "0937645144",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=35",
+    "country": "Denmark",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Son Le",
+        "phone": "0937645144",
+        "addressLine1": "123 Stroget",
+        "district": "Indre By",
+        "city": "Copenhagen",
+        "country": "DK",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Son Le"
+      },
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Son Le",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "platinum",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-12-28T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 24,
+        "dateAdded": "2025-10-28T01:15:16.680Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 26,
+        "dateAdded": "2025-11-08T14:41:14.406Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 28,
+        "dateAdded": "2025-09-20T13:10:01.652Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-06-09T03:47:26.577Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-06-04T15:04:05.203Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 4,
+        "dateAdded": "2025-08-19T09:38:05.473Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 8,
+        "dateAdded": "2025-06-26T05:37:06.372Z",
+        "isOnSale": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c73040d"
+    },
+    "firstName": "Minh",
+    "lastName": "Ngo",
+    "fullName": "Minh Ngo",
+    "email": "minh.ngo.26@example.com",
+    "phone": "0961560440",
+    "gender": "male",
+    "avatarUrl": "https://i.pravatar.cc/150?img=36",
+    "country": "Poland",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Minh Ngo",
+        "phone": "0961560440",
+        "addressLine1": "123 Nowy Swiat",
+        "district": "Srodmiescie",
+        "city": "Warsaw",
+        "country": "PL",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 625,
+      "currentPoints": 504,
+      "tier": "platinum",
+      "lastAccrualAt": "2025-01-11T08:45:57.465Z",
+      "history": [
+        {
+          "orderId": "ORD-2024-0011",
+          "orderDate": "2024-04-09T20:26:41.484Z",
+          "type": "earned",
+          "points": 457,
+          "description": "Earned 457 points from order ORD-2024-0011",
+          "createdAt": "2024-04-09T20:26:41.484Z"
+        },
+        {
+          "orderId": "ORD-2024-0018",
+          "orderDate": "2024-05-12T16:35:43.132Z",
+          "type": "earned",
+          "points": 135,
+          "description": "Earned 135 points from order ORD-2024-0018",
+          "createdAt": "2024-05-12T16:35:43.132Z"
+        },
+        {
+          "orderId": "ORD-2025-0055",
+          "orderDate": "2025-01-11T08:45:57.465Z",
+          "type": "used",
+          "points": 26,
+          "description": "Used 26 points for order ORD-2025-0055",
+          "createdAt": "2025-01-11T08:45:57.465Z"
+        },
+        {
+          "orderId": "ORD-2025-0055",
+          "orderDate": "2025-01-11T08:45:57.465Z",
+          "type": "earned",
+          "points": 33,
+          "description": "Earned 33 points from order ORD-2025-0055",
+          "createdAt": "2025-01-11T08:45:57.465Z"
+        },
+        {
+          "orderId": "ORD-2025-0060",
+          "orderDate": "2025-02-27T15:35:50.900Z",
+          "type": "used",
+          "points": 95,
+          "description": "Used 95 points for order ORD-2025-0060",
+          "createdAt": "2025-02-27T15:35:50.900Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-12-23T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 30,
+        "dateAdded": "2025-08-18T08:49:31.407Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c73040e"
+    },
+    "firstName": "Yen",
+    "lastName": "Phan",
+    "fullName": "Yen Phan",
+    "email": "yen.phan.27@example.com",
+    "phone": "0946495329",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=37",
+    "country": "Portugal",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Yen Phan",
+        "phone": "0946495329",
+        "addressLine1": "123 Rua Augusta",
+        "district": "Alfama",
+        "city": "Lisbon",
+        "country": "PT",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Yen Phan"
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 164,
+      "currentPoints": 164,
+      "tier": "bronze",
+      "lastAccrualAt": "2025-03-13T17:20:56.181Z",
+      "history": [
+        {
+          "orderId": "ORD-2025-0062",
+          "orderDate": "2025-03-13T17:20:56.181Z",
+          "type": "earned",
+          "points": 164,
+          "description": "Earned 164 points from order ORD-2025-0062",
+          "createdAt": "2025-03-13T17:20:56.181Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2024-01-26T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 21,
+        "dateAdded": "2025-11-07T18:24:12.497Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-10-19T16:15:50.818Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 4,
+        "dateAdded": "2025-06-15T22:15:37.492Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 6,
+        "dateAdded": "2025-09-12T08:58:16.449Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 8,
+        "dateAdded": "2025-09-12T23:50:06.969Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 10,
+        "dateAdded": "2025-07-11T13:25:03.968Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 12,
+        "dateAdded": "2025-06-28T08:30:32.277Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 20,
+        "dateAdded": "2025-11-12T03:50:36.083Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 18,
+        "dateAdded": "2025-07-10T20:57:09.804Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 22,
+        "dateAdded": "2025-07-05T02:38:01.906Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-08-03T15:02:17.406Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 19,
+        "dateAdded": "2025-06-14T15:34:30.990Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 21,
+        "dateAdded": "2025-06-11T23:15:22.698Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 23,
+        "dateAdded": "2025-07-31T21:47:55.501Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 25,
+        "dateAdded": "2025-11-09T01:18:09.361Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 27,
+        "dateAdded": "2025-11-15T13:25:37.605Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 29,
+        "dateAdded": "2025-07-08T20:28:04.112Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 11,
+        "dateAdded": "2025-05-29T12:29:18.974Z",
+        "isOnSale": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c73040f"
+    },
+    "firstName": "Linh",
+    "lastName": "Dang",
+    "fullName": "Linh Dang",
+    "email": "linh.dang.28@example.com",
+    "phone": "0981162624",
+    "gender": "male",
+    "avatarUrl": "https://i.pravatar.cc/150?img=38",
+    "country": "Ireland",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Linh Dang",
+        "phone": "0981162624",
+        "addressLine1": "123 Grafton Street",
+        "district": "Temple Bar",
+        "city": "Dublin",
+        "country": "IE",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "momo",
+        "wallet": "0123456789",
+        "isDefault": false
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "silver",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2024-01-02T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 14,
+        "dateAdded": "2025-11-23T06:55:15.290Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-09-06T07:15:49.215Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-06-12T02:52:26.298Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 19,
+        "dateAdded": "2025-10-06T02:47:26.913Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 21,
+        "dateAdded": "2025-05-29T09:06:30.710Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 1,
+        "dateAdded": "2025-05-28T10:43:01.640Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 14,
+        "dateAdded": "2025-10-11T11:24:28.676Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 25,
+        "dateAdded": "2025-10-20T08:31:23.211Z",
+        "isOnSale": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730410"
+    },
+    "firstName": "Tu",
+    "lastName": "Pham",
+    "fullName": "Tu Pham",
+    "email": "tu.pham.29@example.com",
+    "phone": "0928049147",
+    "gender": "female",
+    "avatarUrl": "https://i.pravatar.cc/150?img=39",
+    "country": "United Arab Emirates",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Tu Pham",
+        "phone": "0928049147",
+        "addressLine1": "123 Sheikh Zayed Road",
+        "district": "Downtown Dubai",
+        "city": "Dubai",
+        "country": "AE",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Tu Pham",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      },
+      {
+        "type": "cash",
+        "isDefault": true
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": true
+    },
+    "loyalty": {
+      "totalEarned": 449,
+      "currentPoints": 449,
+      "tier": "silver",
+      "lastAccrualAt": "2025-10-07T12:16:07.525Z",
+      "history": [
+        {
+          "orderId": "ORD-2025-0073",
+          "orderDate": "2025-06-06T00:14:32.974Z",
+          "type": "earned",
+          "points": 68,
+          "description": "Earned 68 points from order ORD-2025-0073",
+          "createdAt": "2025-06-06T00:14:32.974Z"
+        },
+        {
+          "orderId": "ORD-2025-0093",
+          "orderDate": "2025-10-07T12:16:07.525Z",
+          "type": "earned",
+          "points": 381,
+          "description": "Earned 381 points from order ORD-2025-0093",
+          "createdAt": "2025-10-07T12:16:07.525Z"
+        }
+      ]
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-11-26T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 24,
+        "dateAdded": "2025-09-30T04:33:15.935Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 20,
+        "dateAdded": "2025-11-06T01:34:40.998Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 30,
+        "dateAdded": "2025-09-14T02:51:23.102Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 23,
+        "dateAdded": "2025-10-14T04:41:23.635Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 25,
+        "dateAdded": "2025-09-29T18:38:08.321Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 27,
+        "dateAdded": "2025-09-14T00:40:53.357Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 29,
+        "dateAdded": "2025-08-12T06:47:07.673Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 1,
+        "dateAdded": "2025-11-20T19:23:21.827Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 3,
+        "dateAdded": "2025-08-04T04:32:20.570Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 19,
+        "dateAdded": "2025-09-05T12:28:08.691Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 14,
+        "dateAdded": "2025-09-20T18:48:30.011Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-06-06T22:54:48.753Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 8,
+        "dateAdded": "2025-10-14T01:30:55.079Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 11,
+        "dateAdded": "2025-09-10T16:25:31.884Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 11,
+        "dateAdded": "2025-10-10T14:37:40.524Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-07-10T12:43:25.212Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 28,
+        "dateAdded": "2025-08-04T17:06:07.565Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 6,
+        "dateAdded": "2025-09-09T00:52:00.707Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 17,
+        "dateAdded": "2025-11-15T19:24:36.786Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-11-13T14:08:16.533Z",
+        "isOnSale": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691c9a11caaa275d2c730411"
+    },
+    "firstName": "Huong",
+    "lastName": "Truong",
+    "fullName": "Huong Truong",
+    "email": "huong.truong.30@example.com",
+    "phone": "0942313131",
+    "gender": "male",
+    "avatarUrl": "https://i.pravatar.cc/150?img=40",
+    "country": "New Zealand",
+    "addresses": [
+      {
+        "label": "home",
+        "type": "shipping",
+        "isDefault": true,
+        "fullName": "Huong Truong",
+        "phone": "0942313131",
+        "addressLine1": "123 Queen Street",
+        "district": "Ponsonby",
+        "city": "Auckland",
+        "country": "NZ",
+        "ward": ""
+      }
+    ],
+    "paymentMethods": [
+      {
+        "type": "bank",
+        "provider": "Vietcombank",
+        "accountNumber": "9704367891234567",
+        "accountName": "Huong Truong"
+      },
+      {
+        "type": "card",
+        "brand": "VISA",
+        "holderName": "Huong Truong",
+        "last4": "2077",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    ],
+    "preferences": {
+      "language": "vi",
+      "currency": "VND",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "newsletterSubscribed": false
+    },
+    "loyalty": {
+      "totalEarned": 0,
+      "currentPoints": 0,
+      "tier": "gold",
+      "lastAccrualAt": null,
+      "history": []
+    },
+    "consents": {
+      "termsAccepted": true,
+      "termsAcceptedAt": "2023-12-01T08:00:00Z",
+      "privacyAccepted": true,
+      "privacyAcceptedAt": "2023-12-01T08:05:00Z"
+    },
+    "tags": [
+      "sample"
+    ],
+    "status": "active",
+    "createdAt": "2023-11-06T08:00:00.000Z",
+    "wishlist": [
+      {
+        "productId": 14,
+        "dateAdded": "2025-08-07T15:56:19.389Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 20,
+        "dateAdded": "2025-10-31T11:01:57.354Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 2,
+        "dateAdded": "2025-10-14T15:14:35.755Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 4,
+        "dateAdded": "2025-10-20T11:33:12.305Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 6,
+        "dateAdded": "2025-10-15T08:09:40.673Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 8,
+        "dateAdded": "2025-10-02T15:59:49.234Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 10,
+        "dateAdded": "2025-11-05T17:23:31.793Z",
+        "isOnSale": true
+      },
+      {
+        "productId": 27,
+        "dateAdded": "2025-09-24T09:11:50.827Z",
+        "isOnSale": false
+      },
+      {
+        "productId": 13,
+        "dateAdded": "2025-10-06T03:39:02.074Z",
+        "isOnSale": false
+      }
+    ]
+  }
+]

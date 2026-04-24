@@ -1,0 +1,80 @@
+[
+    {
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bee7"
+  },
+  "id": 37,
+  "name": "Trung Nguyên Legend Culi ",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764214984/products/nfcdr1dfgyanvqa5s7jk.webp",
+  "description": "Culi Robusta whole beans from Trung Nguyên Legend with a bold body and long sweet aftertaste, ideal for traditional Vietnamese phin brewing.",
+  "category": "new",
+  "stock": true,
+  "sku": "RC-TN-001",
+  "price": 119000,
+  "quantity": 140,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "250g",
+          "priceDelta": 0
+        },
+        {
+          "label": "500g",
+          "priceDelta": 30000
+        },
+        {
+          "label": "1kg",
+          "priceDelta": 80000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-20T07:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:43:08.781Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bee8"
+  },
+  "id": 38,
+  "name": "Trung Nguyên Legend",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215085/products/dpclht1bk8xcxofy1t64.webp",
+  "description": "Cầu Đất Arabica with fruity aroma and bright acidity, perfect for pour-over brewing.",
+  "category": "new",
+  "stock": true,
+  "sku": "RC-TN-002",
+  "price": 165000,
+  "quantity": 90,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "250g",
+          "priceDelta": 0
+        },
+        {
+          "label": "500g",
+          "priceDelta": 32000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-21T06:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:44:49.056Z"
+  },
+  "__v": 0
+}
+]

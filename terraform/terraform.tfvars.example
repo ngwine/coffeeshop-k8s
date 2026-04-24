@@ -1,0 +1,27 @@
+# ============================================================
+# EduAI — Terraform Variables Example
+# Copy this file to terraform.tfvars and fill in your values
+# ============================================================
+
+# OCI Authentication
+tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaa_YOUR_TENANCY"
+user_ocid        = "ocid1.user.oc1..aaaaaaaa_YOUR_USER"
+fingerprint      = "aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99"
+private_key_path = "~/.oci/oci_api_key.pem"
+region           = "ap-singapore-1"
+compartment_ocid = "ocid1.compartment.oc1..aaaaaaaa_YOUR_COMPARTMENT"
+
+# SSH (paste your public key content)
+ssh_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQ... your-key"
+
+# Project
+project_name = "eduai"
+
+# Domain
+domain_name = "eduai.xyz"
+
+# Compute sizing (Oracle Always Free defaults)
+master_ocpus  = 1
+master_memory = 6
+worker_ocpus  = 1.5
+worker_memory = 9

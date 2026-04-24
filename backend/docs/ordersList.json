@@ -1,0 +1,7408 @@
+[
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fa0"
+    },
+    "id": "ORD-2024-0001",
+    "customerEmail": "uyen.vu.12@example.com",
+    "items": [
+      {
+        "productId": 27,
+        "name": "Highlands Coffee Aluminum Phin Filter 150ml",
+        "sku": "MG-HC-027",
+        "price": 129000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 258000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 278000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Uyen Vu",
+      "phone": "0942202827",
+      "addressLine1": "84 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2024-01-10T01:48:58.762Z",
+    "updatedAt": "2024-01-17T01:48:58.762Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Jan 10",
+        "time": "08:48 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Thursday, Jan 11",
+        "time": "08:48 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Friday, Jan 12",
+        "time": "08:48 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Saturday, Jan 13",
+        "time": "08:48 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fa1"
+    },
+    "id": "ORD-2024-0002",
+    "customerEmail": "an.truong.20@example.com",
+    "items": [
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 3
+      },
+      {
+        "productId": 6,
+        "name": "Phúc Long Arabica Culi",
+        "sku": "RC-PL-006",
+        "price": 175000,
+        "qty": 3
+      },
+      {
+        "productId": 21,
+        "name": "Phúc Long Ceramic Mug 340ml",
+        "sku": "CM-PL-021",
+        "price": 175000,
+        "qty": 4
+      },
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 2728000,
+    "shippingFee": 0,
+    "discount": 247740,
+    "total": 2480260,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "An Truong",
+      "phone": "0907679622",
+      "addressLine1": "187 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2024-01-16T11:04:58.009Z",
+    "updatedAt": "2024-01-17T11:04:58.009Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Jan 16",
+        "time": "06:04 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Wednesday, Jan 17",
+        "time": "06:04 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fa2"
+    },
+    "id": "ORD-2024-0003",
+    "customerEmail": "binh.truong.16@example.com",
+    "items": [
+      {
+        "productId": 10,
+        "name": "Trung Nguyên Legend Gift Set",
+        "sku": "CS-TN-010",
+        "price": 499000,
+        "qty": 3
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 2
+      },
+      {
+        "productId": 7,
+        "name": "The Coffee House - Original Roasted Coffee",
+        "sku": "RC-TCH-007",
+        "price": 145000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 2020000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 2040000,
+    "currency": "VND",
+    "status": "processing",
+    "paymentStatus": "pending",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Binh Truong",
+      "phone": "0902499711",
+      "addressLine1": "92 District 1 Street",
+      "district": "District 1",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2024-01-26T00:06:52.140Z",
+    "updatedAt": "2024-01-26T00:06:52.140Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Jan 26",
+        "time": "07:06 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Saturday, Jan 27",
+        "time": "07:06 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fa3"
+    },
+    "id": "ORD-2024-0004",
+    "customerEmail": "kiet.pham.8@example.com",
+    "items": [
+      {
+        "productId": 12,
+        "name": "Highlands Coffee Combo Phin",
+        "sku": "CS-HC-012",
+        "price": 329000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 658000,
+    "shippingFee": 0,
+    "discount": 80623,
+    "total": 577377,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Kiet Pham",
+      "phone": "0905065441",
+      "addressLine1": "123 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2024-02-03T23:06:35.823Z",
+    "updatedAt": "2024-02-04T23:06:35.823Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, Feb 4",
+        "time": "06:06 AM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Monday, Feb 5",
+        "time": "06:06 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fa4"
+    },
+    "id": "ORD-2024-0005",
+    "customerEmail": "dao.truong.9@example.com",
+    "items": [
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 378000,
+    "shippingFee": 15000,
+    "discount": 52441,
+    "total": 340559,
+    "currency": "VND",
+    "status": "processing",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Truong",
+      "phone": "0973527493",
+      "addressLine1": "44 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2024-02-11T09:27:09.180Z",
+    "updatedAt": "2024-02-12T09:27:09.180Z",
+    "billingAddress": {
+      "company": "Truong Holdings",
+      "addressLine1": "75 Business Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, Feb 11",
+        "time": "04:27 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Monday, Feb 12",
+        "time": "04:27 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fa5"
+    },
+    "id": "ORD-2024-0006",
+    "customerEmail": "huong.truong.30@example.com",
+    "items": [
+      {
+        "productId": 2,
+        "name": "Trung Nguyên Legend Arabica Cầu Đất",
+        "sku": "RC-TN-002",
+        "price": 165000,
+        "qty": 4
+      },
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 1
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 1453000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1483000,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Huong Truong",
+      "phone": "0942313131",
+      "addressLine1": "168 District 1 Street",
+      "district": "District 1",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2024-02-13T08:16:38.401Z",
+    "updatedAt": "2024-02-15T08:16:38.401Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Feb 13",
+        "time": "03:16 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Wednesday, Feb 14",
+        "time": "03:16 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fa6"
+    },
+    "id": "ORD-2024-0007",
+    "customerEmail": "tu.dinh.21@example.com",
+    "items": [
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 1
+      },
+      {
+        "productId": 30,
+        "name": "Hand Coffee Grinder",
+        "sku": "MG-TCH-030",
+        "price": 895000,
+        "qty": 2
+      },
+      {
+        "productId": 7,
+        "name": "The Coffee House - Original Roasted Coffee",
+        "sku": "RC-TCH-007",
+        "price": 145000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 2640000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 2640000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Tu Dinh",
+      "phone": "0905343180",
+      "addressLine1": "235 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2024-03-05T02:42:08.109Z",
+    "updatedAt": "2024-03-06T02:42:08.109Z",
+    "billingAddress": {
+      "company": "Dinh Holdings",
+      "addressLine1": "128 Business Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Mar 5",
+        "time": "09:42 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Mar 6",
+        "time": "09:42 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Mar 7",
+        "time": "09:42 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fa7"
+    },
+    "id": "ORD-2024-0008",
+    "customerEmail": "minh.ngo.26@example.com",
+    "items": [
+      {
+        "productId": 19,
+        "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+        "sku": "CM-HC-019",
+        "price": 159000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 159000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 174000,
+    "currency": "VND",
+    "status": "processing",
+    "paymentStatus": "pending",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Minh Ngo",
+      "phone": "0961560440",
+      "addressLine1": "118 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2024-03-10T18:12:12.443Z",
+    "updatedAt": "2024-03-10T18:12:12.443Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Mar 11",
+        "time": "01:12 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Mar 12",
+        "time": "01:12 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fa8"
+    },
+    "id": "ORD-2024-0009",
+    "customerEmail": "minh.ngo.26@example.com",
+    "items": [
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 1
+      },
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 984000,
+    "shippingFee": 20000,
+    "discount": 67623,
+    "total": 936377,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Minh Ngo",
+      "phone": "0961560440",
+      "addressLine1": "118 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2024-03-15T13:20:14.441Z",
+    "updatedAt": "2024-03-16T13:20:14.441Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Mar 15",
+        "time": "08:20 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fa9"
+    },
+    "id": "ORD-2024-0010",
+    "customerEmail": "chi.duong.4@example.com",
+    "items": [
+      {
+        "productId": 22,
+        "name": "Phúc Long Insulated Bottle 600ml",
+        "sku": "CM-PL-022",
+        "price": 329000,
+        "qty": 2
+      },
+      {
+        "productId": 24,
+        "name": "The Coffee House Ceramic Travel Mug",
+        "sku": "CM-TCH-024",
+        "price": 149000,
+        "qty": 4
+      },
+      {
+        "productId": 14,
+        "name": "Don Pablo Whiskey Infused Coffee Gift Set",
+        "sku": "CS-PL-014",
+        "price": 289000,
+        "qty": 4
+      },
+      {
+        "productId": 23,
+        "name": "The Coffee House Go Green Insulated Tumbler 480ml",
+        "sku": "CM-TCH-023",
+        "price": 315000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 3355000,
+    "shippingFee": 20000,
+    "discount": 343904,
+    "total": 3031096,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Chi Duong",
+      "phone": "0968641984",
+      "addressLine1": "203 Nha Trang Street",
+      "district": "Nha Trang",
+      "city": "Nha Trang",
+      "provinceCode": "KH",
+      "country": "VN"
+    },
+    "createdAt": "2024-03-29T01:34:14.707Z",
+    "updatedAt": "2024-04-05T01:34:14.707Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Mar 29",
+        "time": "08:34 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452faa"
+    },
+    "id": "ORD-2024-0011",
+    "customerEmail": "minh.ngo.26@example.com",
+    "items": [
+      {
+        "productId": 15,
+        "name": "The Coffee House Gift Box",
+        "sku": "CS-TCH-015",
+        "price": 475000,
+        "qty": 4
+      },
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 4
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 1
+      },
+      {
+        "productId": 28,
+        "name": "Philips EP2221/40 Espresso Machine",
+        "sku": "MG-HC-028",
+        "price": 245000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 4540000,
+    "shippingFee": 30000,
+    "discount": 323054,
+    "total": 4246946,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Minh Ngo",
+      "phone": "0961560440",
+      "addressLine1": "118 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2024-04-09T20:26:41.484Z",
+    "updatedAt": "2024-04-11T20:26:41.484Z",
+    "billingAddress": {
+      "company": "Ngo Holdings",
+      "addressLine1": "128 Business Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Apr 10",
+        "time": "03:26 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Thursday, Apr 11",
+        "time": "03:26 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Friday, Apr 12",
+        "time": "03:26 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Saturday, Apr 13",
+        "time": "03:26 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fab"
+    },
+    "id": "ORD-2024-0012",
+    "customerEmail": "linh.ngo.1@example.com",
+    "items": [
+      {
+        "productId": 11,
+        "name": "Highlands Coffee Gift Box 2025",
+        "sku": "CS-HC-011",
+        "price": 389000,
+        "qty": 1
+      },
+      {
+        "productId": 21,
+        "name": "Phúc Long Ceramic Mug 340ml",
+        "sku": "CM-PL-021",
+        "price": 175000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 564000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 584000,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Linh Ngo",
+      "phone": "0904593166",
+      "addressLine1": "56 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2024-04-11T03:07:19.720Z",
+    "updatedAt": "2024-04-16T03:07:19.720Z",
+    "billingAddress": {
+      "company": "Ngo Holdings",
+      "addressLine1": "31 Business Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Thursday, Apr 11",
+        "time": "10:07 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fac"
+    },
+    "id": "ORD-2024-0013",
+    "customerEmail": "an.truong.20@example.com",
+    "items": [
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 4
+      },
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 1
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 1344000,
+    "shippingFee": 15000,
+    "discount": 39533,
+    "total": 1319467,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "An Truong",
+      "phone": "0907679622",
+      "addressLine1": "187 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2024-04-15T15:30:16.049Z",
+    "updatedAt": "2024-04-20T15:30:16.049Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Apr 15",
+        "time": "10:30 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Apr 16",
+        "time": "10:30 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Wednesday, Apr 17",
+        "time": "10:30 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Thursday, Apr 18",
+        "time": "10:30 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fad"
+    },
+    "id": "ORD-2024-0014",
+    "customerEmail": "hanh.nguyen.3@example.com",
+    "items": [
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 1
+      },
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 447000,
+    "shippingFee": 15000,
+    "discount": 13342,
+    "total": 448658,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hanh Nguyen",
+      "phone": "0928126980",
+      "addressLine1": "190 Ba Dinh Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "createdAt": "2024-04-17T21:03:11.978Z",
+    "updatedAt": "2024-04-22T21:03:11.978Z",
+    "billingAddress": {
+      "company": "Nguyen Holdings",
+      "addressLine1": "22 Business Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Thursday, Apr 18",
+        "time": "04:03 AM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Friday, Apr 19",
+        "time": "04:03 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fae"
+    },
+    "id": "ORD-2024-0015",
+    "customerEmail": "binh.nguyen.17@example.com",
+    "items": [
+      {
+        "productId": 14,
+        "name": "Don Pablo Whiskey Infused Coffee Gift Set",
+        "sku": "CS-PL-014",
+        "price": 289000,
+        "qty": 4
+      },
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 3
+      },
+      {
+        "productId": 6,
+        "name": "Phúc Long Arabica Culi",
+        "sku": "RC-PL-006",
+        "price": 175000,
+        "qty": 1
+      },
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 2273000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 2288000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Binh Nguyen",
+      "phone": "0967359867",
+      "addressLine1": "160 Ngo Quyen Street",
+      "district": "Ngo Quyen",
+      "city": "Hai Phong",
+      "provinceCode": "HP",
+      "country": "VN"
+    },
+    "createdAt": "2024-04-21T11:16:20.125Z",
+    "updatedAt": "2024-04-25T11:16:20.125Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, Apr 21",
+        "time": "06:16 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Monday, Apr 22",
+        "time": "06:16 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Tuesday, Apr 23",
+        "time": "06:16 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452faf"
+    },
+    "id": "ORD-2024-0016",
+    "customerEmail": "hieu.bui.18@example.com",
+    "items": [
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 2
+      },
+      {
+        "productId": 14,
+        "name": "Don Pablo Whiskey Infused Coffee Gift Set",
+        "sku": "CS-PL-014",
+        "price": 289000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 1534000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1564000,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hieu Bui",
+      "phone": "0919950614",
+      "addressLine1": "51 Quy Nhon Street",
+      "district": "Quy Nhon",
+      "city": "Quy Nhon",
+      "provinceCode": "BD",
+      "country": "VN"
+    },
+    "createdAt": "2024-05-04T11:00:16.722Z",
+    "updatedAt": "2024-05-05T11:00:16.722Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, May 4",
+        "time": "06:00 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Sunday, May 5",
+        "time": "06:00 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fb0"
+    },
+    "id": "ORD-2024-0017",
+    "customerEmail": "huong.dang.19@example.com",
+    "items": [
+      {
+        "productId": 10,
+        "name": "Trung Nguyên Legend Gift Set",
+        "sku": "CS-TN-010",
+        "price": 499000,
+        "qty": 3
+      },
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 2064000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 2079000,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Huong Dang",
+      "phone": "0999724104",
+      "addressLine1": "81 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2024-05-10T10:07:01.757Z",
+    "updatedAt": "2024-05-12T10:07:01.757Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, May 10",
+        "time": "05:07 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fb1"
+    },
+    "id": "ORD-2024-0018",
+    "customerEmail": "minh.ngo.26@example.com",
+    "items": [
+      {
+        "productId": 25,
+        "name": "Trung Nguyên Legend Stainless Steel Phin Filter 170ml",
+        "sku": "MG-TN-025",
+        "price": 189000,
+        "qty": 4
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 1323000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1353000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Minh Ngo",
+      "phone": "0961560440",
+      "addressLine1": "118 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2024-05-12T16:35:43.132Z",
+    "updatedAt": "2024-05-18T16:35:43.132Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, May 12",
+        "time": "11:35 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Monday, May 13",
+        "time": "11:35 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Tuesday, May 14",
+        "time": "11:35 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fb2"
+    },
+    "id": "ORD-2024-0019",
+    "customerEmail": "xuan.hoang.13@example.com",
+    "items": [
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 3
+      },
+      {
+        "productId": 2,
+        "name": "Trung Nguyên Legend Arabica Cầu Đất",
+        "sku": "RC-TN-002",
+        "price": 165000,
+        "qty": 1
+      },
+      {
+        "productId": 16,
+        "name": "Coffee Christmas Gifts Set",
+        "sku": "CS-TCH-016",
+        "price": 329000,
+        "qty": 3
+      },
+      {
+        "productId": 30,
+        "name": "Hand Coffee Grinder",
+        "sku": "MG-TCH-030",
+        "price": 895000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 4404000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 4404000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Xuan Hoang",
+      "phone": "0972932316",
+      "addressLine1": "207 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2024-05-17T05:12:54.767Z",
+    "updatedAt": "2024-05-23T05:12:54.767Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, May 17",
+        "time": "12:12 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Saturday, May 18",
+        "time": "12:12 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Sunday, May 19",
+        "time": "12:12 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fb3"
+    },
+    "id": "ORD-2024-0020",
+    "customerEmail": "an.truong.20@example.com",
+    "items": [
+      {
+        "productId": 2,
+        "name": "Trung Nguyên Legend Arabica Cầu Đất",
+        "sku": "RC-TN-002",
+        "price": 165000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 165000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 180000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "An Truong",
+      "phone": "0907679622",
+      "addressLine1": "187 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2024-05-28T02:00:14.083Z",
+    "updatedAt": "2024-05-28T02:00:14.083Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, May 28",
+        "time": "09:00 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, May 29",
+        "time": "09:00 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, May 30",
+        "time": "09:00 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fb4"
+    },
+    "id": "ORD-2024-0021",
+    "customerEmail": "dao.do.2@example.com",
+    "items": [
+      {
+        "productId": 19,
+        "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+        "sku": "CM-HC-019",
+        "price": 159000,
+        "qty": 1
+      },
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 1
+      },
+      {
+        "productId": 10,
+        "name": "Trung Nguyên Legend Gift Set",
+        "sku": "CS-TN-010",
+        "price": 499000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 2584000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 2614000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Do",
+      "phone": "0928510599",
+      "addressLine1": "34 Bien Hoa Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "createdAt": "2024-05-31T00:46:26.750Z",
+    "updatedAt": "2024-06-06T00:46:26.750Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, May 31",
+        "time": "07:46 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Saturday, Jun 1",
+        "time": "07:46 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Sunday, Jun 2",
+        "time": "07:46 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Monday, Jun 3",
+        "time": "07:46 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Tuesday, Jun 4",
+        "time": "07:46 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fb5"
+    },
+    "id": "ORD-2024-0022",
+    "customerEmail": "khanh.vo.24@example.com",
+    "items": [
+      {
+        "productId": 19,
+        "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+        "sku": "CM-HC-019",
+        "price": 159000,
+        "qty": 3
+      },
+      {
+        "productId": 15,
+        "name": "The Coffee House Gift Box",
+        "sku": "CS-TCH-015",
+        "price": 475000,
+        "qty": 2
+      },
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 3
+      },
+      {
+        "productId": 5,
+        "name": "Phúc Long Signature Robusta",
+        "sku": "RC-PL-005",
+        "price": 99000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 2813000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 2813000,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Khanh Vo",
+      "phone": "0964720996",
+      "addressLine1": "197 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2024-06-04T13:22:24.107Z",
+    "updatedAt": "2024-06-08T13:22:24.107Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Jun 4",
+        "time": "08:22 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Wednesday, Jun 5",
+        "time": "08:22 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fb6"
+    },
+    "id": "ORD-2024-0023",
+    "customerEmail": "hanh.nguyen.3@example.com",
+    "items": [
+      {
+        "productId": 1,
+        "name": "Trung Nguyên Legend Culi Robusta",
+        "sku": "RC-TN-001",
+        "price": 119000,
+        "qty": 2
+      },
+      {
+        "productId": 30,
+        "name": "Hand Coffee Grinder",
+        "sku": "MG-TCH-030",
+        "price": 895000,
+        "qty": 1
+      },
+      {
+        "productId": 23,
+        "name": "The Coffee House Go Green Insulated Tumbler 480ml",
+        "sku": "CM-TCH-023",
+        "price": 315000,
+        "qty": 1
+      },
+      {
+        "productId": 8,
+        "name": "Guru 3 Blend Cold Brew - Strong Cold",
+        "sku": "RC-TCH-008",
+        "price": 125000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 1823000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1853000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hanh Nguyen",
+      "phone": "0928126980",
+      "addressLine1": "190 Ba Dinh Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "createdAt": "2024-06-15T03:16:34.844Z",
+    "updatedAt": "2024-06-18T03:16:34.844Z",
+    "billingAddress": {
+      "company": "Nguyen Holdings",
+      "addressLine1": "26 Business Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Jun 15",
+        "time": "10:16 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, Jun 16",
+        "time": "10:16 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Monday, Jun 17",
+        "time": "10:16 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Tuesday, Jun 18",
+        "time": "10:16 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Wednesday, Jun 19",
+        "time": "10:16 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fb7"
+    },
+    "id": "ORD-2024-0024",
+    "customerEmail": "thao.pham.6@example.com",
+    "items": [
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 1
+      },
+      {
+        "productId": 1,
+        "name": "Trung Nguyên Legend Culi Robusta",
+        "sku": "RC-TN-001",
+        "price": 119000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 653000,
+    "shippingFee": 20000,
+    "discount": 69549,
+    "total": 603451,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Thao Pham",
+      "phone": "0925590188",
+      "addressLine1": "140 Nha Trang Street",
+      "district": "Nha Trang",
+      "city": "Nha Trang",
+      "provinceCode": "KH",
+      "country": "VN"
+    },
+    "createdAt": "2024-06-16T12:51:53.508Z",
+    "updatedAt": "2024-06-20T12:51:53.508Z",
+    "billingAddress": {
+      "company": "Pham Holdings",
+      "addressLine1": "94 Business Street",
+      "district": "Nha Trang",
+      "city": "Nha Trang",
+      "provinceCode": "KH",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, Jun 16",
+        "time": "07:51 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Monday, Jun 17",
+        "time": "07:51 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Tuesday, Jun 18",
+        "time": "07:51 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Wednesday, Jun 19",
+        "time": "07:51 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fb8"
+    },
+    "id": "ORD-2024-0025",
+    "customerEmail": "dao.do.2@example.com",
+    "items": [
+      {
+        "productId": 19,
+        "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+        "sku": "CM-HC-019",
+        "price": 159000,
+        "qty": 3
+      },
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 1
+      },
+      {
+        "productId": 2,
+        "name": "Trung Nguyên Legend Arabica Cầu Đất",
+        "sku": "RC-TN-002",
+        "price": 165000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 1101000,
+    "shippingFee": 15000,
+    "discount": 23234,
+    "total": 1092766,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Do",
+      "phone": "0928510599",
+      "addressLine1": "34 Bien Hoa Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "createdAt": "2024-06-16T15:37:51.929Z",
+    "updatedAt": "2024-06-23T15:37:51.929Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, Jun 16",
+        "time": "10:37 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Monday, Jun 17",
+        "time": "10:37 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Tuesday, Jun 18",
+        "time": "10:37 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Wednesday, Jun 19",
+        "time": "10:37 PM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Thursday, Jun 20",
+        "time": "10:37 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fb9"
+    },
+    "id": "ORD-2024-0026",
+    "customerEmail": "tam.dinh.14@example.com",
+    "items": [
+      {
+        "productId": 10,
+        "name": "Trung Nguyên Legend Gift Set",
+        "sku": "CS-TN-010",
+        "price": 499000,
+        "qty": 2
+      },
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 1
+      },
+      {
+        "productId": 27,
+        "name": "Highlands Coffee Aluminum Phin Filter 150ml",
+        "sku": "MG-HC-027",
+        "price": 129000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 1699000,
+    "shippingFee": 30000,
+    "discount": 19079,
+    "total": 1709921,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Tam Dinh",
+      "phone": "0983682574",
+      "addressLine1": "247 Nha Trang Street",
+      "district": "Nha Trang",
+      "city": "Nha Trang",
+      "provinceCode": "KH",
+      "country": "VN"
+    },
+    "createdAt": "2024-06-25T15:18:08.483Z",
+    "updatedAt": "2024-07-02T15:18:08.483Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Jun 25",
+        "time": "10:18 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Jun 26",
+        "time": "10:18 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Jun 27",
+        "time": "10:18 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Friday, Jun 28",
+        "time": "10:18 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fba"
+    },
+    "id": "ORD-2024-0027",
+    "customerEmail": "khanh.vo.24@example.com",
+    "items": [
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 2
+      },
+      {
+        "productId": 5,
+        "name": "Phúc Long Signature Robusta",
+        "sku": "RC-PL-005",
+        "price": 99000,
+        "qty": 3
+      },
+      {
+        "productId": 30,
+        "name": "Hand Coffee Grinder",
+        "sku": "MG-TCH-030",
+        "price": 895000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 4135000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 4150000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Khanh Vo",
+      "phone": "0964720996",
+      "addressLine1": "197 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2024-07-01T08:37:52.864Z",
+    "updatedAt": "2024-07-02T08:37:52.864Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Jul 1",
+        "time": "03:37 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Jul 2",
+        "time": "03:37 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Wednesday, Jul 3",
+        "time": "03:37 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Thursday, Jul 4",
+        "time": "03:37 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fbb"
+    },
+    "id": "ORD-2024-0028",
+    "customerEmail": "an.truong.20@example.com",
+    "items": [
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 2
+      },
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 3
+      },
+      {
+        "productId": 8,
+        "name": "Guru 3 Blend Cold Brew - Strong Cold",
+        "sku": "RC-TCH-008",
+        "price": 125000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 1140000,
+    "shippingFee": 20000,
+    "discount": 167660,
+    "total": 992340,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "An Truong",
+      "phone": "0907679622",
+      "addressLine1": "187 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2024-07-02T20:12:01.328Z",
+    "updatedAt": "2024-07-05T20:12:01.328Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Jul 3",
+        "time": "03:12 AM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Thursday, Jul 4",
+        "time": "03:12 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fbc"
+    },
+    "id": "ORD-2024-0029",
+    "customerEmail": "huong.truong.30@example.com",
+    "items": [
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 4
+      },
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 3
+      },
+      {
+        "productId": 28,
+        "name": "Philips EP2221/40 Espresso Machine",
+        "sku": "MG-HC-028",
+        "price": 245000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 3696000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 3716000,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Huong Truong",
+      "phone": "0942313131",
+      "addressLine1": "168 District 1 Street",
+      "district": "District 1",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2024-07-05T05:39:08.669Z",
+    "updatedAt": "2024-07-12T05:39:08.669Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Jul 5",
+        "time": "12:39 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fbd"
+    },
+    "id": "ORD-2024-0030",
+    "customerEmail": "dao.do.2@example.com",
+    "items": [
+      {
+        "productId": 7,
+        "name": "The Coffee House - Original Roasted Coffee",
+        "sku": "RC-TCH-007",
+        "price": 145000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 580000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 595000,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Do",
+      "phone": "0928510599",
+      "addressLine1": "34 Bien Hoa Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "createdAt": "2024-07-08T07:03:33.502Z",
+    "updatedAt": "2024-07-09T07:03:33.502Z",
+    "billingAddress": {
+      "company": "Do Holdings",
+      "addressLine1": "101 Business Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Jul 8",
+        "time": "02:03 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Tuesday, Jul 9",
+        "time": "02:03 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fbe"
+    },
+    "id": "ORD-2024-0031",
+    "customerEmail": "linh.ngo.1@example.com",
+    "items": [
+      {
+        "productId": 8,
+        "name": "Guru 3 Blend Cold Brew - Strong Cold",
+        "sku": "RC-TCH-008",
+        "price": 125000,
+        "qty": 2
+      },
+      {
+        "productId": 6,
+        "name": "Phúc Long Arabica Culi",
+        "sku": "RC-PL-006",
+        "price": 175000,
+        "qty": 3
+      },
+      {
+        "productId": 16,
+        "name": "Coffee Christmas Gifts Set",
+        "sku": "CS-TCH-016",
+        "price": 329000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 1433000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1463000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Linh Ngo",
+      "phone": "0904593166",
+      "addressLine1": "56 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2024-07-13T16:31:54.807Z",
+    "updatedAt": "2024-07-18T16:31:54.807Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Jul 13",
+        "time": "11:31 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, Jul 14",
+        "time": "11:31 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Monday, Jul 15",
+        "time": "11:31 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fbf"
+    },
+    "id": "ORD-2024-0032",
+    "customerEmail": "hanh.nguyen.3@example.com",
+    "items": [
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 1
+      },
+      {
+        "productId": 2,
+        "name": "Trung Nguyên Legend Arabica Cầu Đất",
+        "sku": "RC-TN-002",
+        "price": 165000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 624000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 644000,
+    "currency": "VND",
+    "status": "processing",
+    "paymentStatus": "pending",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hanh Nguyen",
+      "phone": "0928126980",
+      "addressLine1": "190 Ba Dinh Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "createdAt": "2024-07-20T03:37:17.084Z",
+    "updatedAt": "2024-07-24T03:37:17.084Z",
+    "billingAddress": {
+      "company": "Nguyen Holdings",
+      "addressLine1": "37 Business Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Jul 20",
+        "time": "10:37 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, Jul 21",
+        "time": "10:37 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fc0"
+    },
+    "id": "ORD-2024-0033",
+    "customerEmail": "tu.dinh.21@example.com",
+    "items": [
+      {
+        "productId": 16,
+        "name": "Coffee Christmas Gifts Set",
+        "sku": "CS-TCH-016",
+        "price": 329000,
+        "qty": 1
+      },
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 3
+      },
+      {
+        "productId": 28,
+        "name": "Philips EP2221/40 Espresso Machine",
+        "sku": "MG-HC-028",
+        "price": 245000,
+        "qty": 2
+      },
+      {
+        "productId": 22,
+        "name": "Phúc Long Insulated Bottle 600ml",
+        "sku": "CM-PL-022",
+        "price": 329000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 2193000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 2213000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Tu Dinh",
+      "phone": "0905343180",
+      "addressLine1": "235 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2024-08-05T05:22:55.212Z",
+    "updatedAt": "2024-08-07T05:22:55.212Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Aug 5",
+        "time": "12:22 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Aug 6",
+        "time": "12:22 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Wednesday, Aug 7",
+        "time": "12:22 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Thursday, Aug 8",
+        "time": "12:22 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fc1"
+    },
+    "id": "ORD-2024-0034",
+    "customerEmail": "tam.dinh.14@example.com",
+    "items": [
+      {
+        "productId": 25,
+        "name": "Trung Nguyên Legend Stainless Steel Phin Filter 170ml",
+        "sku": "MG-TN-025",
+        "price": 189000,
+        "qty": 2
+      },
+      {
+        "productId": 19,
+        "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+        "sku": "CM-HC-019",
+        "price": 159000,
+        "qty": 2
+      },
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 1452000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1482000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Tam Dinh",
+      "phone": "0983682574",
+      "addressLine1": "247 Nha Trang Street",
+      "district": "Nha Trang",
+      "city": "Nha Trang",
+      "provinceCode": "KH",
+      "country": "VN"
+    },
+    "createdAt": "2024-08-18T05:54:37.371Z",
+    "updatedAt": "2024-08-20T05:54:37.371Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, Aug 18",
+        "time": "12:54 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Monday, Aug 19",
+        "time": "12:54 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Tuesday, Aug 20",
+        "time": "12:54 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Wednesday, Aug 21",
+        "time": "12:54 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fc2"
+    },
+    "id": "ORD-2024-0035",
+    "customerEmail": "tu.dinh.21@example.com",
+    "items": [
+      {
+        "productId": 10,
+        "name": "Trung Nguyên Legend Gift Set",
+        "sku": "CS-TN-010",
+        "price": 499000,
+        "qty": 4
+      },
+      {
+        "productId": 8,
+        "name": "Guru 3 Blend Cold Brew - Strong Cold",
+        "sku": "RC-TCH-008",
+        "price": 125000,
+        "qty": 2
+      },
+      {
+        "productId": 22,
+        "name": "Phúc Long Insulated Bottle 600ml",
+        "sku": "CM-PL-022",
+        "price": 329000,
+        "qty": 2
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 3660000,
+    "shippingFee": 30000,
+    "discount": 98423,
+    "total": 3591577,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Tu Dinh",
+      "phone": "0905343180",
+      "addressLine1": "235 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2024-08-22T15:28:36.331Z",
+    "updatedAt": "2024-08-29T15:28:36.331Z",
+    "billingAddress": {
+      "company": "Dinh Holdings",
+      "addressLine1": "174 Business Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Thursday, Aug 22",
+        "time": "10:28 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Friday, Aug 23",
+        "time": "10:28 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fc3"
+    },
+    "id": "ORD-2024-0036",
+    "customerEmail": "yen.vo.15@example.com",
+    "items": [
+      {
+        "productId": 26,
+        "name": "Paper Coffee Filters (100 pcs)",
+        "sku": "MG-TN-026",
+        "price": 59000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 59000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 79000,
+    "currency": "VND",
+    "status": "processing",
+    "paymentStatus": "pending",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Yen Vo",
+      "phone": "0997442946",
+      "addressLine1": "69 Cau Giay Street",
+      "district": "Cau Giay",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "createdAt": "2024-09-01T20:39:28.695Z",
+    "updatedAt": "2024-09-05T20:39:28.695Z",
+    "billingAddress": {
+      "company": "Vo Holdings",
+      "addressLine1": "186 Business Street",
+      "district": "Cau Giay",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Sep 2",
+        "time": "03:39 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Sep 3",
+        "time": "03:39 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fc4"
+    },
+    "id": "ORD-2024-0037",
+    "customerEmail": "yen.vo.15@example.com",
+    "items": [
+      {
+        "productId": 15,
+        "name": "The Coffee House Gift Box",
+        "sku": "CS-TCH-015",
+        "price": 475000,
+        "qty": 4
+      },
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 4
+      },
+      {
+        "productId": 1,
+        "name": "Trung Nguyên Legend Culi Robusta",
+        "sku": "RC-TN-001",
+        "price": 119000,
+        "qty": 4
+      },
+      {
+        "productId": 8,
+        "name": "Guru 3 Blend Cold Brew - Strong Cold",
+        "sku": "RC-TCH-008",
+        "price": 125000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 4467000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 4497000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Yen Vo",
+      "phone": "0997442946",
+      "addressLine1": "69 Cau Giay Street",
+      "district": "Cau Giay",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "createdAt": "2024-09-03T05:07:01.262Z",
+    "updatedAt": "2024-09-08T05:07:01.262Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Sep 3",
+        "time": "12:07 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Sep 4",
+        "time": "12:07 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Sep 5",
+        "time": "12:07 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fc5"
+    },
+    "id": "ORD-2024-0038",
+    "customerEmail": "son.le.25@example.com",
+    "items": [
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 4
+      },
+      {
+        "productId": 21,
+        "name": "Phúc Long Ceramic Mug 340ml",
+        "sku": "CM-PL-021",
+        "price": 175000,
+        "qty": 1
+      },
+      {
+        "productId": 30,
+        "name": "Hand Coffee Grinder",
+        "sku": "MG-TCH-030",
+        "price": 895000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 3376000,
+    "shippingFee": 20000,
+    "discount": 239616,
+    "total": 3156384,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Son Le",
+      "phone": "0937645144",
+      "addressLine1": "87 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2024-09-05T00:31:59.904Z",
+    "updatedAt": "2024-09-09T00:31:59.904Z",
+    "billingAddress": {
+      "company": "Le Holdings",
+      "addressLine1": "175 Business Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Thursday, Sep 5",
+        "time": "07:31 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Friday, Sep 6",
+        "time": "07:31 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Saturday, Sep 7",
+        "time": "07:31 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Sunday, Sep 8",
+        "time": "07:31 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Monday, Sep 9",
+        "time": "07:31 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fc6"
+    },
+    "id": "ORD-2024-0039",
+    "customerEmail": "linh.dang.28@example.com",
+    "items": [
+      {
+        "productId": 28,
+        "name": "Philips EP2221/40 Espresso Machine",
+        "sku": "MG-HC-028",
+        "price": 245000,
+        "qty": 2
+      },
+      {
+        "productId": 26,
+        "name": "Paper Coffee Filters (100 pcs)",
+        "sku": "MG-TN-026",
+        "price": 59000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 726000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 746000,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Linh Dang",
+      "phone": "0981162624",
+      "addressLine1": "160 Bien Hoa Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "createdAt": "2024-09-06T05:14:41.898Z",
+    "updatedAt": "2024-09-07T05:14:41.898Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Sep 6",
+        "time": "12:14 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Saturday, Sep 7",
+        "time": "12:14 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fc7"
+    },
+    "id": "ORD-2024-0040",
+    "customerEmail": "binh.nguyen.17@example.com",
+    "items": [
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 1
+      },
+      {
+        "productId": 2,
+        "name": "Trung Nguyên Legend Arabica Cầu Đất",
+        "sku": "RC-TN-002",
+        "price": 165000,
+        "qty": 2
+      },
+      {
+        "productId": 5,
+        "name": "Phúc Long Signature Robusta",
+        "sku": "RC-PL-005",
+        "price": 99000,
+        "qty": 3
+      },
+      {
+        "productId": 9,
+        "name": "Trung Nguyên Legend G7 Full Set",
+        "sku": "CS-TN-009",
+        "price": 259000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 1833000,
+    "shippingFee": 15000,
+    "discount": 13802,
+    "total": 1834198,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Binh Nguyen",
+      "phone": "0967359867",
+      "addressLine1": "160 Ngo Quyen Street",
+      "district": "Ngo Quyen",
+      "city": "Hai Phong",
+      "provinceCode": "HP",
+      "country": "VN"
+    },
+    "createdAt": "2024-09-07T07:27:56.169Z",
+    "updatedAt": "2024-09-10T07:27:56.169Z",
+    "billingAddress": {
+      "company": "Nguyen Holdings",
+      "addressLine1": "62 Business Street",
+      "district": "Ngo Quyen",
+      "city": "Hai Phong",
+      "provinceCode": "HP",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Sep 7",
+        "time": "02:27 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, Sep 8",
+        "time": "02:27 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Monday, Sep 9",
+        "time": "02:27 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Tuesday, Sep 10",
+        "time": "02:27 PM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Wednesday, Sep 11",
+        "time": "02:27 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fc8"
+    },
+    "id": "ORD-2024-0041",
+    "customerEmail": "hieu.bui.18@example.com",
+    "items": [
+      {
+        "productId": 5,
+        "name": "Phúc Long Signature Robusta",
+        "sku": "RC-PL-005",
+        "price": 99000,
+        "qty": 1
+      },
+      {
+        "productId": 6,
+        "name": "Phúc Long Arabica Culi",
+        "sku": "RC-PL-006",
+        "price": 175000,
+        "qty": 1
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 1030000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 1050000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hieu Bui",
+      "phone": "0919950614",
+      "addressLine1": "51 Quy Nhon Street",
+      "district": "Quy Nhon",
+      "city": "Quy Nhon",
+      "provinceCode": "BD",
+      "country": "VN"
+    },
+    "createdAt": "2024-09-15T19:18:34.774Z",
+    "updatedAt": "2024-09-18T19:18:34.774Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Sep 16",
+        "time": "02:18 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Sep 17",
+        "time": "02:18 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Wednesday, Sep 18",
+        "time": "02:18 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Thursday, Sep 19",
+        "time": "02:18 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fc9"
+    },
+    "id": "ORD-2024-0042",
+    "customerEmail": "binh.nguyen.17@example.com",
+    "items": [
+      {
+        "productId": 11,
+        "name": "Highlands Coffee Gift Box 2025",
+        "sku": "CS-HC-011",
+        "price": 389000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 1167000,
+    "shippingFee": 20000,
+    "discount": 28320,
+    "total": 1158680,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Binh Nguyen",
+      "phone": "0967359867",
+      "addressLine1": "160 Ngo Quyen Street",
+      "district": "Ngo Quyen",
+      "city": "Hai Phong",
+      "provinceCode": "HP",
+      "country": "VN"
+    },
+    "createdAt": "2024-09-20T01:16:43.444Z",
+    "updatedAt": "2024-09-20T01:16:43.444Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Sep 20",
+        "time": "08:16 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fca"
+    },
+    "id": "ORD-2024-0043",
+    "customerEmail": "xuan.duong.11@example.com",
+    "items": [
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 1
+      },
+      {
+        "productId": 21,
+        "name": "Phúc Long Ceramic Mug 340ml",
+        "sku": "CM-PL-021",
+        "price": 175000,
+        "qty": 1
+      },
+      {
+        "productId": 23,
+        "name": "The Coffee House Go Green Insulated Tumbler 480ml",
+        "sku": "CM-TCH-023",
+        "price": 315000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 919000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 919000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Xuan Duong",
+      "phone": "0944942732",
+      "addressLine1": "54 Ngo Quyen Street",
+      "district": "Ngo Quyen",
+      "city": "Hai Phong",
+      "provinceCode": "HP",
+      "country": "VN"
+    },
+    "createdAt": "2024-09-22T10:44:12.070Z",
+    "updatedAt": "2024-09-22T10:44:12.070Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, Sep 22",
+        "time": "05:44 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Monday, Sep 23",
+        "time": "05:44 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Tuesday, Sep 24",
+        "time": "05:44 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fcb"
+    },
+    "id": "ORD-2024-0044",
+    "customerEmail": "son.le.25@example.com",
+    "items": [
+      {
+        "productId": 15,
+        "name": "The Coffee House Gift Box",
+        "sku": "CS-TCH-015",
+        "price": 475000,
+        "qty": 4
+      },
+      {
+        "productId": 5,
+        "name": "Phúc Long Signature Robusta",
+        "sku": "RC-PL-005",
+        "price": 99000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 1999000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 2014000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Son Le",
+      "phone": "0937645144",
+      "addressLine1": "87 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2024-09-30T05:30:23.336Z",
+    "updatedAt": "2024-10-03T05:30:23.336Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Sep 30",
+        "time": "12:30 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Oct 1",
+        "time": "12:30 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Wednesday, Oct 2",
+        "time": "12:30 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Thursday, Oct 3",
+        "time": "12:30 PM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Friday, Oct 4",
+        "time": "12:30 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fcc"
+    },
+    "id": "ORD-2024-0045",
+    "customerEmail": "thao.pham.6@example.com",
+    "items": [
+      {
+        "productId": 10,
+        "name": "Trung Nguyên Legend Gift Set",
+        "sku": "CS-TN-010",
+        "price": 499000,
+        "qty": 4
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 4
+      },
+      {
+        "productId": 26,
+        "name": "Paper Coffee Filters (100 pcs)",
+        "sku": "MG-TN-026",
+        "price": 59000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 2988000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 3018000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Thao Pham",
+      "phone": "0925590188",
+      "addressLine1": "140 Nha Trang Street",
+      "district": "Nha Trang",
+      "city": "Nha Trang",
+      "provinceCode": "KH",
+      "country": "VN"
+    },
+    "createdAt": "2024-09-30T11:53:43.504Z",
+    "updatedAt": "2024-10-05T11:53:43.504Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Sep 30",
+        "time": "06:53 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Oct 1",
+        "time": "06:53 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Wednesday, Oct 2",
+        "time": "06:53 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Thursday, Oct 3",
+        "time": "06:53 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fcd"
+    },
+    "id": "ORD-2024-0046",
+    "customerEmail": "hieu.bui.18@example.com",
+    "items": [
+      {
+        "productId": 1,
+        "name": "Trung Nguyên Legend Culi Robusta",
+        "sku": "RC-TN-001",
+        "price": 119000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 357000,
+    "shippingFee": 20000,
+    "discount": 41596,
+    "total": 335404,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hieu Bui",
+      "phone": "0919950614",
+      "addressLine1": "51 Quy Nhon Street",
+      "district": "Quy Nhon",
+      "city": "Quy Nhon",
+      "provinceCode": "BD",
+      "country": "VN"
+    },
+    "createdAt": "2024-10-03T21:20:28.999Z",
+    "updatedAt": "2024-10-06T21:20:28.999Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Oct 4",
+        "time": "04:20 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Saturday, Oct 5",
+        "time": "04:20 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Sunday, Oct 6",
+        "time": "04:20 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Monday, Oct 7",
+        "time": "04:20 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fce"
+    },
+    "id": "ORD-2024-0047",
+    "customerEmail": "an.truong.20@example.com",
+    "items": [
+      {
+        "productId": 28,
+        "name": "Philips EP2221/40 Espresso Machine",
+        "sku": "MG-HC-028",
+        "price": 245000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 980000,
+    "shippingFee": 20000,
+    "discount": 45388,
+    "total": 954612,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "An Truong",
+      "phone": "0907679622",
+      "addressLine1": "187 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2024-10-07T20:15:42.321Z",
+    "updatedAt": "2024-10-10T20:15:42.321Z",
+    "billingAddress": {
+      "company": "Truong Holdings",
+      "addressLine1": "80 Business Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Oct 8",
+        "time": "03:15 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Oct 9",
+        "time": "03:15 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Oct 10",
+        "time": "03:15 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fcf"
+    },
+    "id": "ORD-2024-0048",
+    "customerEmail": "binh.truong.16@example.com",
+    "items": [
+      {
+        "productId": 21,
+        "name": "Phúc Long Ceramic Mug 340ml",
+        "sku": "CM-PL-021",
+        "price": 175000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 175000,
+    "shippingFee": 30000,
+    "discount": 5905,
+    "total": 199095,
+    "currency": "VND",
+    "status": "processing",
+    "paymentStatus": "pending",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Binh Truong",
+      "phone": "0902499711",
+      "addressLine1": "92 District 1 Street",
+      "district": "District 1",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2024-11-06T09:56:56.898Z",
+    "updatedAt": "2024-11-13T09:56:56.898Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Nov 6",
+        "time": "04:56 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Thursday, Nov 7",
+        "time": "04:56 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fd0"
+    },
+    "id": "ORD-2024-0049",
+    "customerEmail": "dao.truong.9@example.com",
+    "items": [
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 1
+      },
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 3
+      },
+      {
+        "productId": 28,
+        "name": "Philips EP2221/40 Espresso Machine",
+        "sku": "MG-HC-028",
+        "price": 245000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 1724000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 1724000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Truong",
+      "phone": "0973527493",
+      "addressLine1": "44 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2024-11-09T03:16:49.520Z",
+    "updatedAt": "2024-11-15T03:16:49.520Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Nov 9",
+        "time": "10:16 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, Nov 10",
+        "time": "10:16 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Monday, Nov 11",
+        "time": "10:16 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fd1"
+    },
+    "id": "ORD-2024-0050",
+    "customerEmail": "hanh.nguyen.3@example.com",
+    "items": [
+      {
+        "productId": 22,
+        "name": "Phúc Long Insulated Bottle 600ml",
+        "sku": "CM-PL-022",
+        "price": 329000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 987000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 1002000,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hanh Nguyen",
+      "phone": "0928126980",
+      "addressLine1": "190 Ba Dinh Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "createdAt": "2024-11-29T05:29:29.792Z",
+    "updatedAt": "2024-12-06T05:29:29.792Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Nov 29",
+        "time": "12:29 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fd2"
+    },
+    "id": "ORD-2024-0051",
+    "customerEmail": "tu.pham.29@example.com",
+    "items": [
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 1
+      },
+      {
+        "productId": 6,
+        "name": "Phúc Long Arabica Culi",
+        "sku": "RC-PL-006",
+        "price": 175000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 885000,
+    "shippingFee": 15000,
+    "discount": 126333,
+    "total": 773667,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Tu Pham",
+      "phone": "0928049147",
+      "addressLine1": "80 Bien Hoa Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "createdAt": "2024-12-09T21:09:02.135Z",
+    "updatedAt": "2024-12-11T21:09:02.135Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Dec 10",
+        "time": "04:09 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Dec 11",
+        "time": "04:09 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Dec 12",
+        "time": "04:09 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Friday, Dec 13",
+        "time": "04:09 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Saturday, Dec 14",
+        "time": "04:09 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fd3"
+    },
+    "id": "ORD-2024-0052",
+    "customerEmail": "dao.truong.9@example.com",
+    "items": [
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 189000,
+    "shippingFee": 0,
+    "discount": 13867,
+    "total": 175133,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Truong",
+      "phone": "0973527493",
+      "addressLine1": "44 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2024-12-24T05:49:24.309Z",
+    "updatedAt": "2024-12-29T05:49:24.309Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Dec 24",
+        "time": "12:49 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Wednesday, Dec 25",
+        "time": "12:49 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fd4"
+    },
+    "id": "ORD-2024-0053",
+    "customerEmail": "vy.phan.5@example.com",
+    "items": [
+      {
+        "productId": 3,
+        "name": "Highlands Coffee Culi Blend",
+        "sku": "RC-HC-003",
+        "price": 135000,
+        "qty": 4
+      },
+      {
+        "productId": 10,
+        "name": "Trung Nguyên Legend Gift Set",
+        "sku": "CS-TN-010",
+        "price": 499000,
+        "qty": 1
+      },
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 2
+      },
+      {
+        "productId": 19,
+        "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+        "sku": "CM-HC-019",
+        "price": 159000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 2533000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 2533000,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Vy Phan",
+      "phone": "0974333837",
+      "addressLine1": "211 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2024-12-30T05:45:48.005Z",
+    "updatedAt": "2024-12-30T05:45:48.005Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Dec 30",
+        "time": "12:45 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Tuesday, Dec 31",
+        "time": "12:45 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fd5"
+    },
+    "id": "ORD-2025-0054",
+    "customerEmail": "uyen.vu.12@example.com",
+    "items": [
+      {
+        "productId": 5,
+        "name": "Phúc Long Signature Robusta",
+        "sku": "RC-PL-005",
+        "price": 99000,
+        "qty": 1
+      },
+      {
+        "productId": 7,
+        "name": "The Coffee House - Original Roasted Coffee",
+        "sku": "RC-TCH-007",
+        "price": 145000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 389000,
+    "shippingFee": 30000,
+    "discount": 15000,
+    "total": 404000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Uyen Vu",
+      "phone": "0942202827",
+      "addressLine1": "84 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2025-01-09T21:43:19.058Z",
+    "updatedAt": "2025-01-10T21:43:19.058Z",
+    "billingAddress": {
+      "company": "Vu Holdings",
+      "addressLine1": "65 Business Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Jan 10",
+        "time": "04:43 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Saturday, Jan 11",
+        "time": "04:43 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Sunday, Jan 12",
+        "time": "04:43 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Monday, Jan 13",
+        "time": "04:43 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Tuesday, Jan 14",
+        "time": "04:43 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fd6"
+    },
+    "id": "ORD-2025-0055",
+    "customerEmail": "minh.ngo.26@example.com",
+    "items": [
+      {
+        "productId": 19,
+        "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+        "sku": "CM-HC-019",
+        "price": 159000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 318000,
+    "shippingFee": 20000,
+    "discount": 26816,
+    "total": 311184,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Minh Ngo",
+      "phone": "0961560440",
+      "addressLine1": "118 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2025-01-11T08:45:57.465Z",
+    "updatedAt": "2025-01-11T08:45:57.465Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Jan 11",
+        "time": "03:45 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, Jan 12",
+        "time": "03:45 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Monday, Jan 13",
+        "time": "03:45 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Tuesday, Jan 14",
+        "time": "03:45 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fd7"
+    },
+    "id": "ORD-2025-0056",
+    "customerEmail": "xuan.hoang.13@example.com",
+    "items": [
+      {
+        "productId": 25,
+        "name": "Trung Nguyên Legend Stainless Steel Phin Filter 170ml",
+        "sku": "MG-TN-025",
+        "price": 189000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 189000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 189000,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Xuan Hoang",
+      "phone": "0972932316",
+      "addressLine1": "207 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2025-01-11T10:04:11.248Z",
+    "updatedAt": "2025-01-17T10:04:11.248Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Jan 11",
+        "time": "05:04 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fd8"
+    },
+    "id": "ORD-2025-0057",
+    "customerEmail": "tu.dinh.21@example.com",
+    "items": [
+      {
+        "productId": 26,
+        "name": "Paper Coffee Filters (100 pcs)",
+        "sku": "MG-TN-026",
+        "price": 59000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 59000,
+    "shippingFee": 15000,
+    "discount": 5257,
+    "total": 68743,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Tu Dinh",
+      "phone": "0905343180",
+      "addressLine1": "235 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2025-01-15T03:26:47.755Z",
+    "updatedAt": "2025-01-17T03:26:47.755Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Jan 15",
+        "time": "10:26 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Thursday, Jan 16",
+        "time": "10:26 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Friday, Jan 17",
+        "time": "10:26 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Saturday, Jan 18",
+        "time": "10:26 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Sunday, Jan 19",
+        "time": "10:26 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fd9"
+    },
+    "id": "ORD-2025-0058",
+    "customerEmail": "xuan.hoang.13@example.com",
+    "items": [
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 2
+      },
+      {
+        "productId": 3,
+        "name": "Highlands Coffee Premium Blend",
+        "sku": "RC-HC-003",
+        "price": 135000,
+        "qty": 2
+      },
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 1055000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1085000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Xuan Hoang",
+      "phone": "0972932316",
+      "addressLine1": "207 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2025-01-23T17:50:05.122Z",
+    "updatedAt": "2025-01-28T17:50:05.122Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Jan 24",
+        "time": "12:50 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Saturday, Jan 25",
+        "time": "12:50 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Sunday, Jan 26",
+        "time": "12:50 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Monday, Jan 27",
+        "time": "12:50 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fda"
+    },
+    "id": "ORD-2025-0059",
+    "customerEmail": "vy.phan.5@example.com",
+    "items": [
+      {
+        "productId": 24,
+        "name": "The Coffee House Ceramic Travel Mug",
+        "sku": "CM-TCH-024",
+        "price": 149000,
+        "qty": 1
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 4
+      },
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 2
+      },
+      {
+        "productId": 8,
+        "name": "Guru 3 Blend Cold Brew - Strong Cold",
+        "sku": "RC-TCH-008",
+        "price": 125000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 1533000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 1533000,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Vy Phan",
+      "phone": "0974333837",
+      "addressLine1": "211 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2025-01-24T10:04:34.764Z",
+    "updatedAt": "2025-01-31T10:04:34.764Z",
+    "billingAddress": {
+      "company": "Phan Holdings",
+      "addressLine1": "175 Business Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Jan 24",
+        "time": "05:04 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Saturday, Jan 25",
+        "time": "05:04 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fdb"
+    },
+    "id": "ORD-2025-0060",
+    "customerEmail": "minh.ngo.26@example.com",
+    "items": [
+      {
+        "productId": 14,
+        "name": "Don Pablo Whiskey Infused Coffee Gift Set",
+        "sku": "CS-PL-014",
+        "price": 289000,
+        "qty": 2
+      },
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 4
+      },
+      {
+        "productId": 5,
+        "name": "Phúc Long Signature Robusta",
+        "sku": "RC-PL-005",
+        "price": 99000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 1631000,
+    "shippingFee": 20000,
+    "discount": 95504,
+    "total": 1555496,
+    "currency": "VND",
+    "status": "processing",
+    "paymentStatus": "pending",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Minh Ngo",
+      "phone": "0961560440",
+      "addressLine1": "118 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2025-02-27T15:35:50.900Z",
+    "updatedAt": "2025-03-02T15:35:50.900Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Thursday, Feb 27",
+        "time": "10:35 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Friday, Feb 28",
+        "time": "10:35 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fdc"
+    },
+    "id": "ORD-2025-0061",
+    "customerEmail": "xuan.hoang.13@example.com",
+    "items": [
+      {
+        "productId": 14,
+        "name": "Don Pablo Whiskey Infused Coffee Gift Set",
+        "sku": "CS-PL-014",
+        "price": 289000,
+        "qty": 3
+      },
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 4
+      },
+      {
+        "productId": 15,
+        "name": "The Coffee House Gift Box",
+        "sku": "CS-TCH-015",
+        "price": 475000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 4008000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 4008000,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Xuan Hoang",
+      "phone": "0972932316",
+      "addressLine1": "207 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2025-03-01T04:05:52.812Z",
+    "updatedAt": "2025-03-05T04:05:52.812Z",
+    "billingAddress": {
+      "company": "Hoang Holdings",
+      "addressLine1": "103 Business Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Mar 1",
+        "time": "11:05 AM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Sunday, Mar 2",
+        "time": "11:05 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fdd"
+    },
+    "id": "ORD-2025-0062",
+    "customerEmail": "yen.phan.27@example.com",
+    "items": [
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 3
+      },
+      {
+        "productId": 11,
+        "name": "Highlands Coffee Gift Box 2025",
+        "sku": "CS-HC-011",
+        "price": 389000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 1634000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 1649000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Yen Phan",
+      "phone": "0946495329",
+      "addressLine1": "16 Hue City Street",
+      "district": "Hue City",
+      "city": "Hue",
+      "provinceCode": "TTH",
+      "country": "VN"
+    },
+    "createdAt": "2025-03-13T17:20:56.181Z",
+    "updatedAt": "2025-03-19T17:20:56.181Z",
+    "billingAddress": {
+      "company": "Phan Holdings",
+      "addressLine1": "180 Business Street",
+      "district": "Hue City",
+      "city": "Hue",
+      "provinceCode": "TTH",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Mar 14",
+        "time": "12:20 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Saturday, Mar 15",
+        "time": "12:20 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Sunday, Mar 16",
+        "time": "12:20 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fde"
+    },
+    "id": "ORD-2025-0063",
+    "customerEmail": "nam.do.22@example.com",
+    "items": [
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 1
+      },
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 673000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 688000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Nam Do",
+      "phone": "0927384180",
+      "addressLine1": "52 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2025-03-18T09:10:52.562Z",
+    "updatedAt": "2025-03-21T09:10:52.562Z",
+    "billingAddress": {
+      "company": "Do Holdings",
+      "addressLine1": "144 Business Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Mar 18",
+        "time": "04:10 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Mar 19",
+        "time": "04:10 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Mar 20",
+        "time": "04:10 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Friday, Mar 21",
+        "time": "04:10 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fdf"
+    },
+    "id": "ORD-2025-0064",
+    "customerEmail": "nam.do.22@example.com",
+    "items": [
+      {
+        "productId": 6,
+        "name": "Phúc Long Arabica Culi",
+        "sku": "RC-PL-006",
+        "price": 175000,
+        "qty": 4
+      },
+      {
+        "productId": 16,
+        "name": "Coffee Christmas Gifts Set",
+        "sku": "CS-TCH-016",
+        "price": 329000,
+        "qty": 4
+      },
+      {
+        "productId": 11,
+        "name": "Highlands Coffee Gift Box 2025",
+        "sku": "CS-HC-011",
+        "price": 389000,
+        "qty": 3
+      },
+      {
+        "productId": 7,
+        "name": "The Coffee House - Original Roasted Coffee",
+        "sku": "RC-TCH-007",
+        "price": 145000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 3328000,
+    "shippingFee": 20000,
+    "discount": 470880,
+    "total": 2877120,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Nam Do",
+      "phone": "0927384180",
+      "addressLine1": "52 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2025-03-22T04:16:45.072Z",
+    "updatedAt": "2025-03-25T04:16:45.072Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Mar 22",
+        "time": "11:16 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fe0"
+    },
+    "id": "ORD-2025-0065",
+    "customerEmail": "chi.duong.4@example.com",
+    "items": [
+      {
+        "productId": 24,
+        "name": "The Coffee House Ceramic Travel Mug",
+        "sku": "CM-TCH-024",
+        "price": 149000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 447000,
+    "shippingFee": 30000,
+    "discount": 9460,
+    "total": 467540,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Chi Duong",
+      "phone": "0968641984",
+      "addressLine1": "203 Nha Trang Street",
+      "district": "Nha Trang",
+      "city": "Nha Trang",
+      "provinceCode": "KH",
+      "country": "VN"
+    },
+    "createdAt": "2025-04-08T12:09:09.154Z",
+    "updatedAt": "2025-04-08T12:09:09.154Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Apr 8",
+        "time": "07:09 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Apr 9",
+        "time": "07:09 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Apr 10",
+        "time": "07:09 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Friday, Apr 11",
+        "time": "07:09 PM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Saturday, Apr 12",
+        "time": "07:09 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fe1"
+    },
+    "id": "ORD-2025-0066",
+    "customerEmail": "tam.dinh.14@example.com",
+    "items": [
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 1
+      },
+      {
+        "productId": 2,
+        "name": "Trung Nguyên Legend Arabica Cầu Đất",
+        "sku": "RC-TN-002",
+        "price": 165000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 354000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 354000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Tam Dinh",
+      "phone": "0983682574",
+      "addressLine1": "247 Nha Trang Street",
+      "district": "Nha Trang",
+      "city": "Nha Trang",
+      "provinceCode": "KH",
+      "country": "VN"
+    },
+    "createdAt": "2025-04-12T04:54:15.865Z",
+    "updatedAt": "2025-04-18T04:54:15.865Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Apr 12",
+        "time": "11:54 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, Apr 13",
+        "time": "11:54 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Monday, Apr 14",
+        "time": "11:54 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fe2"
+    },
+    "id": "ORD-2025-0067",
+    "customerEmail": "dao.vo.7@example.com",
+    "items": [
+      {
+        "productId": 8,
+        "name": "Guru 3 Blend Cold Brew - Strong Cold",
+        "sku": "RC-TCH-008",
+        "price": 125000,
+        "qty": 1
+      },
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 1
+      },
+      {
+        "productId": 30,
+        "name": "Hand Coffee Grinder",
+        "sku": "MG-TCH-030",
+        "price": 895000,
+        "qty": 2
+      },
+      {
+        "productId": 25,
+        "name": "Trung Nguyên Legend Stainless Steel Phin Filter 170ml",
+        "sku": "MG-TN-025",
+        "price": 189000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 2671000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 2686000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Vo",
+      "phone": "0989950214",
+      "addressLine1": "195 Hue City Street",
+      "district": "Hue City",
+      "city": "Hue",
+      "provinceCode": "TTH",
+      "country": "VN"
+    },
+    "createdAt": "2025-04-14T20:21:39.723Z",
+    "updatedAt": "2025-04-18T20:21:39.723Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Apr 15",
+        "time": "03:21 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Apr 16",
+        "time": "03:21 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Apr 17",
+        "time": "03:21 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Friday, Apr 18",
+        "time": "03:21 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Saturday, Apr 19",
+        "time": "03:21 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fe3"
+    },
+    "id": "ORD-2025-0068",
+    "customerEmail": "huong.dang.19@example.com",
+    "items": [
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 2
+      },
+      {
+        "productId": 10,
+        "name": "Trung Nguyên Legend Gift Set",
+        "sku": "CS-TN-010",
+        "price": 499000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 1376000,
+    "shippingFee": 20000,
+    "discount": 112375,
+    "total": 1283625,
+    "currency": "VND",
+    "status": "processing",
+    "paymentStatus": "pending",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Huong Dang",
+      "phone": "0999724104",
+      "addressLine1": "81 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2025-04-19T16:15:22.425Z",
+    "updatedAt": "2025-04-23T16:15:22.425Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Apr 19",
+        "time": "11:15 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, Apr 20",
+        "time": "11:15 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fe4"
+    },
+    "id": "ORD-2025-0069",
+    "customerEmail": "vy.phan.5@example.com",
+    "items": [
+      {
+        "productId": 12,
+        "name": "Highlands Coffee Combo Phin",
+        "sku": "CS-HC-012",
+        "price": 329000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 1316000,
+    "shippingFee": 30000,
+    "discount": 101548,
+    "total": 1244452,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Vy Phan",
+      "phone": "0974333837",
+      "addressLine1": "211 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2025-05-18T13:01:32.972Z",
+    "updatedAt": "2025-05-25T13:01:32.972Z",
+    "billingAddress": {
+      "company": "Phan Holdings",
+      "addressLine1": "159 Business Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, May 18",
+        "time": "08:01 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Monday, May 19",
+        "time": "08:01 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Tuesday, May 20",
+        "time": "08:01 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Wednesday, May 21",
+        "time": "08:01 PM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Thursday, May 22",
+        "time": "08:01 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fe5"
+    },
+    "id": "ORD-2025-0070",
+    "customerEmail": "huong.dang.19@example.com",
+    "items": [
+      {
+        "productId": 6,
+        "name": "Phúc Long Arabica Culi",
+        "sku": "RC-PL-006",
+        "price": 175000,
+        "qty": 1
+      },
+      {
+        "productId": 23,
+        "name": "The Coffee House Go Green Insulated Tumbler 480ml",
+        "sku": "CM-TCH-023",
+        "price": 315000,
+        "qty": 2
+      },
+      {
+        "productId": 22,
+        "name": "Phúc Long Insulated Bottle 600ml",
+        "sku": "CM-PL-022",
+        "price": 329000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 1792000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1822000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Huong Dang",
+      "phone": "0999724104",
+      "addressLine1": "81 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2025-05-24T16:04:13.648Z",
+    "updatedAt": "2025-05-27T16:04:13.648Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, May 24",
+        "time": "11:04 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, May 25",
+        "time": "11:04 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Monday, May 26",
+        "time": "11:04 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fe6"
+    },
+    "id": "ORD-2025-0071",
+    "customerEmail": "nam.do.22@example.com",
+    "items": [
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 1
+      },
+      {
+        "productId": 2,
+        "name": "Trung Nguyên Legend Arabica Cầu Đất",
+        "sku": "RC-TN-002",
+        "price": 165000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 845000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 860000,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Nam Do",
+      "phone": "0927384180",
+      "addressLine1": "52 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2025-05-29T13:55:58.802Z",
+    "updatedAt": "2025-06-04T13:55:58.802Z",
+    "billingAddress": {
+      "company": "Do Holdings",
+      "addressLine1": "29 Business Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Thursday, May 29",
+        "time": "08:55 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Friday, May 30",
+        "time": "08:55 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fe7"
+    },
+    "id": "ORD-2025-0072",
+    "customerEmail": "huong.truong.30@example.com",
+    "items": [
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 1
+      },
+      {
+        "productId": 1,
+        "name": "Trung Nguyên Legend Culi Robusta",
+        "sku": "RC-TN-001",
+        "price": 119000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 486000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 501000,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Huong Truong",
+      "phone": "0942313131",
+      "addressLine1": "168 District 1 Street",
+      "district": "District 1",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2025-05-30T05:45:23.443Z",
+    "updatedAt": "2025-05-30T05:45:23.443Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, May 30",
+        "time": "12:45 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fe8"
+    },
+    "id": "ORD-2025-0073",
+    "customerEmail": "tu.pham.29@example.com",
+    "items": [
+      {
+        "productId": 2,
+        "name": "Trung Nguyên Legend Arabica Cầu Đất",
+        "sku": "RC-TN-002",
+        "price": 165000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 660000,
+    "shippingFee": 20000,
+    "discount": 10994,
+    "total": 669006,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Tu Pham",
+      "phone": "0928049147",
+      "addressLine1": "80 Bien Hoa Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "createdAt": "2025-06-06T00:14:32.974Z",
+    "updatedAt": "2025-06-09T00:14:32.974Z",
+    "billingAddress": {
+      "company": "Pham Holdings",
+      "addressLine1": "164 Business Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Jun 6",
+        "time": "07:14 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Saturday, Jun 7",
+        "time": "07:14 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Sunday, Jun 8",
+        "time": "07:14 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Monday, Jun 9",
+        "time": "07:14 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fe9"
+    },
+    "id": "ORD-2025-0074",
+    "customerEmail": "nam.do.22@example.com",
+    "items": [
+      {
+        "productId": 1,
+        "name": "Trung Nguyên Legend Culi Robusta",
+        "sku": "RC-TN-001",
+        "price": 119000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 119000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 119000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Nam Do",
+      "phone": "0927384180",
+      "addressLine1": "52 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2025-06-18T04:37:05.009Z",
+    "updatedAt": "2025-06-19T04:37:05.009Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Jun 18",
+        "time": "11:37 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Thursday, Jun 19",
+        "time": "11:37 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Friday, Jun 20",
+        "time": "11:37 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Saturday, Jun 21",
+        "time": "11:37 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Sunday, Jun 22",
+        "time": "11:37 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fea"
+    },
+    "id": "ORD-2025-0075",
+    "customerEmail": "vy.phan.5@example.com",
+    "items": [
+      {
+        "productId": 9,
+        "name": "Trung Nguyên Legend G7 Full Set",
+        "sku": "CS-TN-009",
+        "price": 259000,
+        "qty": 1
+      },
+      {
+        "productId": 7,
+        "name": "The Coffee House - Original Roasted Coffee",
+        "sku": "RC-TCH-007",
+        "price": 145000,
+        "qty": 4
+      },
+      {
+        "productId": 8,
+        "name": "Guru 3 Blend Cold Brew - Strong Cold",
+        "sku": "RC-TCH-008",
+        "price": 125000,
+        "qty": 1
+      },
+      {
+        "productId": 12,
+        "name": "Highlands Coffee Combo Phin",
+        "sku": "CS-HC-012",
+        "price": 329000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 1951000,
+    "shippingFee": 0,
+    "discount": 271828,
+    "total": 1679172,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Vy Phan",
+      "phone": "0974333837",
+      "addressLine1": "211 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2025-06-19T19:59:14.697Z",
+    "updatedAt": "2025-06-24T19:59:14.697Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Jun 20",
+        "time": "02:59 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452feb"
+    },
+    "id": "ORD-2025-0076",
+    "customerEmail": "yen.do.10@example.com",
+    "items": [
+      {
+        "productId": 16,
+        "name": "Coffee Christmas Gifts Set",
+        "sku": "CS-TCH-016",
+        "price": 329000,
+        "qty": 3
+      },
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 1172000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1202000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Yen Do",
+      "phone": "0961073468",
+      "addressLine1": "60 Bien Hoa Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "createdAt": "2025-06-23T21:35:49.673Z",
+    "updatedAt": "2025-06-23T21:35:49.673Z",
+    "billingAddress": {
+      "company": "Do Holdings",
+      "addressLine1": "161 Business Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Jun 24",
+        "time": "04:35 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Jun 25",
+        "time": "04:35 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Jun 26",
+        "time": "04:35 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Friday, Jun 27",
+        "time": "04:35 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Saturday, Jun 28",
+        "time": "04:35 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fec"
+    },
+    "id": "ORD-2025-0077",
+    "customerEmail": "vy.phan.5@example.com",
+    "items": [
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 4
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 3
+      },
+      {
+        "productId": 28,
+        "name": "Philips EP2221/40 Espresso Machine",
+        "sku": "MG-HC-028",
+        "price": 245000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 2472000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 2492000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Vy Phan",
+      "phone": "0974333837",
+      "addressLine1": "211 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2025-06-30T04:45:10.056Z",
+    "updatedAt": "2025-07-03T04:45:10.056Z",
+    "billingAddress": {
+      "company": "Phan Holdings",
+      "addressLine1": "121 Business Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Jun 30",
+        "time": "11:45 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Jul 1",
+        "time": "11:45 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Wednesday, Jul 2",
+        "time": "11:45 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fed"
+    },
+    "id": "ORD-2025-0078",
+    "customerEmail": "dao.truong.9@example.com",
+    "items": [
+      {
+        "productId": 25,
+        "name": "Trung Nguyên Legend Stainless Steel Phin Filter 170ml",
+        "sku": "MG-TN-025",
+        "price": 189000,
+        "qty": 3
+      },
+      {
+        "productId": 15,
+        "name": "The Coffee House Gift Box",
+        "sku": "CS-TCH-015",
+        "price": 475000,
+        "qty": 4
+      },
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 1
+      },
+      {
+        "productId": 28,
+        "name": "Philips EP2221/40 Espresso Machine",
+        "sku": "MG-HC-028",
+        "price": 245000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 3127000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 3147000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Truong",
+      "phone": "0973527493",
+      "addressLine1": "44 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2025-06-30T22:04:12.455Z",
+    "updatedAt": "2025-07-02T22:04:12.455Z",
+    "billingAddress": {
+      "company": "Truong Holdings",
+      "addressLine1": "173 Business Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Jul 1",
+        "time": "05:04 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Jul 2",
+        "time": "05:04 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Jul 3",
+        "time": "05:04 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Friday, Jul 4",
+        "time": "05:04 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Saturday, Jul 5",
+        "time": "05:04 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fee"
+    },
+    "id": "ORD-2025-0079",
+    "customerEmail": "uyen.vu.12@example.com",
+    "items": [
+      {
+        "productId": 7,
+        "name": "The Coffee House - Original Roasted Coffee",
+        "sku": "RC-TCH-007",
+        "price": 145000,
+        "qty": 1
+      },
+      {
+        "productId": 8,
+        "name": "Guru 3 Blend Cold Brew - Strong Cold",
+        "sku": "RC-TCH-008",
+        "price": 125000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 270000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 270000,
+    "currency": "VND",
+    "status": "processing",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Uyen Vu",
+      "phone": "0942202827",
+      "addressLine1": "84 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2025-08-02T03:20:58.126Z",
+    "updatedAt": "2025-08-06T03:20:58.126Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Aug 2",
+        "time": "10:20 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, Aug 3",
+        "time": "10:20 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fef"
+    },
+    "id": "ORD-2025-0080",
+    "customerEmail": "xuan.duong.11@example.com",
+    "items": [
+      {
+        "productId": 22,
+        "name": "Phúc Long Insulated Bottle 600ml",
+        "sku": "CM-PL-022",
+        "price": 329000,
+        "qty": 3
+      },
+      {
+        "productId": 2,
+        "name": "Trung Nguyên Legend Arabica Cầu Đất",
+        "sku": "RC-TN-002",
+        "price": 165000,
+        "qty": 2
+      },
+      {
+        "productId": 10,
+        "name": "Trung Nguyên Legend Gift Set",
+        "sku": "CS-TN-010",
+        "price": 499000,
+        "qty": 1
+      },
+      {
+        "productId": 24,
+        "name": "The Coffee House Ceramic Travel Mug",
+        "sku": "CM-TCH-024",
+        "price": 149000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 2412000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 2427000,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Xuan Duong",
+      "phone": "0944942732",
+      "addressLine1": "54 Ngo Quyen Street",
+      "district": "Ngo Quyen",
+      "city": "Hai Phong",
+      "provinceCode": "HP",
+      "country": "VN"
+    },
+    "createdAt": "2025-08-03T13:34:17.566Z",
+    "updatedAt": "2025-08-05T13:34:17.566Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, Aug 3",
+        "time": "08:34 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ff0"
+    },
+    "id": "ORD-2025-0081",
+    "customerEmail": "dao.do.2@example.com",
+    "items": [
+      {
+        "productId": 21,
+        "name": "Phúc Long Ceramic Mug 340ml",
+        "sku": "CM-PL-021",
+        "price": 175000,
+        "qty": 1
+      },
+      {
+        "productId": 11,
+        "name": "Highlands Coffee Gift Box 2025",
+        "sku": "CS-HC-011",
+        "price": 389000,
+        "qty": 1
+      },
+      {
+        "productId": 19,
+        "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+        "sku": "CM-HC-019",
+        "price": 159000,
+        "qty": 2
+      },
+      {
+        "productId": 12,
+        "name": "Highlands Coffee Combo Phin",
+        "sku": "CS-HC-012",
+        "price": 329000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 1869000,
+    "shippingFee": 20000,
+    "discount": 222301,
+    "total": 1666699,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Do",
+      "phone": "0928510599",
+      "addressLine1": "34 Bien Hoa Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "createdAt": "2025-08-06T16:45:45.978Z",
+    "updatedAt": "2025-08-11T16:45:45.978Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Aug 6",
+        "time": "11:45 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ff1"
+    },
+    "id": "ORD-2025-0082",
+    "customerEmail": "xuan.hoang.13@example.com",
+    "items": [
+      {
+        "productId": 25,
+        "name": "Trung Nguyên Legend Stainless Steel Phin Filter 170ml",
+        "sku": "MG-TN-025",
+        "price": 189000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 189000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 209000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Xuan Hoang",
+      "phone": "0972932316",
+      "addressLine1": "207 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2025-08-13T10:13:28.040Z",
+    "updatedAt": "2025-08-17T10:13:28.040Z",
+    "billingAddress": {
+      "company": "Hoang Holdings",
+      "addressLine1": "24 Business Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Aug 13",
+        "time": "05:13 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Thursday, Aug 14",
+        "time": "05:13 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Friday, Aug 15",
+        "time": "05:13 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Saturday, Aug 16",
+        "time": "05:13 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ff2"
+    },
+    "id": "ORD-2025-0083",
+    "customerEmail": "xuan.hoang.13@example.com",
+    "items": [
+      {
+        "productId": 1,
+        "name": "Trung Nguyên Legend Culi Robusta",
+        "sku": "RC-TN-001",
+        "price": 119000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 238000,
+    "shippingFee": 15000,
+    "discount": 5096,
+    "total": 247904,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Xuan Hoang",
+      "phone": "0972932316",
+      "addressLine1": "207 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2025-08-24T12:47:52.343Z",
+    "updatedAt": "2025-08-25T12:47:52.343Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, Aug 24",
+        "time": "07:47 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ff3"
+    },
+    "id": "ORD-2025-0084",
+    "customerEmail": "hanh.nguyen.3@example.com",
+    "items": [
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 4
+      },
+      {
+        "productId": 16,
+        "name": "Coffee Christmas Gifts Set",
+        "sku": "CS-TCH-016",
+        "price": 329000,
+        "qty": 2
+      },
+      {
+        "productId": 14,
+        "name": "Don Pablo Whiskey Infused Coffee Gift Set",
+        "sku": "CS-PL-014",
+        "price": 289000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 1992000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 2012000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hanh Nguyen",
+      "phone": "0928126980",
+      "addressLine1": "190 Ba Dinh Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "createdAt": "2025-08-27T18:33:40.235Z",
+    "updatedAt": "2025-09-03T18:33:40.235Z",
+    "billingAddress": {
+      "company": "Nguyen Holdings",
+      "addressLine1": "100 Business Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Thursday, Aug 28",
+        "time": "01:33 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Friday, Aug 29",
+        "time": "01:33 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Saturday, Aug 30",
+        "time": "01:33 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ff4"
+    },
+    "id": "ORD-2025-0085",
+    "customerEmail": "yen.do.10@example.com",
+    "items": [
+      {
+        "productId": 11,
+        "name": "Highlands Coffee Gift Box 2025",
+        "sku": "CS-HC-011",
+        "price": 389000,
+        "qty": 4
+      },
+      {
+        "productId": 12,
+        "name": "Highlands Coffee Combo Phin",
+        "sku": "CS-HC-012",
+        "price": 329000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 2543000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 2558000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Yen Do",
+      "phone": "0961073468",
+      "addressLine1": "60 Bien Hoa Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "createdAt": "2025-08-31T10:30:09.961Z",
+    "updatedAt": "2025-09-05T10:30:09.961Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Sunday, Aug 31",
+        "time": "05:30 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Monday, Sep 1",
+        "time": "05:30 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Tuesday, Sep 2",
+        "time": "05:30 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ff5"
+    },
+    "id": "ORD-2025-0086",
+    "customerEmail": "minh.ngo.26@example.com",
+    "items": [
+      {
+        "productId": 30,
+        "name": "Hand Coffee Grinder",
+        "sku": "MG-TCH-030",
+        "price": 895000,
+        "qty": 1
+      },
+      {
+        "productId": 6,
+        "name": "Phúc Long Arabica Culi",
+        "sku": "RC-PL-006",
+        "price": 175000,
+        "qty": 2
+      },
+      {
+        "productId": 15,
+        "name": "The Coffee House Gift Box",
+        "sku": "CS-TCH-015",
+        "price": 475000,
+        "qty": 1
+      },
+      {
+        "productId": 1,
+        "name": "Trung Nguyên Legend Culi Robusta",
+        "sku": "RC-TN-001",
+        "price": 119000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 2077000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 2107000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "vnpay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Minh Ngo",
+      "phone": "0961560440",
+      "addressLine1": "118 Ninh Kieu Street",
+      "district": "Ninh Kieu",
+      "city": "Can Tho",
+      "provinceCode": "CT",
+      "country": "VN"
+    },
+    "createdAt": "2025-08-31T23:50:50.383Z",
+    "updatedAt": "2025-08-31T23:50:50.383Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Sep 1",
+        "time": "06:50 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Sep 2",
+        "time": "06:50 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Wednesday, Sep 3",
+        "time": "06:50 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Thursday, Sep 4",
+        "time": "06:50 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Friday, Sep 5",
+        "time": "06:50 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ff6"
+    },
+    "id": "ORD-2025-0087",
+    "customerEmail": "uyen.vu.12@example.com",
+    "items": [
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 4
+      },
+      {
+        "productId": 3,
+        "name": "Highlands Coffee Premium Blend",
+        "sku": "RC-HC-003",
+        "price": 135000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 1026000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 1046000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Uyen Vu",
+      "phone": "0942202827",
+      "addressLine1": "84 Vung Tau Street",
+      "district": "Vung Tau",
+      "city": "Vung Tau",
+      "provinceCode": "VT",
+      "country": "VN"
+    },
+    "createdAt": "2025-09-11T19:55:31.084Z",
+    "updatedAt": "2025-09-12T19:55:31.084Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Friday, Sep 12",
+        "time": "02:55 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Saturday, Sep 13",
+        "time": "02:55 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Sunday, Sep 14",
+        "time": "02:55 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Monday, Sep 15",
+        "time": "02:55 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Tuesday, Sep 16",
+        "time": "02:55 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ff7"
+    },
+    "id": "ORD-2025-0088",
+    "customerEmail": "thao.pham.6@example.com",
+    "items": [
+      {
+        "productId": 12,
+        "name": "Highlands Coffee Combo Phin",
+        "sku": "CS-HC-012",
+        "price": 329000,
+        "qty": 4
+      },
+      {
+        "productId": 7,
+        "name": "The Coffee House - Original Roasted Coffee",
+        "sku": "RC-TCH-007",
+        "price": 145000,
+        "qty": 3
+      },
+      {
+        "productId": 13,
+        "name": "Coffee Starter Kit",
+        "sku": "CS-PL-013",
+        "price": 415000,
+        "qty": 1
+      },
+      {
+        "productId": 6,
+        "name": "Phúc Long Arabica Culi",
+        "sku": "RC-PL-006",
+        "price": 175000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 2341000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 2341000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Thao Pham",
+      "phone": "0925590188",
+      "addressLine1": "140 Nha Trang Street",
+      "district": "Nha Trang",
+      "city": "Nha Trang",
+      "provinceCode": "KH",
+      "country": "VN"
+    },
+    "createdAt": "2025-09-13T16:53:05.597Z",
+    "updatedAt": "2025-09-18T16:53:05.597Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Sep 13",
+        "time": "11:53 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Sunday, Sep 14",
+        "time": "11:53 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Monday, Sep 15",
+        "time": "11:53 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ff8"
+    },
+    "id": "ORD-2025-0089",
+    "customerEmail": "dao.vo.7@example.com",
+    "items": [
+      {
+        "productId": 19,
+        "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+        "sku": "CM-HC-019",
+        "price": 159000,
+        "qty": 2
+      },
+      {
+        "productId": 28,
+        "name": "Philips EP2221/40 Espresso Machine",
+        "sku": "MG-HC-028",
+        "price": 245000,
+        "qty": 4
+      },
+      {
+        "productId": 26,
+        "name": "Paper Coffee Filters (100 pcs)",
+        "sku": "MG-TN-026",
+        "price": 59000,
+        "qty": 4
+      },
+      {
+        "productId": 17,
+        "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+        "sku": "CM-TN-017",
+        "price": 129000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 1792000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 1822000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Vo",
+      "phone": "0989950214",
+      "addressLine1": "195 Hue City Street",
+      "district": "Hue City",
+      "city": "Hue",
+      "provinceCode": "TTH",
+      "country": "VN"
+    },
+    "createdAt": "2025-09-17T09:41:57.244Z",
+    "updatedAt": "2025-09-17T09:41:57.244Z",
+    "billingAddress": {
+      "company": "Vo Holdings",
+      "addressLine1": "199 Business Street",
+      "district": "Hue City",
+      "city": "Hue",
+      "provinceCode": "TTH",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Sep 17",
+        "time": "04:41 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Thursday, Sep 18",
+        "time": "04:41 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Friday, Sep 19",
+        "time": "04:41 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ff9"
+    },
+    "id": "ORD-2025-0090",
+    "customerEmail": "hieu.bui.18@example.com",
+    "items": [
+      {
+        "productId": 21,
+        "name": "Phúc Long Ceramic Mug 340ml",
+        "sku": "CM-PL-021",
+        "price": 175000,
+        "qty": 1
+      },
+      {
+        "productId": 8,
+        "name": "Guru 3 Blend Cold Brew - Strong Cold",
+        "sku": "RC-TCH-008",
+        "price": 125000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 425000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 425000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hieu Bui",
+      "phone": "0919950614",
+      "addressLine1": "51 Quy Nhon Street",
+      "district": "Quy Nhon",
+      "city": "Quy Nhon",
+      "provinceCode": "BD",
+      "country": "VN"
+    },
+    "createdAt": "2025-09-29T16:49:07.288Z",
+    "updatedAt": "2025-10-02T16:49:07.288Z",
+    "billingAddress": {
+      "company": "Bui Holdings",
+      "addressLine1": "183 Business Street",
+      "district": "Quy Nhon",
+      "city": "Quy Nhon",
+      "provinceCode": "BD",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Sep 29",
+        "time": "11:49 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Sep 30",
+        "time": "11:49 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Wednesday, Oct 1",
+        "time": "11:49 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ffa"
+    },
+    "id": "ORD-2025-0091",
+    "customerEmail": "huong.dang.19@example.com",
+    "items": [
+      {
+        "productId": 5,
+        "name": "Phúc Long Signature Robusta",
+        "sku": "RC-PL-005",
+        "price": 99000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 396000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 396000,
+    "currency": "VND",
+    "status": "shipped",
+    "paymentStatus": "paid",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Huong Dang",
+      "phone": "0999724104",
+      "addressLine1": "81 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2025-09-30T01:55:05.706Z",
+    "updatedAt": "2025-10-07T01:55:05.706Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Sep 30",
+        "time": "08:55 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Oct 1",
+        "time": "08:55 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Oct 2",
+        "time": "08:55 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ffb"
+    },
+    "id": "ORD-2025-0092",
+    "customerEmail": "yen.vo.15@example.com",
+    "items": [
+      {
+        "productId": 25,
+        "name": "Trung Nguyên Legend Stainless Steel Phin Filter 170ml",
+        "sku": "MG-TN-025",
+        "price": 189000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 567000,
+    "shippingFee": 20000,
+    "discount": 28282,
+    "total": 558718,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Yen Vo",
+      "phone": "0997442946",
+      "addressLine1": "69 Cau Giay Street",
+      "district": "Cau Giay",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "createdAt": "2025-10-03T21:17:43.347Z",
+    "updatedAt": "2025-10-10T21:17:43.347Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Saturday, Oct 4",
+        "time": "04:17 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ffc"
+    },
+    "id": "ORD-2025-0093",
+    "customerEmail": "tu.pham.29@example.com",
+    "items": [
+      {
+        "productId": 30,
+        "name": "Hand Coffee Grinder",
+        "sku": "MG-TCH-030",
+        "price": 895000,
+        "qty": 3
+      },
+      {
+        "productId": 3,
+        "name": "Highlands Coffee Premium Blend",
+        "sku": "RC-HC-003",
+        "price": 135000,
+        "qty": 3
+      },
+      {
+        "productId": 4,
+        "name": "Highlands Coffee Moka",
+        "sku": "RC-HC-004",
+        "price": 189000,
+        "qty": 1
+      },
+      {
+        "productId": 21,
+        "name": "Phúc Long Ceramic Mug 340ml",
+        "sku": "CM-PL-021",
+        "price": 175000,
+        "qty": 3
+      }
+    ],
+    "subtotal": 3804000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 3819000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Tu Pham",
+      "phone": "0928049147",
+      "addressLine1": "80 Bien Hoa Street",
+      "district": "Bien Hoa",
+      "city": "Bien Hoa",
+      "provinceCode": "DNA",
+      "country": "VN"
+    },
+    "createdAt": "2025-10-07T12:16:07.525Z",
+    "updatedAt": "2025-10-11T12:16:07.525Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Oct 7",
+        "time": "07:16 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Oct 8",
+        "time": "07:16 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Oct 9",
+        "time": "07:16 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Friday, Oct 10",
+        "time": "07:16 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ffd"
+    },
+    "id": "ORD-2025-0094",
+    "customerEmail": "kiet.pham.8@example.com",
+    "items": [
+      {
+        "productId": 22,
+        "name": "Phúc Long Insulated Bottle 600ml",
+        "sku": "CM-PL-022",
+        "price": 329000,
+        "qty": 3
+      },
+      {
+        "productId": 12,
+        "name": "Highlands Coffee Combo Phin",
+        "sku": "CS-HC-012",
+        "price": 329000,
+        "qty": 3
+      },
+      {
+        "productId": 16,
+        "name": "Coffee Christmas Gifts Set",
+        "sku": "CS-TCH-016",
+        "price": 329000,
+        "qty": 2
+      },
+      {
+        "productId": 3,
+        "name": "Highlands Coffee Premium Blend",
+        "sku": "RC-HC-003",
+        "price": 135000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 3172000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 3192000,
+    "currency": "VND",
+    "status": "processing",
+    "paymentStatus": "paid",
+    "paymentMethod": "momo",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Kiet Pham",
+      "phone": "0905065441",
+      "addressLine1": "123 Go Vap Street",
+      "district": "Go Vap",
+      "city": "Ho Chi Minh City",
+      "provinceCode": "SG",
+      "country": "VN"
+    },
+    "createdAt": "2025-10-14T00:47:10.746Z",
+    "updatedAt": "2025-10-19T00:47:10.746Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Oct 14",
+        "time": "07:47 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Oct 15",
+        "time": "07:47 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452ffe"
+    },
+    "id": "ORD-2025-0095",
+    "customerEmail": "xuan.duong.11@example.com",
+    "items": [
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 1
+      },
+      {
+        "productId": 5,
+        "name": "Phúc Long Signature Robusta",
+        "sku": "RC-PL-005",
+        "price": 99000,
+        "qty": 3
+      },
+      {
+        "productId": 26,
+        "name": "Paper Coffee Filters (100 pcs)",
+        "sku": "MG-TN-026",
+        "price": 59000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 541000,
+    "shippingFee": 20000,
+    "discount": 0,
+    "total": 561000,
+    "currency": "VND",
+    "status": "cancelled",
+    "paymentStatus": "refunded",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Xuan Duong",
+      "phone": "0944942732",
+      "addressLine1": "54 Ngo Quyen Street",
+      "district": "Ngo Quyen",
+      "city": "Hai Phong",
+      "provinceCode": "HP",
+      "country": "VN"
+    },
+    "createdAt": "2025-10-15T16:33:10.323Z",
+    "updatedAt": "2025-10-16T16:33:10.323Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Oct 15",
+        "time": "11:33 PM",
+        "completed": false
+      },
+      {
+        "status": "Cancelled",
+        "description": "Order has been cancelled.",
+        "date": "Thursday, Oct 16",
+        "time": "11:33 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a452fff"
+    },
+    "id": "ORD-2025-0096",
+    "customerEmail": "hanh.nguyen.3@example.com",
+    "items": [
+      {
+        "productId": 23,
+        "name": "The Coffee House Go Green Insulated Tumbler 480ml",
+        "sku": "CM-TCH-023",
+        "price": 315000,
+        "qty": 1
+      },
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 1173000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 1188000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "paid",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hanh Nguyen",
+      "phone": "0928126980",
+      "addressLine1": "190 Ba Dinh Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "createdAt": "2025-10-21T11:13:17.892Z",
+    "updatedAt": "2025-10-22T11:13:17.892Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Oct 21",
+        "time": "06:13 PM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Wednesday, Oct 22",
+        "time": "06:13 PM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Thursday, Oct 23",
+        "time": "06:13 PM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Friday, Oct 24",
+        "time": "06:13 PM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a453000"
+    },
+    "id": "ORD-2025-0097",
+    "customerEmail": "an.truong.20@example.com",
+    "items": [
+      {
+        "productId": 1,
+        "name": "Trung Nguyên Legend Culi Robusta",
+        "sku": "RC-TN-001",
+        "price": 119000,
+        "qty": 4
+      },
+      {
+        "productId": 26,
+        "name": "Paper Coffee Filters (100 pcs)",
+        "sku": "MG-TN-026",
+        "price": 59000,
+        "qty": 2
+      },
+      {
+        "productId": 10,
+        "name": "Trung Nguyên Legend Gift Set",
+        "sku": "CS-TN-010",
+        "price": 499000,
+        "qty": 1
+      },
+      {
+        "productId": 18,
+        "name": "Trung Nguyên Legend Message Mug",
+        "sku": "CM-TN-018",
+        "price": 189000,
+        "qty": 1
+      }
+    ],
+    "subtotal": 1282000,
+    "shippingFee": 0,
+    "discount": 0,
+    "total": 1282000,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "An Truong",
+      "phone": "0907679622",
+      "addressLine1": "187 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2025-10-27T19:53:08.057Z",
+    "updatedAt": "2025-11-02T19:53:08.057Z",
+    "billingAddress": {
+      "company": "Truong Holdings",
+      "addressLine1": "58 Business Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Tuesday, Oct 28",
+        "time": "02:53 AM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a453001"
+    },
+    "id": "ORD-2025-0098",
+    "customerEmail": "hanh.nguyen.3@example.com",
+    "items": [
+      {
+        "productId": 15,
+        "name": "The Coffee House Gift Box",
+        "sku": "CS-TCH-015",
+        "price": 475000,
+        "qty": 3
+      },
+      {
+        "productId": 30,
+        "name": "Hand Coffee Grinder",
+        "sku": "MG-TCH-030",
+        "price": 895000,
+        "qty": 2
+      },
+      {
+        "productId": 29,
+        "name": "BODUM Brazil French Press - Black",
+        "sku": "MG-PL-029",
+        "price": 429000,
+        "qty": 4
+      }
+    ],
+    "subtotal": 4931000,
+    "shippingFee": 15000,
+    "discount": 0,
+    "total": 4946000,
+    "currency": "VND",
+    "status": "refunded",
+    "paymentStatus": "refunded",
+    "paymentMethod": "bank-transfer",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Hanh Nguyen",
+      "phone": "0928126980",
+      "addressLine1": "190 Ba Dinh Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "createdAt": "2025-11-02T22:41:37.419Z",
+    "updatedAt": "2025-11-02T22:41:37.419Z",
+    "billingAddress": {
+      "company": "Nguyen Holdings",
+      "addressLine1": "163 Business Street",
+      "district": "Ba Dinh",
+      "city": "Hanoi",
+      "provinceCode": "HN",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Nov 3",
+        "time": "05:41 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Tuesday, Nov 4",
+        "time": "05:41 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Wednesday, Nov 5",
+        "time": "05:41 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Thursday, Nov 6",
+        "time": "05:41 AM",
+        "completed": true
+      },
+      {
+        "status": "refunded",
+        "description": "Order has been refunded.",
+        "date": "Friday, Nov 7",
+        "time": "05:41 AM",
+        "completed": true
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a453002"
+    },
+    "id": "ORD-2025-0099",
+    "customerEmail": "an.truong.20@example.com",
+    "items": [
+      {
+        "productId": 26,
+        "name": "Paper Coffee Filters (100 pcs)",
+        "sku": "MG-TN-026",
+        "price": 59000,
+        "qty": 1
+      },
+      {
+        "productId": 9,
+        "name": "Trung Nguyên Legend G7 Full Set",
+        "sku": "CS-TN-009",
+        "price": 259000,
+        "qty": 2
+      },
+      {
+        "productId": 6,
+        "name": "Phúc Long Arabica Culi",
+        "sku": "RC-PL-006",
+        "price": 175000,
+        "qty": 3
+      },
+      {
+        "productId": 20,
+        "name": "Highlands Tall Leaf-Pattern Tumbler",
+        "sku": "CM-HC-020",
+        "price": 185000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 1472000,
+    "shippingFee": 15000,
+    "discount": 155020,
+    "total": 1331980,
+    "currency": "VND",
+    "status": "pending",
+    "paymentStatus": "pending",
+    "paymentMethod": "zaloPay",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "An Truong",
+      "phone": "0907679622",
+      "addressLine1": "187 Hai Chau Street",
+      "district": "Hai Chau",
+      "city": "Da Nang",
+      "provinceCode": "DN",
+      "country": "VN"
+    },
+    "createdAt": "2025-11-03T09:37:47.360Z",
+    "updatedAt": "2025-11-09T09:37:47.360Z",
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Monday, Nov 3",
+        "time": "04:37 PM",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "691afd9e569e89354a453003"
+    },
+    "id": "ORD-2025-0100",
+    "customerEmail": "dao.vo.7@example.com",
+    "items": [
+      {
+        "productId": 19,
+        "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+        "sku": "CM-HC-019",
+        "price": 159000,
+        "qty": 4
+      },
+      {
+        "productId": 12,
+        "name": "Highlands Coffee Combo Phin",
+        "sku": "CS-HC-012",
+        "price": 329000,
+        "qty": 1
+      },
+      {
+        "productId": 22,
+        "name": "Phúc Long Insulated Bottle 600ml",
+        "sku": "CM-PL-022",
+        "price": 329000,
+        "qty": 4
+      },
+      {
+        "productId": 25,
+        "name": "Trung Nguyên Legend Stainless Steel Phin Filter 170ml",
+        "sku": "MG-TN-025",
+        "price": 189000,
+        "qty": 2
+      }
+    ],
+    "subtotal": 2659000,
+    "shippingFee": 30000,
+    "discount": 0,
+    "total": 2689000,
+    "currency": "VND",
+    "status": "delivered",
+    "paymentStatus": "pending",
+    "paymentMethod": "cod",
+    "shippingAddress": {
+      "label": "home",
+      "type": "shipping",
+      "isDefault": true,
+      "fullName": "Dao Vo",
+      "phone": "0989950214",
+      "addressLine1": "195 Hue City Street",
+      "district": "Hue City",
+      "city": "Hue",
+      "provinceCode": "TTH",
+      "country": "VN"
+    },
+    "createdAt": "2025-11-04T20:51:59.958Z",
+    "updatedAt": "2025-11-04T20:51:59.958Z",
+    "billingAddress": {
+      "company": "Vo Holdings",
+      "addressLine1": "79 Business Street",
+      "district": "Hue City",
+      "city": "Hue",
+      "provinceCode": "TTH",
+      "country": "VN"
+    },
+    "shippingActivity": [
+      {
+        "status": "Pending",
+        "description": "Order has been placed and is awaiting processing.",
+        "date": "Wednesday, Nov 5",
+        "time": "03:51 AM",
+        "completed": false
+      },
+      {
+        "status": "Processing",
+        "description": "Order is being prepared and processed.",
+        "date": "Thursday, Nov 6",
+        "time": "03:51 AM",
+        "completed": false
+      },
+      {
+        "status": "Shipped",
+        "description": "Order has been shipped.",
+        "date": "Friday, Nov 7",
+        "time": "03:51 AM",
+        "completed": false
+      },
+      {
+        "status": "Delivered",
+        "description": "Order has been delivered successfully.",
+        "date": "Saturday, Nov 8",
+        "time": "03:51 AM",
+        "completed": true
+      }
+    ]
+  }
+]

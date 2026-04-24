@@ -1,0 +1,594 @@
+/* ====== Theme ====== */
+:root{
+  --bg:#0f0c0a;
+  --card:#3c312c;
+  --card-2:#463a35;
+  --ink:#fff;
+  --ink-dim:#d7c8bf;
+  --accent:#C7A186;        /* tiêu đề sp */
+  --brand:#b68a6a;         /* viền/nhấn */
+  --ring:#e9d7cc;
+  --gap-x:28px;
+  --gap-y:24px;
+  --radius:16px;
+}
+
+/* ====== Section ====== */
+.pc-section{
+  padding:80px 0 40px;
+  background:transparent;
+  position:relative;
+  margin-top:120px;
+}
+.container{max-width:1400px;margin:0 auto;padding:0 20px}
+
+/* ====== Head ====== */
+.pc-head{ text-align:center; margin-bottom:44px; position:relative }
+.pc-head .pc-eyebrow{font:600 14px/1.2 ui-sans-serif; letter-spacing:.18em; text-transform:uppercase; color:var(--brand); margin-bottom:8px}
+.pc-head h2{ font-weight:600; font-size:32px; color:#f4f3f2 }
+.pc-head h1.bg-text{
+  position:absolute; top:10%; left:50%; transform:translate(-50%,-50%);
+  font:800 120px/1 ui-serif; color:rgba(255,255,255,.06); white-space:nowrap; pointer-events:none
+}
+
+/* ====== Viewport row (scroll) ====== */
+.pc-row{ display:flex; overflow-x:auto; scroll-behavior:smooth; padding:0 8px }
+.pc-row::-webkit-scrollbar{ height:8px }
+.pc-row::-webkit-scrollbar-thumb{ background:transparent } /* ẩn */
+
+
+/* ====== Grid (3 cols × 2 rows, fill dọc trước) ====== */
+/* ====== Grid (3 cols × 2 rows, MỖI HÀNG CAO HƠN) ====== */
+.pc-grid-container{
+  display:grid;
+  grid-auto-columns:calc((100% - 2*var(--gap-x))/3);
+  grid-template-rows:repeat(2, 250px);  /* trước là 250px */
+  grid-auto-flow:column;
+  gap:var(--gap-y) var(--gap-x);
+  width:max-content; 
+  max-width:none;
+}
+
+
+
+/* Container để giới hạn hiển thị 3 cột */
+.pc-row {
+  overflow-x: auto; /* Cho phép scroll ngang */
+  width: 100%;
+  max-width: 100%;
+}
+
+.pc-grid-container {
+  width: 200%; /* Grid rộng gấp đôi để chứa 6 cột */
+}
+
+.pc-row::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ====== Card ====== */
+.pc-item {
+  display:flex; align-items:stretch; gap:16px;
+  background:linear-gradient(180deg,var(--card),var(--card-2));
+  overflow: hidden;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--radius);
+  height:250px; padding:14px;
+  position:relative; box-sizing:border-box;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  will-change:transform;
+}
+
+.pc-item:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 40px rgba(0,0,0,.35);
+  border-color:rgba(255,255,255,.12);
+}
+
+/* —— Thumbnail —— */
+.pc-thumb{
+  flex:0 0 180px; display:flex; align-items:center; justify-content:center;
+  position:relative; overflow:hidden; border-radius:12px;
+  background:rgba(255,255,255,.03)
+}
+.pc-thumb img{
+  width:100%; height:100%; max-width:160px; max-height:160px; object-fit:contain; filter:drop-shadow(0 8px 18px rgba(0,0,0,.25))
+}
+
+/* —— Quick-view eye —— */
+.pc-eye { 
+  position: absolute; top: 50%; left: 50%; 
+  transform: translate(-50%, -50%) scale(0.8); 
+  opacity: 0; 
+  background: rgba(0, 0, 0, 0.6); color: white; 
+  padding: 10px; border-radius: 50%; 
+  cursor: pointer; transition: all 0.3s ease; } 
+.pc-thumb:hover .pc-eye { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+/* —— Discount badge —— */
+.pc-discount{
+  position:absolute; top:10px; left:10px;
+  background:#fff; color:#1d1d1d; font-weight:800; font-size:12px;
+  padding:6px 10px; border-radius:999px; box-shadow:0 2px 8px rgba(0,0,0,.18)
+}
+
+/* —— Meta —— */
+.pc-meta{ flex:1; min-width:0; display:flex; flex-direction:column; justify-content:space-between }
+.pc-category{ color:#fff; opacity:.9; font-size:12px; letter-spacing:.14em; text-transform:uppercase }
+.pc-title{
+  color:var(--accent); font-weight:700; font-size:20px; line-height:1.25;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden
+}
+.pc-type{ color:#fff; opacity:.85; font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+
+/* —— Size on card & modal —— */
+.pc-size-wrapper{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:8px;
+  max-width:100%;
+}
+.pc-size-wrapper,
+.pc-size-row {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  flex-wrap: wrap;         
+}
+
+.pc-size-row--modal {
+  margin: 10px 0 16px;
+}
+
+.pc-size-label {
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--ink-dim);
+  white-space:nowrap;
+}
+
+/* Hàng size trong modal */
+.pc-size-row--modal{
+  margin:10px 0 18px;
+}
+
+/* 👉 Modal: cho select rộng hơn, không cần ellipsis */
+.pc-select--modal{
+  flex:0 0 auto;
+  min-width:220px;
+  max-width:320px;  /* hoặc 260–320 tuỳ bạn */
+  text-overflow:clip;
+}
+
+
+/* —— Variant select (chỉ 1 định nghĩa) —— */
+.pc-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  flex:1 1 auto;       
+  min-width:0;         
+  max-width:100%; 
+
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,.14), transparent 60%),
+    rgba(31,24,21,.95);
+  color: #fff;
+  font-size: 14px;
+
+  padding: 6px 32px 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow:
+    0 1px 2px rgba(0,0,0,.45),
+    inset 0 0 0 1px rgba(0,0,0,.25);
+
+  line-height: 1.2;
+  flex: 0 0 auto;
+  max-width: 170px;        /* KHÔNG cho vượt quá card */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 1.5L6 5.5L10 1.5' stroke='%23f5e7dd' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px 8px;
+}
+
+.pc-select:hover {
+  border-color: var(--ring);
+  box-shadow:
+    0 2px 8px rgba(0,0,0,.35),
+    inset 0 0 0 1px rgba(255,255,255,.12);
+  transform: translateY(-1px);
+}
+
+.pc-select:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.pc-select:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  background: rgba(40,32,28,.9);
+  box-shadow: none;
+}
+
+.pc-select option {
+  background: #2f241f;
+  color: #fff;
+}
+
+.pc-meta .pc-select {
+  max-width: 120px;    /* nhỏ hơn nữa để dư chỗ */
+  font-size: 13px;
+}
+/* —— Price —— */
+.pc-price-row{ display:flex; align-items:baseline; gap:10px; margin-top:4px; flex-wrap:wrap }
+.pc-price{ color:#fff; font-weight:800; font-size:18px; letter-spacing:.02em }
+.pc-old{ color:var(--ink-dim); text-decoration:line-through; font-size:12px }
+
+
+/* ---- Add to Cart ---- */
+.pc-add{
+  align-self:flex-start;
+  margin-top:8px; padding:8px 12px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.28);
+  color:#fff; text-transform:uppercase; letter-spacing:.08em; font-weight:800; font-size:11px;
+  border-radius:10px; cursor:pointer;
+  transition:background .2s ease, box-shadow .2s ease, transform .15s ease, border-color .2s ease
+}
+.pc-add:hover{
+  background:rgba(255,255,255,.12);
+  box-shadow:0 6px 16px rgba(0,0,0,.25);
+  transform:translateY(-1px);
+  border-color:rgba(255,255,255,.42)
+}
+/* ====== Modal (giữ, làm ấm sắc) ====== */
+.pc-modal{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.6); backdrop-filter:blur(4px); z-index:999 }
+.pc-modal-content{
+  width:min(920px,92%); background:#b1917b; color:#111; border-radius:20px; padding:28px 28px 24px; position:relative;
+  box-shadow:0 20px 60px rgba(0,0,0,.45)
+}
+.pc-modal-close{ position:absolute; top:16px; right:16px; background:none; border:none; color:#111; font-size:20px; cursor:pointer }
+.pc-modal-body{ display:flex; gap:28px; align-items:flex-start }
+.pc-modal-left img{ width:260px; border-radius:12px; box-shadow:0 10px 26px rgba(0,0,0,.28) }
+.pc-modal-right h3{ font-size:28px; font-weight:800; color:#2d1a10 }
+.pc-desc{ margin:10px 0 14px; line-height:1.55 }
+.pc-materials{ display:flex; gap:10px; margin:8px 0 }
+.pc-material-btn{ background:#2d1a10; color:#fff; padding:6px 14px; border-radius:999px; border:none; cursor:pointer }
+.pc-modal-actions{ display:flex; align-items:center; gap:16px; margin-top:16px }
+.pc-cart-btn{ background:#111; color:#fff; border:none; padding:10px 18px; border-radius:999px; font-weight:700; display:flex; align-items:center; gap:8px }
+.pc-qty{ display:flex; align-items:center; gap:10px; background:#d9c1b2; border-radius:999px; padding:4px 12px }
+.pc-qty button{ border:none; background:none; cursor:pointer; font-size:18px }
+.pc-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap; /* gọn gàng khi màn nhỏ */
+}
+
+.pc-qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #d9c1b2;
+  border-radius: 20px;
+  padding: 4px 12px;
+}
+
+.pc-qty button{
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  font-size:18px;
+  padding:4px 8px;
+  border-radius:999px;
+  color:#3b3029;
+  transition:
+    background .15s ease,
+    transform .15s ease,
+    box-shadow .15s ease,
+    color .15s ease;
+}
+.pc-qty button:disabled{
+  opacity:.35;
+  cursor:not-allowed;
+  background:transparent;
+  box-shadow:none;
+  transform:none;
+}
+.pc-qty button:hover:not(:disabled){
+  background:rgba(0,0,0,.06);
+  transform:translateY(-1px);
+  box-shadow:0 2px 4px rgba(0,0,0,.18);
+  color:#1f1712;
+}
+.pc-qty span{
+  min-width:26px;
+  text-align:center;
+  font-variant-numeric:tabular-nums;
+  font-weight:600;
+}
+
+.pc-total {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 16px;
+  color: #2d1a10;
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: #e6d3c7; /* nhẹ nhàng, cùng tone modal */
+}
+.pc-total strong { font-size: 18px; }
+
+/* ====== Select trong MODAL (hiện full text) ====== */
+.pc-select--modal{
+  max-width: none;       /* bỏ giới hạn 180px */
+  min-width: 280px;      /* rộng hơn card một chút */
+  padding: 8px 40px 8px 18px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;   /* vẫn 1 dòng, nhưng đủ rộng nên không bị "…" */
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Label dùng chung – base */
+.pc-size-label{
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  white-space: nowrap;
+}
+
+/* 👉 Trên CARD: cho nhỏ hơn một chút */
+.pc-meta .pc-size-label{
+  font-size: 9px;        /* nhỏ lại */
+  letter-spacing: .13em;
+  opacity: .9;
+}
+
+/* 👉 Trong MODAL: giữ to, rõ ràng hơn */
+.pc-modal-right .pc-size-label{
+  font-size: 12px;       /* hoặc 12 nếu muốn to hơn */
+  letter-spacing: .18em;
+}
+.pc-toast{
+  position:fixed;
+  left:50%;
+  bottom:24px;
+  transform:translateX(-50%);
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(15,12,10,.96);
+  color:#fff;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 12px 30px rgba(0,0,0,.5);
+  z-index:1100;
+  animation:pc-toast-in .18s ease-out;
+}
+
+@keyframes pc-toast-in{
+  from{
+    opacity:0;
+    transform:translate(-50%, 6px);
+  }
+  to{
+    opacity:1;
+    transform:translate(-50%, 0);
+  }
+}
+
+
+/* 1 cột + thu nhỏ chữ từ 700px trở xuống */
+@media (max-width:750px){
+  /* Grid: 1 cột full width */
+  .pc-grid-container{
+    grid-template-rows:repeat(2, 240px);
+  }
+  .pc-item{
+    height:240px;
+  }
+
+  /* Tên sản phẩm nhỏ lại */
+  .pc-title{
+    font-size:16px;      /* trước 20px */
+    line-height:1.25;
+  }
+
+  /* Category (ROASTED COFFEE) nhỏ hơn */
+  .pc-category{
+    font-size:8px;          /* trước 12px */
+    letter-spacing:.12em;    /* bớt giãn chút */
+  }
+
+  /* Giá nhỏ lại */
+  .pc-price{
+    font-size:15px;          /* trước 18px */
+  }
+
+  /* Nút + ADD TO CART nhỏ lại */
+  .pc-add{
+    font-size:10px;          /* trước 11px */
+    padding:6px 10px;
+    letter-spacing:.06em;
+    white-space:nowrap;
+    margin-left: 2px;
+  }
+
+  /* Label OPTION / size nhỏ 1 tí */
+  .pc-meta .pc-size-label{
+    font-size:8px;
+    letter-spacing:.11em;
+  }
+
+  /* Select size nhỏ, gọn */
+  .pc-meta .pc-select{
+    font-size:12px;          /* trước 14px */
+    padding:5px 26px 5px 12px;
+    max-width:110px;
+  }
+}
+
+/* Màn hình vừa (laptop nhỏ, iPad ngang) – 2 cột */
+@media (max-width:1200px){
+  .pc-grid-container{
+    /* 2 card / view thay vì 3 */
+    grid-auto-columns: calc((100% - 1*var(--gap-x)) / 2);
+    grid-template-rows: repeat(2, 300px);
+  }
+
+}
+
+
+@media (max-width:900px){
+  .pc-grid-container{
+    grid-auto-columns:calc((100% - 1*var(--gap-x))/2);
+    grid-template-rows:repeat(2, 260px); /* trước 220px */
+  }
+  .pc-item{ height:260px; }
+}
+
+@media (max-width:640px){
+  .pc-grid-container{
+    grid-auto-columns:100%;
+    grid-template-rows:repeat(2, 240px); /* trước 200px */
+  }
+  .pc-item{ height:240px; }
+}
+
+/* ====== Modal responsive (mobile) ====== */
+@media (max-width: 640px) {
+  /* Overlay có padding để modal không dính sát mép màn hình */
+  .pc-modal {
+    padding: 12px 8px 8px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hộp modal gần full màn, cuộn dọc được */
+  .pc-modal-content {
+    width: 80%;
+    max-width: 100%;
+    max-height: calc(100vh - 24px); /* trừ chút margin trên/dưới */
+    margin: 0;
+    padding: 20px 18px 18px;
+    border-radius: 20px;
+    overflow-y: auto;
+  }
+
+  /* Thân modal xếp dọc: ảnh trên, text + nút dưới */
+  .pc-modal-body {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .pc-modal-left {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pc-modal-left img {
+    width: 140px;
+    border-radius: 12px;
+  }
+
+  .pc-modal-right h3 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .pc-desc {
+    font-size: 14px;
+  }
+
+  /* Nút + total xếp dọc, nút Add To Cart full chiều ngang */
+  .pc-modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .pc-qty {
+    justify-content: space-between;
+  }
+
+  .pc-cart-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width:640px){
+  .pc-grid-container{
+    grid-auto-columns:100%;
+    grid-template-rows:repeat(2, 240px);
+  }
+  .pc-item{
+    height:240px;
+  }
+
+  /* Giá nhỏ lại */
+  .pc-price{
+    font-size: 16px;
+  }
+
+  /* Nút + ADD TO CART nhỏ, không xuống hàng */
+  .pc-add{
+    font-size: 10px;
+    padding: 6px 10px;
+    letter-spacing: .06em;
+    white-space: nowrap;
+  }
+
+  /* Category nhỏ lại (ROASTED COFFEE) */
+  .pc-category{
+    font-size: 10px;          /* trước 12px */
+    letter-spacing: .12em;    /* bớt giãn nhẹ */
+  }
+
+  /* Label OPTION / size nhỏ lại nữa trên card */
+  .pc-meta .pc-size-label{
+    font-size: 8px;           /* trước 9–11px */
+    letter-spacing: .11em;
+  }
+
+  /* Option select trên card cũng gọn hơn chút */
+  .pc-meta .pc-select{
+    font-size: 12px;
+    padding: 5px 26px 5px 12px;
+    max-width: 110px;
+  }
+  .pc-title{
+    font-size: 16.6px;      /* trước 20px, cần nhỏ nữa thì để 15px */
+    line-height: 1.25;
+  }
+
+  .pc-meta .pc-size-label{
+    font-size: 8px;
+    letter-spacing: .11em;
+  }
+
+  .pc-meta .pc-select{
+    font-size: 12px;
+    padding: 5px 26px 5px 12px;
+    max-width: 110px;
+  }
+}

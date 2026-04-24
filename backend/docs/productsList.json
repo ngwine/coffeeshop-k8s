@@ -1,0 +1,1193 @@
+[
+  {
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bee7"
+  },
+  "id": 1,
+  "name": "Trung Nguyên Legend Culi Robusta",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764214984/products/nfcdr1dfgyanvqa5s7jk.webp",
+  "description": "Culi Robusta whole beans from Trung Nguyên Legend with a bold body and long sweet aftertaste, ideal for traditional Vietnamese phin brewing.",
+  "category": "Roasted coffee",
+  "stock": true,
+  "sku": "RC-TN-001",
+  "price": 119000,
+  "quantity": 140,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "250g",
+          "priceDelta": 0
+        },
+        {
+          "label": "500g",
+          "priceDelta": 30000
+        },
+        {
+          "label": "1kg",
+          "priceDelta": 80000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-20T07:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:43:08.781Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bee8"
+  },
+  "id": 2,
+  "name": "Trung Nguyên Legend Arabica Cầu Đất",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215085/products/dpclht1bk8xcxofy1t64.webp",
+  "description": "Cầu Đất Arabica with fruity aroma and bright acidity, perfect for pour-over brewing.",
+  "category": "Roasted coffee",
+  "stock": true,
+  "sku": "RC-TN-002",
+  "price": 165000,
+  "quantity": 90,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "250g",
+          "priceDelta": 0
+        },
+        {
+          "label": "500g",
+          "priceDelta": 32000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-21T06:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:44:49.056Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bee9"
+  },
+  "id": 3,
+  "name": "Highlands Coffee Culi Blend",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215261/products/uym4qckmtun4z1rfw2df.jpg",
+  "description": "Medium roast blend balancing Robusta and Arabica, suitable for both espresso and Vietnamese phin.",
+  "category": "Roasted coffee",
+  "stock": true,
+  "sku": "RC-HC-003",
+  "price": 135000,
+  "quantity": 110,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "250g",
+          "priceDelta": 0
+        },
+        {
+          "label": "500g",
+          "priceDelta": 28000
+        },
+        {
+          "label": "1kg",
+          "priceDelta": 75000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-18T05:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:47:44.951Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7beea"
+  },
+  "id": 4,
+  "name": "Highlands Coffee Moka",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215204/products/y0nxyqlcz1xwispsalsp.webp",
+  "description": "Rare Moka line with small beans and a distinctive chocolate aroma, available in a single bag size.",
+  "category": "Roasted coffee",
+  "stock": false,
+  "sku": "RC-HC-004",
+  "price": 189000,
+  "quantity": 0,
+  "status": "Inactive",
+  "createdAt": {
+    "$date": "2025-09-30T04:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:46:50.672Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7beeb"
+  },
+  "id": 5,
+  "name": "Phúc Long Signature Robusta",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215324/products/ozwpwrigbyj8axzcdx3h.webp",
+  "description": "Medium-roast Robusta with rich body and light caramel aftertaste, great with iced milk coffee.",
+  "category": "Roasted coffee",
+  "stock": true,
+  "sku": "RC-PL-005",
+  "price": 99000,
+  "quantity": 160,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "250g",
+          "priceDelta": 0
+        },
+        {
+          "label": "500g",
+          "priceDelta": 25000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-12T09:05:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:48:48.723Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7beec"
+  },
+  "id": 6,
+  "name": "Phúc Long Arabica Culi",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215360/products/jfxxwwtoquffroxx3hcp.jpg",
+  "description": "Honey-process Arabica from Đà Lạt with notes of honey and jasmine.",
+  "category": "Roasted coffee",
+  "stock": true,
+  "sku": "RC-PL-006",
+  "price": 175000,
+  "quantity": 70,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "250g",
+          "priceDelta": 0
+        },
+        {
+          "label": "500g",
+          "priceDelta": 35000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-08T08:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:49:40.349Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7beed"
+  },
+  "id": 7,
+  "name": "The Coffee House - Original Roasted Coffee",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215426/products/xnfecpd4krxxlkdolywx.png",
+  "description": "Signature blend combining beans from Lâm Đồng and Gia Lai for a balanced flavor profile.",
+  "category": "Roasted coffee",
+  "stock": true,
+  "sku": "RC-TCH-007",
+  "price": 145000,
+  "quantity": 130,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "250g",
+          "priceDelta": 0
+        },
+        {
+          "label": "1kg",
+          "priceDelta": 90000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-15T07:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:50:30.715Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7beee"
+  },
+  "id": 8,
+  "name": "Guru 3 Blend Cold Brew - Strong Cold",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215509/products/sxcbwugv2ewmbknukmsn.png",
+  "description": "Special roast for cold brew with a smooth body and clean, sweet finish, sold only as pre-ground coffee.",
+  "category": "Roasted coffee",
+  "stock": false,
+  "sku": "RC-TCH-008",
+  "price": 125000,
+  "quantity": 0,
+  "status": "Inactive",
+  "createdAt": {
+    "$date": "2025-09-25T09:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:51:54.539Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7beef"
+  },
+  "id": 9,
+  "name": "Trung Nguyên Legend G7 Full Set",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215601/products/m44ldnfyzfne7kbdqwoi.jpg",
+  "description": "G7 combo including instant coffee, stainless steel phin filter and a Legend logo glass.",
+  "category": "Coffee sets",
+  "stock": true,
+  "sku": "CS-TN-009",
+  "price": 259000,
+  "quantity": 80,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Basic",
+          "priceDelta": 0
+        },
+        {
+          "label": "Gift",
+          "priceDelta": 40000
+        },
+        {
+          "label": "Premium",
+          "priceDelta": 90000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-10T05:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:53:25.710Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bef0"
+  },
+  "id": 10,
+  "name": "Trung Nguyên Legend Gift Set",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215665/products/tfo0mybmczq8d4fuqkga.png",
+  "description": "Premium WEASEL coffee from Trung Nguyên, one of the rarest and most expensive coffees in the world, paired with accessories.",
+  "category": "Coffee sets",
+  "stock": true,
+  "sku": "CS-TN-010",
+  "price": 431000,
+  "quantity": 5,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Gift",
+          "priceDelta": 0
+        },
+        {
+          "label": "Premium",
+          "priceDelta": 1500000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-01T04:40:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:55:00.906Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bef1"
+  },
+  "id": 11,
+  "name": "Highlands Coffee Gift Box 2025",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215724/products/dqojb9nowztwbkxsdprb.jpg",
+  "description": "Gift box including three packs of roasted coffee and a Highlands ceramic mug set.",
+  "category": "Coffee sets",
+  "stock": true,
+  "sku": "CS-HC-011",
+  "price": 389000,
+  "quantity": 60,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Basic",
+          "priceDelta": 0
+        },
+        {
+          "label": "Gift",
+          "priceDelta": 45000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-05T06:05:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:55:27.069Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bef2"
+  },
+  "id": 12,
+  "name": "Highlands Coffee Phin Combo",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216277/products/p4cd6zmtfgec0orryffy.png",
+  "description": "Combo of stainless steel phin, roasted ground coffee and condensed milk, ideal for traditional phin brewing.",
+  "category": "Coffee sets",
+  "stock": false,
+  "sku": "CS-HC-012",
+  "price": 329000,
+  "quantity": 0,
+  "status": "Inactive",
+  "createdAt": {
+    "$date": "2025-09-10T03:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:04:41.307Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bef3"
+  },
+  "id": 13,
+  "name": "Coffee Starter Kit",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215774/products/lknqklkro9pbkmmjyza8.webp",
+  "description": "Starter kit for beginners, including coffee beans and essential brewing tools.",
+  "category": "Coffee sets",
+  "stock": true,
+  "sku": "CS-PL-013",
+  "price": 415000,
+  "quantity": 12,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Basic",
+          "priceDelta": 0
+        },
+        {
+          "label": "Gift",
+          "priceDelta": 45000
+        },
+        {
+          "label": "Premium",
+          "priceDelta": 110000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-14T07:25:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:56:41.612Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bef4"
+  },
+  "id": 14,
+  "name": "Don Pablo Whiskey Infused Coffee Gift Set",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216082/products/jkozuca9bv5609qbfngl.webp",
+  "description": "Don Pablo Whiskey gift set with three rich whole-bean blends: Bourbon, Maple and Irish Vanilla.",
+  "category": "Coffee sets",
+  "stock": false,
+  "sku": "CS-PL-014",
+  "price": 789000,
+  "quantity": 0,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Standard",
+          "priceDelta": 0
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-09-28T08:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:01:25.153Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bef5"
+  },
+  "id": 15,
+  "name": "The Coffee House Gift Box",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216026/products/er2witdvtjkhcetqkvoa.webp",
+  "description": "Tết gift box with two cans of iced milk coffee and one The Coffee House glass.",
+  "category": "Coffee sets",
+  "stock": true,
+  "sku": "CS-TCH-015",
+  "price": 475000,
+  "quantity": 35,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Basic",
+          "priceDelta": 0
+        },
+        {
+          "label": "Premium",
+          "priceDelta": 120000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-02T09:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:00:32.010Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bef6"
+  },
+  "id": 16,
+  "name": "Coffee Christmas Gifts Set",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216135/products/pgrytbuefuv0pdoseela.jpg",
+  "description": "Gift set of pure ground coffee suitable for everyone.",
+  "category": "Coffee sets",
+  "stock": true,
+  "sku": "CS-TCH-016",
+  "price": 329000,
+  "quantity": 58,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Basic",
+          "priceDelta": 0
+        },
+        {
+          "label": "Gift",
+          "priceDelta": 35000
+        },
+        {
+          "label": "Premium",
+          "priceDelta": 90000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-09-22T06:50:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:02:22.990Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bef7"
+  },
+  "id": 17,
+  "name": "Trung Nguyên Legend Ceramic Mug 330ml",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216408/products/rsk60iuk4dnlwfp48c7x.jpg",
+  "description": "White ceramic mug with Trung Nguyên Legend logo, 330ml capacity.",
+  "category": "Cups & Mugs",
+  "stock": true,
+  "sku": "CM-TN-017",
+  "price": 129000,
+  "quantity": 210,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "1 pc",
+          "priceDelta": 0
+        },
+        {
+          "label": "2 pcs",
+          "priceDelta": 70000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-08-30T07:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:06:51.696Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bef8"
+  },
+  "id": 18,
+  "name": "Trung Nguyên Legend Message Mug",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216571/products/etfzv8fsagngtj3qlvy9.webp",
+  "description": "Limited edition mug with Đông Sơn drum pattern, 330ml capacity.",
+  "category": "Cups & Mugs",
+  "stock": false,
+  "sku": "CM-TN-018",
+  "price": 189000,
+  "quantity": 0,
+  "status": "Inactive",
+  "createdAt": {
+    "$date": "2025-07-12T05:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:09:34.062Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bef9"
+  },
+  "id": 19,
+  "name": "Highlands Coffee Ceramic Mugs 360ml (Set of 2)",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216321/products/hd92uckpsya0hq2xhcq4.webp",
+  "description": "Set of two basic white ceramic mugs with Highlands logo, perfect for couples or families.",
+  "category": "Cups & Mugs",
+  "stock": true,
+  "sku": "CM-HC-019",
+  "price": 159000,
+  "quantity": 175,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "2 pcs",
+          "priceDelta": 0
+        },
+        {
+          "label": "4 pcs",
+          "priceDelta": 155000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-09-05T06:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:05:25.179Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7befa"
+  },
+  "id": 20,
+  "name": "Highlands Tall Leaf-Pattern Tumbler",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216187/products/nvh1yxcourrv7clsstse.webp",
+  "description": "Tall tumbler with straw and vibrant leaf pattern, handy and easy to carry.",
+  "category": "Cups & Mugs",
+  "stock": true,
+  "sku": "CM-HC-020",
+  "price": 185000,
+  "quantity": 142,
+  "status": "Publish",
+  "createdAt": {
+    "$date": "2025-09-18T09:35:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:03:09.958Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7befb"
+  },
+  "id": 21,
+  "name": "Phúc Long Ceramic Mug 340ml",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216457/products/vi1x2q6mii4iwpwhasfz.jpg",
+  "description": "White ceramic cappuccino cup with embossed Phúc Long logo, 340ml capacity.",
+  "category": "Cups & Mugs",
+  "stock": true,
+  "sku": "CM-PL-021",
+  "price": 175000,
+  "quantity": 160,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "1 pc",
+          "priceDelta": 0
+        },
+        {
+          "label": "2 pcs",
+          "priceDelta": 85000
+        },
+        {
+          "label": "4 pcs",
+          "priceDelta": 190000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-08-24T08:55:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:07:41.021Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7befc"
+  },
+  "id": 22,
+  "name": "Phúc Long Insulated Bottle 600ml",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216342/products/qmj27yfxgr8qpxvochxv.png",
+  "description": "Double-wall stainless steel bottle that keeps drinks hot or cold for up to 12 hours, with leakproof lock.",
+  "category": "Cups & Mugs",
+  "stock": true,
+  "sku": "CM-PL-022",
+  "price": 329000,
+  "quantity": 120,
+  "status": "Publish",
+  "createdAt": {
+    "$date": "2025-09-02T07:05:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:05:58.218Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7befd"
+  },
+  "id": 23,
+  "name": "The Coffee House Go Green Insulated Tumbler 480ml",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216236/products/i64kxqcfkdbe1vhf9qcd.jpg",
+  "description": "480ml insulated tumbler with silicone strap and The Coffee House logo.",
+  "category": "Cups & Mugs",
+  "stock": true,
+  "sku": "CM-TCH-023",
+  "price": 315000,
+  "quantity": 98,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Black",
+          "priceDelta": 0
+        },
+        {
+          "label": "Pink",
+          "priceDelta": 0
+        },
+        {
+          "label": "Blue",
+          "priceDelta": 0
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-09-14T06:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:04:06.618Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7befe"
+  },
+  "id": 24,
+  "name": "The Coffee House Ceramic Travel Mug",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216523/products/qfzncs8rkxxsaglquuom.jpg",
+  "description": "Limited edition Travel Mug with a modern color palette and sleek ceramic design.",
+  "category": "Cups & Mugs",
+  "stock": false,
+  "sku": "CM-TCH-024",
+  "price": 149000,
+  "quantity": 0,
+  "status": "Inactive",
+  "createdAt": {
+    "$date": "2025-07-30T05:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:08:46.255Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7beff"
+  },
+  "id": 25,
+  "name": "Trung Nguyên Legend Stainless Steel Phin Filter 170ml",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216479/products/lgwvhkm1seo6htggu1kn.webp",
+  "description": "Polished stainless steel phin filter engraved with Legend logo, ideal for authentic Vietnamese coffee.",
+  "category": "Coffee makers and grinders",
+  "stock": true,
+  "sku": "MG-TN-025",
+  "price": 189000,
+  "quantity": 115,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "S",
+          "priceDelta": 0
+        },
+        {
+          "label": "M",
+          "priceDelta": 70000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-08-18T04:50:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:08:02.417Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf00"
+  },
+  "id": 26,
+  "name": "Paper Coffee Filters (100 pcs)",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216386/products/htapan0arblw72qaszbc.jpg",
+  "description": "Pack of 100 paper filters compatible with Legend and ceramic phin filters.",
+  "category": "Coffee makers and grinders",
+  "stock": true,
+  "sku": "MG-TN-026",
+  "price": 59000,
+  "quantity": 220,
+  "status": "Publish",
+  "createdAt": {
+    "$date": "2025-09-01T03:35:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:06:28.949Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf01"
+  },
+  "id": 27,
+  "name": "Highlands Coffee Aluminum Phin Filter 150ml",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216437/products/rnqlmtzhk4etapb135zo.png",
+  "description": "Red anodized aluminum phin filter in Highlands standard size.",
+  "category": "Coffee makers and grinders",
+  "stock": true,
+  "sku": "MG-HC-027",
+  "price": 129000,
+  "quantity": 140,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "S",
+          "priceDelta": 0
+        },
+        {
+          "label": "M",
+          "priceDelta": 50000
+        },
+        {
+          "label": "L",
+          "priceDelta": 120000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-08-26T09:10:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:07:21.044Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf02"
+  },
+  "id": 28,
+  "name": "Philips EP2221/40 Espresso Machine",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216547/products/gftuf1wbaelg9xi4psaw.webp",
+  "description": "Philips automatic coffee machine for home use. Enjoy clean, aromatic coffee at home every day.",
+  "category": "Coffee makers and grinders",
+  "stock": false,
+  "sku": "MG-HC-028",
+  "price": 245000,
+  "quantity": 0,
+  "status": "Inactive",
+  "createdAt": {
+    "$date": "2025-07-14T06:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:09:09.604Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf03"
+  },
+  "id": 29,
+  "name": "BODUM Brazil French Press - Black",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216503/products/j7dk1ymd9xbsajzehuhy.jpg",
+  "description": "Classic French press with glass body and black frame, suitable for both coffee and tea.",
+  "category": "Coffee makers and grinders",
+  "stock": true,
+  "sku": "MG-PL-029",
+  "price": 429000,
+  "quantity": 65,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "S",
+          "priceDelta": 0
+        },
+        {
+          "label": "M",
+          "priceDelta": 80000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-08-12T10:05:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:08:27.461Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf04"
+  },
+  "id": 30,
+  "name": "Hand Coffee Grinder",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216299/products/jzakyxw6phjqpufrkqic.jpg",
+  "description": "Manual burr grinder with stainless steel burrs and 18 grind settings.",
+  "category": "Coffee makers and grinders",
+  "stock": true,
+  "sku": "MG-TCH-030",
+  "price": 895000,
+  "quantity": 48,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Home",
+          "priceDelta": 0
+        },
+        {
+          "label": "Pro",
+          "priceDelta": 250000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-09-07T07:40:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:05:05.013Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf05"
+  },
+  "id": 31,
+  "name": "Đà Lạt Arabica Light Roast",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215116/products/lsaknh0wxcq5cm29e6vs.jpg",
+  "description": "Light-roasted Arabica with fresh fruity and floral notes, perfect for pour-over brewing.",
+  "category": "Roasted coffee",
+  "stock": true,
+  "sku": "RC-DL-031",
+  "price": 155000,
+  "quantity": 60,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "200g",
+          "priceDelta": 0
+        },
+        {
+          "label": "500g",
+          "priceDelta": 45000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-22T07:15:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:45:20.344Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf06"
+  },
+  "id": 32,
+  "name": "Trung Nguyên Creative Coffee 1",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215817/products/eo1ovkddw4hyqr0ghmrb.jpg",
+  "description": "Bold dark-roast blend of Robusta and Arabica for coffee lovers who enjoy strong flavor.",
+  "category": "Roasted coffee",
+  "stock": true,
+  "sku": "RC-MX-032",
+  "price": 98000,
+  "quantity": 180,
+  "status": "Publish",
+  "createdAt": {
+    "$date": "2025-10-18T06:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:57:01.355Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf07"
+  },
+  "id": 33,
+  "name": "Mug & Cold Brew Combo Set",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764215751/products/hrg8wkciasubl3p2vivf.png",
+  "description": "Combo including one insulated mug and one bag of roasted coffee for cold brew.",
+  "category": "Coffee sets",
+  "stock": true,
+  "sku": "CS-CB-033",
+  "price": 355000,
+  "quantity": 40,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Single",
+          "priceDelta": 0
+        },
+        {
+          "label": "Double",
+          "priceDelta": 170000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-19T08:30:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T03:55:58.404Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf08"
+  },
+  "id": 34,
+  "name": "Set of 4 Ceramic Espresso Cups",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216061/products/qqx2whsk5naw6c6ymm8q.webp",
+  "description": "Set of four matte-glazed ceramic espresso cups in earthy tones, perfect for specialty-style serving.",
+  "category": "Cups & Mugs",
+  "stock": true,
+  "sku": "CM-ESP-034",
+  "price": 245000,
+  "quantity": 72,
+  "status": "Publish",
+  "createdAt": {
+    "$date": "2025-09-29T05:50:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:01:03.576Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf09"
+  },
+  "id": 35,
+  "name": "V60 Glass Dripper 02",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216170/products/i4qljl7dieio3rcujfux.jpg",
+  "description": "Size 02 V60 dripper made from heat-resistant glass, suitable for 1–2 cups.",
+  "category": "Coffee makers and grinders",
+  "stock": true,
+  "sku": "MG-V60-035",
+  "price": 295000,
+  "quantity": 55,
+  "status": "Publish",
+  "createdAt": {
+    "$date": "2025-09-21T04:20:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:02:52.127Z"
+  },
+  "variants": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6927ad704639e2dc82d7bf0a"
+  },
+  "id": 36,
+  "name": "Gooseneck Pouring Kettle 600ml",
+  "imageUrl": "https://res.cloudinary.com/dztnbf2kj/image/upload/v1764216108/products/iszgjrl6il354iwjwxmi.jpg",
+  "description": "600ml gooseneck kettle for pour-over brewing, made from 304 stainless steel.",
+  "category": "Coffee makers and grinders",
+  "stock": true,
+  "sku": "MG-KTL-036",
+  "price": 659000,
+  "quantity": 38,
+  "status": "Publish",
+  "variants": [
+    {
+      "name": "size",
+      "options": [
+        {
+          "label": "Black",
+          "priceDelta": 0
+        },
+        {
+          "label": "Silver",
+          "priceDelta": 20000
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-09-25T06:45:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-27T04:01:50.914Z"
+  },
+  "__v": 0
+}]

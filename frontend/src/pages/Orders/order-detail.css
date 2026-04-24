@@ -1,0 +1,838 @@
+/* =========================
+   THEME
+   ========================= */
+
+:root {
+  --od-bg: #f6f3ef;
+  --od-card-bg: #ffffff;
+  --od-border-subtle: #e3ddd5;
+  --od-border-strong: #d2c7ba;
+  --od-text-main: #111827;
+  --od-text-muted: #6b7280;
+  --od-text-soft: #9ca3af;
+  --od-primary: #8b5e3c;
+  --od-primary-hover: #744b30;
+  --od-primary-soft: #f2e6dc;
+  --od-danger: #dc2626;
+  --od-radius-lg: 28px;
+  --od-radius-md: 18px;
+  --od-radius-pill: 999px;
+  --od-shadow-soft: 0 20px 50px rgba(15, 23, 42, 0.2);
+  --od-shadow-subtle: 0 10px 28px rgba(15, 23, 42, 0.12);
+  --od-transition: 0.22s ease;
+}
+
+/* =========================
+   PAGE LAYOUT
+   ========================= */
+
+.order-detail-page {
+  min-height: calc(100vh - 120px);
+  padding: 32px 16px 48px;
+  padding-top: 160px;
+  box-sizing: border-box;
+}
+
+.order-detail-inner {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.order-detail-card {
+  width: 100%;
+  background: linear-gradient(135deg, #ffffff 0%, #fbf8f3 60%, #f6efe6 100%);
+  border-radius: var(--od-radius-lg);
+  padding: 24px 28px 26px;
+  box-shadow: var(--od-shadow-soft);
+  border: 1px solid rgba(209, 213, 219, 0.7);
+  box-sizing: border-box;
+}
+
+/* =========================
+   HEADER BAR
+   ========================= */
+
+.order-detail-header-bar {
+  width: 100%;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-detail-back-btn {
+  border-radius: var(--od-radius-pill);
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: background var(--od-transition), color var(--od-transition),
+    box-shadow var(--od-transition), transform var(--od-transition),
+    border-color var(--od-transition);
+}
+
+.order-detail-back-btn:hover {
+  background: #ffffff;
+  border-color: var(--od-primary);
+  color: #111827;
+  box-shadow: var(--od-shadow-subtle);
+  transform: translateY(-1px);
+}
+
+.order-detail-header-bar h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--od-text-main);
+}
+
+/* =========================
+   LOADING / ERROR STATES
+   ========================= */
+
+.order-detail-state {
+  margin-top: 4px;
+  padding: 18px 16px;
+  border-radius: var(--od-radius-md);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px dashed var(--od-border-subtle);
+  text-align: center;
+  font-size: 13px;
+  color: var(--od-text-muted);
+}
+
+.order-detail-state p {
+  margin: 0 0 10px;
+}
+
+.order-detail-state button {
+  border-radius: var(--od-radius-pill);
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: background var(--od-transition), color var(--od-transition),
+    box-shadow var(--od-transition), transform var(--od-transition),
+    border-color var(--od-transition);
+}
+
+.order-detail-state button:hover {
+  background: #ffffff;
+  border-color: var(--od-primary);
+  color: #111827;
+  box-shadow: var(--od-shadow-subtle);
+  transform: translateY(-1px);
+}
+
+.order-detail-error {
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #b91c1c;
+}
+
+/* spinner riêng cho order-detail */
+.order-detail-page .spinner {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 3px solid #e5e7eb;
+  border-top-color: var(--od-primary);
+  margin: 0 auto 8px;
+  animation: od-spin 0.8s linear infinite;
+}
+
+@keyframes od-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   TOP SUMMARY (MÃ ĐƠN + TRẠNG THÁI)
+   ========================= */
+
+.order-detail-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.order-detail-code {
+  margin: 0 0 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--od-text-main);
+}
+
+.order-detail-time {
+  margin: 0;
+  font-size: 12px;
+  color: var(--od-text-soft);
+}
+
+.order-detail-status-block {
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   STATUS BADGES
+   ========================= */
+
+.order-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+  border-radius: var(--od-radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+/* unknown */
+.order-status-unknown {
+  color: #6b7280;
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+}
+
+/* created, pending – vàng/cam */
+.order-status-created,
+.order-status-pending {
+  color: #92400e;
+  background: #fffbeb;
+  border-color: #fed7aa;
+}
+
+/* processing, confirmed, shipping, shipped – xanh dương */
+.order-status-processing,
+.order-status-confirmed,
+.order-status-shipping,
+.order-status-shipped {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* completed, delivered – xanh lá */
+.order-status-completed,
+.order-status-delivered {
+  color: #166534;
+  background: #ecfdf3;
+  border-color: #bbf7d0;
+}
+
+/* cancelled / canceled – đỏ */
+.order-status-cancelled,
+.order-status-canceled {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+/* refunded – teal */
+.order-status-refunded {
+  color: #0f766e;
+  background: #ecfdf5;
+  border-color: #6ee7b7;
+}
+
+/* =========================
+   STEPPER / PROGRESS BAR
+   ========================= */
+
+.order-detail-steps {
+  position: relative;
+  margin: 16px 0 24px;
+  padding: 24px 40px 18px;
+  border-radius: 999px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* progress mặc định = 0 */
+  --od-progress: 0;
+}
+
+/* track xám full chiều rộng */
+.order-detail-steps::before {
+  content: "";
+  position: absolute;
+  left: 72px;
+  right: 72px;
+  top: 34px;               /* = padding-top 24 + (circle 24 / 2) */
+  height: 4px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+/* track màu cam theo tiến độ */
+.order-detail-steps::after {
+  content: "";
+  position: absolute;
+  left: 72px;
+  top: 34px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f97316, #facc15);
+  width: calc((100% - 144px) * var(--od-progress));
+}
+
+/* set % cho từng step (0 → 3) */
+.order-detail-steps.od-step-0 { --od-progress: 0; }
+.order-detail-steps.od-step-1 { --od-progress: 0.33; }
+.order-detail-steps.od-step-2 { --od-progress: 0.66; }
+.order-detail-steps.od-step-3 { --od-progress: 1; }
+
+/* mỗi step */
+.order-detail-step {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: var(--od-text-soft);
+}
+
+/* chấm trạng thái – tròn + core vàng */
+.order-detail-step-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-detail-step-circle::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 20%, #fef9c3, #d97706);
+}
+
+/* step active */
+.order-detail-step-active {
+  color: var(--od-primary);
+  font-weight: 500;
+}
+
+.order-detail-step-active .order-detail-step-circle {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.35);
+}
+
+/* label dưới */
+.order-detail-step-label {
+  margin-top: 6px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .order-detail-steps {
+    padding: 18px 20px 14px;
+  }
+
+  .order-detail-steps::before,
+  .order-detail-steps::after {
+    left: 52px;
+    right: 52px;
+    top: 30px;
+    height: 3px;
+  }
+
+  .order-detail-step-circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .order-detail-step-circle::after {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* =========================
+   MAIN GRID: LEFT/RIGHT
+   ========================= */
+
+.order-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.order-detail-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.order-detail-section {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 20px;
+  border: 1px solid rgba(229, 231, 235, 0.95);
+  box-shadow: var(--od-shadow-subtle);
+  padding: 14px 16px 16px;
+}
+
+.order-detail-section h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--od-text-main);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.order-detail-section h2::before {
+  content: "";
+  width: 4px;
+  height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--od-primary), #c79a66);
+}
+
+/* Thông tin text */
+
+.order-detail-info p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: var(--od-text-muted);
+  line-height: 1.5;
+}
+
+.order-detail-info .label {
+  font-weight: 500;
+  color: var(--od-text-main);
+}
+
+/* =========================
+   SUMMARY BÊN PHẢI
+   ========================= */
+
+.order-detail-summary {
+  background: #f9fafb;
+}
+
+.order-detail-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 14px;
+  margin: 3px 0;
+  color: var(--od-text-muted);
+}
+
+.order-detail-summary-row span:first-child {
+  color: var(--od-text-soft);
+}
+
+.order-detail-summary-total {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--od-border-subtle);
+  font-weight: 600;
+  color: var(--od-text-main);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .order-detail-page {
+    padding: 22px 10px 32px;
+  }
+
+  .order-detail-card {
+    padding: 18px 16px 20px;
+    border-radius: 22px;
+  }
+
+  .order-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-detail-steps {
+    padding: 14px 18px 12px;
+  }
+
+  .order-detail-steps::before {
+    left: 42px;
+    right: 42px;
+    top: 24px;
+    height: 4px;
+  }
+
+  .order-detail-step-circle {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-detail-header-bar h1 {
+    font-size: 19px;
+  }
+
+  .order-detail-card {
+    padding-inline: 12px;
+  }
+
+  .order-detail-steps {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .order-detail-steps::before {
+    display: none;
+  }
+}
+
+/* =========================================
+   EXTRA RESPONSIVE TWEAKS (MOBILE / TABLET)
+   ========================================= */
+
+/* chặn bị scroll ngang trên các màn nhỏ */
+.order-detail-page {
+  overflow-x: hidden;
+}
+
+/* Tablet & mobile: header back + title wrap đẹp hơn */
+@media (max-width: 768px) {
+  .order-detail-page {
+    padding-top: 70px; /* bớt khoảng trắng phía trên ở mobile */
+  }
+
+  .order-detail-header-bar {
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .order-detail-back-btn {
+    flex-shrink: 0;
+  }
+
+  .order-detail-header-bar h1 {
+    font-size: 18px;
+  }
+}
+
+/* Mobile & small tablet dọc */
+@media (max-width: 600px) {
+  .order-detail-page {
+    padding-inline: 8px;
+  }
+
+  .order-detail-card {
+    padding-inline: 12px;
+  }
+
+  /* chắc chắn layout về 1 cột, không bị ép hẹp */
+  .order-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* stepper dọc, không còn oval to chiếm màn hình */
+  .order-detail-steps {
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 10px 10px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+  }
+
+  .order-detail-steps::before,
+  .order-detail-steps::after {
+    display: none;
+  }
+}
+
+/* Màn rất nhỏ (mấy con < 400px) */
+@media (max-width: 400px) {
+  .order-detail-page {
+    padding-inline: 6px;
+  }
+
+  .order-detail-section {
+    padding-inline: 12px;
+  }
+}
+
+/* === FIX MOBILE: keep status bar horizontal === */
+@media (max-width: 480px) {
+  .order-detail-steps {
+    flex-direction: row;  /* cho các step nằm ngang */
+    gap: 0;
+    padding: 14px 14px 12px; /* thu chút padding cho đỡ chật */
+  }
+
+  .order-detail-steps::before,
+  .order-detail-steps::after {
+    display: block;       /* bật lại thanh progress ngang */
+  }
+
+  .order-detail-step-label {
+    font-size: 11px;      /* chữ nhỏ lại xíu cho vừa màn */
+  }
+}
+
+/* === FIX: progress bar chạm đúng từng step === */
+
+/* track xám chạy từ dot đầu tới dot cuối, tính theo % */
+.order-detail-steps::before {
+  left: 12.5%;
+  right: 12.5%; /* 12.5% ~ vị trí tâm dot 1 & dot 4 */
+}
+
+/* track màu cam chạy theo % tiến độ */
+.order-detail-steps::after {
+  left: 12.5%;
+  right: auto; /* bỏ right: 72px cũ */
+  width: calc(75% * var(--od-progress)); 
+  /* 75% = 100% - 12.5% - 12.5% -> đúng khoảng giữa 4 dot */
+}
+
+/* dùng phân số chính xác cho từng step */
+.order-detail-steps.od-step-0 { --od-progress: 0; }
+.order-detail-steps.od-step-1 { --od-progress: 0.333333; }
+.order-detail-steps.od-step-2 { --od-progress: 0.666667; }
+.order-detail-steps.od-step-3 { --od-progress: 1; }
+
+
+/* === ALIGN STATUS PROGRESS BAR VỚI CÁC CHẤM === */
+
+/* track xám chạy từ tâm chấm 1 tới tâm chấm 4 */
+.order-detail-steps::before {
+  left: 12.5%;
+  right: 12.5%;
+}
+
+/* track cam chạy theo % tiến độ trong khoảng 12.5% → 87.5% */
+.order-detail-steps::after {
+  left: 12.5%;
+  right: auto;
+  width: calc(75% * var(--od-progress));
+}
+
+/* dùng tỉ lệ chính xác hơn cho từng step */
+.order-detail-steps.od-step-0 { --od-progress: 0; }
+.order-detail-steps.od-step-1 { --od-progress: 0.333333; }
+.order-detail-steps.od-step-2 { --od-progress: 0.666667; }
+.order-detail-steps.od-step-3 { --od-progress: 1; }
+
+/* đảm bảo mobile vẫn nằm ngang, không bị column + ẩn track */
+@media (max-width: 480px) {
+  .order-detail-steps {
+    flex-direction: row;
+    gap: 0;
+    padding: 18px 16px 14px;
+  }
+
+  .order-detail-step-label {
+    font-size: 11px;
+  }
+
+  .order-detail-steps::before,
+  .order-detail-steps::after {
+    display: block;
+  }
+}
+
+
+/* =========================================
+   STEP PROGRESS BAR V2 – canh đúng từng dot
+   ========================================= */
+
+/* tắt hẳn track cũ của container */
+.order-detail-steps::before,
+.order-detail-steps::after {
+  display: none !important;
+}
+
+/* mỗi step tự vẽ 1 đoạn track nối từ dot trước đến dot hiện tại */
+.order-detail-step {
+  position: relative;
+}
+
+/* đoạn track xám giữa dot trước và dot hiện tại */
+.order-detail-step::before {
+  content: "";
+  position: absolute;
+  top: 12px;                 /* đúng tâm circle 24px */
+  left: -50%;
+  right: 50%;
+  height: 4px;
+  border-radius: 999px;
+  background: #e5e7eb;       /* màu xám mặc định */
+  z-index: 0;
+}
+
+/* dot đầu tiên không có đoạn bên trái */
+.order-detail-step:first-child::before {
+  display: none;
+}
+
+/* đảm bảo chấm nằm trên track */
+.order-detail-step-circle {
+  position: relative;
+  z-index: 1;
+}
+
+/* các đoạn đã hoàn thành thì tô gradient cam */
+.order-detail-step-active::before {
+  background: linear-gradient(90deg, #f97316, #facc15);
+}
+
+/* responsive: circle nhỏ lại thì hạ track xuống chút */
+@media (max-width: 768px) {
+  .order-detail-step::before {
+    top: 10px;               /* tâm của circle 20px */
+    height: 3px;
+  }
+}
+
+/* mobile: giữ layout ngang + text nhỏ hơn */
+@media (max-width: 600px) {
+  .order-detail-steps {
+    flex-direction: row;
+    gap: 0;
+    padding: 14px 14px 12px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+  }
+
+  .order-detail-step-label {
+    font-size: 11px;
+  }
+}
+
+/* === Tinh chỉnh: thanh không đè lên hình tròn === */
+
+/* Desktop: circle 24px (bán kính 12px) */
+.order-detail-step::before {
+  left: calc(-50% + 12px);  /* trừ bán kính -> dừng ở mép circle */
+  right: calc(50% + 12px);
+}
+
+/* Tablet + mobile: circle nhỏ hơn (20px -> bán kính ~10px) */
+@media (max-width: 768px) {
+  .order-detail-step::before {
+    left: calc(-50% + 10px);
+    right: calc(50% + 10px);
+  }
+}
+
+/* =========================
+   ORDERED ITEMS LIST
+   ========================= */
+
+.order-detail-items-list {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-detail-item-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #f9fafb;
+  border: 1px solid var(--od-border-subtle);
+}
+
+.order-detail-item-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.order-detail-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--od-text-main);
+  margin-bottom: 2px;
+}
+
+.order-detail-item-variant {
+  font-size: 12px;
+  color: var(--od-text-soft);
+  margin-bottom: 4px;
+}
+
+.order-detail-item-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--od-text-muted);
+}
+
+.order-detail-item-total {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--od-text-main);
+  white-space: nowrap;
+}
+
+.order-detail-items-empty {
+  font-size: 13px;
+  color: var(--od-text-soft);
+  margin: 4px 0 0;
+}
+
+/* Responsive: trên màn nhỏ, cho line total xuống dưới cho đỡ chật */
+@media (max-width: 600px) {
+  .order-detail-item-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-detail-item-total {
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .order-detail-page{
+    padding-top: 70px;
+  }
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "code": "NEW10",
+    "discountPercent": 10,
+    "maxUses": 10,
+    "usedCount": 0,
+    "isActive": true
+  },
+  {
+    "code": "SAVE5",
+    "discountPercent": 5,
+    "maxUses": 8,
+    "usedCount": 0,
+    "isActive": true
+  },
+  {
+    "code": "VIP20",
+    "discountPercent": 20,
+    "maxUses": 3,
+    "usedCount": 0,
+    "isActive": true
+  },
+  {
+    "code": "TRU20",
+    "type": "amount",
+    "discountAmount": 20000,
+    "maxUses": 10,
+    "usedCount": 0,
+    "isActive": true
+  },
+  {
+    "code": "TRU10",
+    "type": "amount",
+    "discountAmount": 10000,
+    "maxUses": 10,
+    "usedCount": 0,
+    "isActive": true
+  }
+]

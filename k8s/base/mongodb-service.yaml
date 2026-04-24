@@ -1,0 +1,22 @@
+# ============================================================
+# CoffeeShop — MongoDB Service
+# Headless service for StatefulSet stable DNS
+# ============================================================
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+  labels:
+    app: coffeeshop
+    component: mongodb
+spec:
+  type: ClusterIP
+  clusterIP: None    # Headless service for StatefulSet
+  selector:
+    app: coffeeshop
+    component: mongodb
+  ports:
+    - name: mongodb
+      port: 27017
+      targetPort: 27017
+      protocol: TCP

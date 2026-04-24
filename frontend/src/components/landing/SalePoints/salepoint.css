@@ -1,0 +1,60 @@
+.sale-point-wrapper {
+  position: relative;
+}
+.sale-point-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: -80px; /* chèn vào hero */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 30px 40px;
+  min-width: 80%;
+  min-height: 1000px;
+  z-index: 10;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  50% { 
+    transform: translateY(-8px); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.sale-point-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sale-point-item:hover {
+  transform: translateY(-5px);
+  background: rgba(160, 106, 59, 0.05);
+}
+
+.sale-point-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+
+}
+
+.sale-point-item p {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

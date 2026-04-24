@@ -1,0 +1,340 @@
+/* About Page Styles */
+.about-hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  color: white;
+  margin-bottom: -50px; 
+}
+.about-page {
+  min-height: 100vh;
+  background: black;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, #2c1810 0%, #8b4513 100%);
+  color: white;
+  padding: 120px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 130px;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .story-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .story-text h2,
+  .our-values h2,
+  .our-team h2,
+  .our-process h2 {
+    font-size: 2rem;
+  }
+  
+  .values-grid,
+  .team-grid,
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+} */
+/* 
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 80px 0 60px;
+  }
+  
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .our-story,
+  .our-values,
+  .our-team,
+  .our-process {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+} */
+
+/* Overlay Story Box */
+.story-box {
+  position: absolute;
+  bottom: -120px; /* tràn xuống dưới */
+  left: 70%;
+  transform: translateX(-50%);
+  background: var(--cream-white);
+  color: #000;
+  max-width: 45%;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.story-box h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.story-box p {
+  line-height: 1.6;
+  text-align: left;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1200px;
+  margin: 15px auto;
+  gap: 10px;
+}
+
+/* Section chẵn sẽ đảo vị trí */
+.sections-wrapper .section:nth-of-type(even) {
+  direction: rtl;
+}
+.sections-wrapper .section:nth-of-type(even) > * {
+  direction: ltr;
+}
+
+.section img {
+  width: 50%;
+  object-fit: contain;
+}
+
+.text-box.dark {
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+
+.text-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.text-box p {
+  line-height: 1.6;
+}
+
+/* Quote box */
+.highlight {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  text-align: center;
+  max-width: 500px;
+  margin: -80px auto 80px;
+  font-style: italic;
+  top: -60px; 
+  left: 50%;
+
+}
+
+.quote-overlay {
+  position: relative;
+  height: 0; 
+  margin-bottom: 100px; 
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .section:nth-child(even) {
+    direction: ltr;
+  }
+  .section img {
+    order: -1; /* đưa hình lên trước trên mobile */
+  }
+}
+
+/* ========= ABOUT PAGE RESPONSIVE ========= */
+
+/* Tablet */
+/* Tablet: iPad Pro, Surface, Nest Hub */
+@media (max-width: 1024px) {
+  .about-hero {
+    min-height: 80vh;            /* hero cao ~80% màn hình */
+    padding: 100px 20px 80px;    /* tăng padding dưới 1 xíu */
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .about-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  /* Story box: KHÔNG overlay nữa, thành card thường bên dưới hero */
+  .story-box {
+    position: static;
+    max-width: 80%;
+    width: 100%;
+    margin: 24px auto 40px;
+    padding: 24px;
+    transform: none;
+    bottom: auto;
+    left: auto;
+  }
+
+  /* Section vẫn 2 cột nhưng hình full cột, không bị kì */
+  .section {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    gap: 24px;
+    padding: 0 24px;
+  }
+
+  .section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Quote: bỏ overlay để không đè lên text Team/Story */
+  .quote-overlay {
+    height: auto;
+    margin: 40px 0 60px;
+  }
+
+  .highlight {
+    margin: 0 auto 40px;
+    max-width: 80%;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-hero {
+    height: auto;
+    padding: 80px 16px 40px;   /* không cần tràn xuống nhiều */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  /* Story box: bỏ overlay, thành card bình thường bên dưới hero */
+  .story-box {
+    position: static;
+    max-width: 100%;
+    width: 100%;
+    transform: none;
+    bottom: auto;
+    left: auto;
+    margin: 24px auto 40px;
+    padding: 20px 16px;
+  }
+
+  /* Sections dưới: xếp 1 cột, hình full width, text dưới */
+  .section {
+    grid-template-columns: 1fr;
+    align-items: start;
+    text-align: left;
+    gap: 24px;
+  }
+
+  .section img {
+    width: 100%;
+    object-fit: cover;
+    order: -1;  /* hình lên trước */
+  }
+
+  /* bỏ đảo chiều ở section chẵn */
+  .sections-wrapper .section:nth-of-type(even) {
+    direction: ltr;
+  }
+  .sections-wrapper .section:nth-of-type(even) > * {
+    direction: ltr;
+  }
+
+  /* Quote box */
+  .highlight {
+    margin: 40px 16px 60px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
+@media (max-width: 768px) {
+  .text-box {
+    padding: 16px 20px;
+  }
+}

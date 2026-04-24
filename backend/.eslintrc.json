@@ -1,0 +1,25 @@
+{
+  "env": {
+    "node": true,
+    "es2022": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-console": "off",
+    "prefer-const": "warn",
+    "no-var": "error",
+    "eqeqeq": ["warn", "always"],
+    "no-duplicate-imports": "error",
+    "no-undef": "error"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "coverage/",
+    "*.bak"
+  ]
+}

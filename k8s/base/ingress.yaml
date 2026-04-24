@@ -1,0 +1,116 @@
+# ============================================================
+# CoffeeShop — Ingress (Traefik)
+# TLS termination via cert-manager + Let's Encrypt
+# Routes: / → frontend, /api/ → backend, /ws/ → backend
+# ============================================================
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: coffeeshop-ingress
+  labels:
+    app: coffeeshop
+  annotations:
+    # cert-manager integration
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    # Traefik-specific
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    # Redirect HTTP → HTTPS
+    traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
+    # WebSocket support for /ws/
+    traefik.ingress.kubernetes.io/service.sticky.cookie: "true"
+spec:
+  ingressClassName: traefik
+  tls:
+    - hosts:
+        - coffeeshop.xyz
+        - www.coffeeshop.xyz
+      secretName: coffeeshop-tls-cert    # Auto-created by cert-manager
+  rules:
+    # ── Main Domain ──
+    - host: coffeeshop.xyz
+      http:
+        paths:
+          # API routes → backend service
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 3001
+          # WebSocket routes → backend service
+          - path: /ws
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 3001
+          # Health check endpoint
+          - path: /health
+            pathType: Exact
+            backend:
+              service:
+                name: backend
+                port:
+                  number: 3001
+          # Everything else → frontend service
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
+    # ── WWW Redirect ──
+    - host: www.coffeeshop.xyz
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
+
+---
+# ── Grafana Ingress (Monitoring) ──
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grafana-ingress
+  namespace: monitoring
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
+spec:
+  ingressClassName: traefik
+  tls:
+    - hosts:
+        - grafana.coffeeshop.xyz
+      secretName: grafana-tls-cert
+  rules:
+    - host: grafana.coffeeshop.xyz
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: monitoring-grafana
+                port:
+                  number: 80
+
+---
+# ── HTTP → HTTPS Redirect Middleware ──
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: redirect-https
+spec:
+  redirectScheme:
+    scheme: https
+    permanent: true

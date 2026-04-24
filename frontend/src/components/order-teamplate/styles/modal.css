@@ -1,0 +1,137 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #fff;
+  display: flex;
+  max-width: 800px;
+  width: 90%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-left img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.modal-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.modal-right h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.modal-right .price {
+  color: #c20000;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.option-block {
+  margin: 15px 0;
+}
+
+.option-block h4 {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+.size-options {
+  display: flex;
+  gap: 10px;
+}
+
+.size-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.size-btn input { display: none; }
+
+.size-btn.active {
+  border-color: #c20000;
+  color: #c20000;
+}
+
+.qty-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-actions button {
+  width: 28px; height: 28px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.option-block select,
+.option-block textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.option-block textarea {
+  resize: vertical;
+  min-height: 50px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.modal-actions .btn-buy {
+  flex: 1;
+  background: #c20000;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-actions .btn-add {
+  flex: 1;
+  background: #ff6b6b;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+

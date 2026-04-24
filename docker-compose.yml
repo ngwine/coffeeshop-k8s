@@ -1,0 +1,84 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:6
+    container_name: coffee-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: CoffeeDB
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+
+  # Backend instance 1
+  backend1:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: coffee-backend-1
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      MONGO_URI: mongodb://mongo:27017/CoffeeDB
+      FRONTEND_URL: http://localhost:3000
+      API_BASE_URL: http://localhost:3001
+      GOOGLE_REDIRECT_URI: http://localhost:3001/api/auth/google/callback
+      JWT_SECRET: dev-secret-key
+    depends_on:
+      - mongo
+    expose:
+      - "3001"       # chỉ mở trong mạng docker
+
+  # Backend instance 2
+  backend2:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: coffee-backend-2
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      MONGO_URI: mongodb://mongo:27017/CoffeeDB
+      FRONTEND_URL: http://localhost:3000
+      API_BASE_URL: http://localhost:3001
+      GOOGLE_REDIRECT_URI: http://localhost:3001/api/auth/google/callback
+      JWT_SECRET: dev-secret-key
+    depends_on:
+      - mongo
+    expose:
+      - "3001"
+
+  # Nginx làm load balancer cho backend1 + backend2
+  nginx:
+    image: nginx:alpine
+    container_name: coffee-nginx
+    restart: unless-stopped
+    depends_on:
+      - backend1
+      - backend2
+    ports:
+      - "3001:80"   # host:3001 -> nginx:80
+    volumes:
+      - ./deploy/nginx.conf:/etc/nginx/nginx.conf:ro
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: coffee-frontend
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      # frontend gọi qua LB trên host
+      REACT_APP_API_BASE_URL: http://localhost:3001
+    depends_on:
+      - nginx
+    ports:
+      - "3000:80"
+
+volumes:
+  mongo_data:

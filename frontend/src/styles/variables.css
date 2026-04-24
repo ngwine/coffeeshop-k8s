@@ -1,0 +1,15 @@
+/* ====== Shared Variables & Base ====== */
+:root {
+  --footer-bg: #04251f;
+  --white: #fff;
+  --gold: #e5a94b;
+  --gray: #bfc9c6;
+  --cream-white: #fcfbf9;     /* softer off-white */
+  --light-brown: #D29D6A; 
+  --dark-brown: #4B2F24;   
+  --transition: 0.3s;
+}
+
+.testimonial-footer-font {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+} 

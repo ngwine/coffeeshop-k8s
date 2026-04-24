@@ -1,0 +1,59 @@
+/* Landing page styles tuned to coffee/cosmetics dark theme with gold accents */
+.landing { padding: 70px 0; }
+.landing .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.landing h2 { text-align: center; margin-bottom: 28px; font-weight: 800; letter-spacing: 0.5px; }
+
+:root {
+  --bg-dark: #121110;
+  --panel-dark: #1b1a19;
+  --gold: #c3ab84;
+  --gold-strong: #b9975b;
+  --muted: #a9a9a9;
+}
+
+/* .landing.recent-products { background: var(--bg-dark); color: #fff; }
+.landing.recent-products h2::after { content: ""; display: block; width: 120px; height: 2px; background: var(--gold); margin: 12px auto 0; opacity: 0.8; }
+.landing.recent-products .grid,
+.landing.recent-posts .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.landing .card, .landing .post-card { background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
+.landing .card h3 { font-weight: 700; margin: 10px 0 6px; }
+.landing .thumb { background: #dedede; border-radius: 10px; height: 160px; margin-bottom: 12px; }
+.landing .price { font-weight: 800; margin: 8px 0 12px; color: #1d1d1d; } */
+
+.landing.sale-points { background: transparent; color: #fff; }
+.landing.sale-points .points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; list-style: none; padding: 0; margin: 0; }
+.landing.sale-points li { background: rgba(255,255,255,0.06); padding: 16px; border-radius: 8px; text-align: center; border: 1px solid rgba(255,255,255,0.08); }
+
+
+.landing.testimonials { background: var(--bg-dark); color: #fff; }
+.landing.testimonials blockquote { border: 2px solid rgba(195,171,132,0.5); padding: 36px; border-radius: 10px; max-width: 820px; margin: 0 auto; position: relative; }
+.landing.testimonials blockquote::before, .landing.testimonials blockquote::after { content: ""; position: absolute; width: 24px; height: 24px; border: 2px solid var(--gold); top: 12px; }
+.landing.testimonials blockquote::before { left: 12px; }
+.landing.testimonials blockquote::after { right: 12px; }
+
+.landing.partners .logos { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; align-items: center; }
+.landing.partners .logo { height: 48px; background: #e3e3e3; border-radius: 6px; opacity: 0.8; }
+
+.landing.discount { background: #f5efe7; text-align: center; }
+.landing.newsletter { background: #121212; color: #fff; }
+.newsletter-form { display: flex; gap: 12px; justify-content: center; }
+.newsletter-form input { padding: 12px 14px; border-radius: 6px; border: 1px solid #333; min-width: 280px; }
+
+/* Process styles moved to process.css */
+
+@media (max-width: 960px) {
+  .landing.recent-products .grid,
+  .landing.recent-posts .grid { grid-template-columns: repeat(2, 1fr); }
+  .landing.stats-dealer .container { grid-template-columns: 1fr; }
+  .landing.partners .logos { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .landing.recent-products .grid,
+  .landing.recent-posts .grid { grid-template-columns: 1fr; }
+  .landing.about-market .features { grid-template-columns: 1fr; }
+  .landing.sale-points .points { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; }
+}
+
+

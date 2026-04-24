@@ -1,0 +1,354 @@
+/* =========================
+   THEME
+   ========================= */
+
+:root {
+  --oh-bg: #f6f3ef;
+  --oh-card-bg: #ffffff;
+  --oh-border-subtle: #e3ddd5;
+  --oh-border-strong: #d2c7ba;
+  --oh-text-main: #111827;
+  --oh-text-muted: #6b7280;
+  --oh-text-soft: #9ca3af;
+  --oh-primary: #8b5e3c;
+  --oh-primary-soft: #f2e6dc;
+  --oh-primary-hover: #744b30;
+  --oh-danger: #dc2626;
+  --oh-radius-lg: 28px;
+  --oh-radius-md: 18px;
+  --oh-radius-pill: 999px;
+  --oh-shadow-soft: 0 20px 50px rgba(15, 23, 42, 0.18);
+  --oh-shadow-subtle: 0 10px 28px rgba(15, 23, 42, 0.12);
+  --oh-transition: 0.22s ease;
+}
+
+/* =========================
+   PAGE LAYOUT
+   ========================= */
+
+.order-history-page {
+  min-height: calc(100vh - 120px);
+  padding: 32px 0 48px;
+  padding-top: 160px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.order-history-card {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ffffff 0%, #fbf8f3 60%, #f6efe6 100%);
+  border-radius: var(--oh-radius-lg);
+  padding: 22px 24px 24px;
+  box-shadow: var(--oh-shadow-soft);
+  border: 1px solid rgba(209, 213, 219, 0.7);
+  box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.order-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.order-history-header h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--oh-text-main);
+}
+
+.order-history-header p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--oh-text-muted);
+}
+
+/* =========================
+   STATES (EMPTY / ERROR / LOADING)
+   ========================= */
+
+.order-history-state {
+  margin-top: 8px;
+  padding: 18px 16px;
+  border-radius: var(--oh-radius-md);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px dashed var(--oh-border-subtle);
+  text-align: center;
+  color: var(--oh-text-muted);
+  font-size: 13px;
+}
+
+.order-history-state h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--oh-text-main);
+}
+
+.order-history-state p {
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.order-history-state button {
+  border-radius: var(--oh-radius-pill);
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: background var(--oh-transition), color var(--oh-transition),
+    box-shadow var(--oh-transition), transform var(--oh-transition),
+    border-color var(--oh-transition);
+}
+
+.order-history-state button:hover {
+  background: #ffffff;
+  border-color: var(--oh-primary);
+  color: #111827;
+  box-shadow: var(--oh-shadow-subtle);
+  transform: translateY(-1px);
+}
+
+.order-history-error {
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #b91c1c;
+}
+
+.order-history-empty {
+  text-align: left;
+}
+
+.order-history-empty h3 {
+  margin-bottom: 4px;
+}
+
+/* Loading spinner */
+
+.spinner {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 3px solid #e5e7eb;
+  border-top-color: var(--oh-primary);
+  margin: 0 auto 8px;
+  animation: oh-spin 0.8s linear infinite;
+}
+
+@keyframes oh-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   TABLE WRAPPER
+   ========================= */
+
+.order-history-table-wrapper {
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: var(--oh-radius-md);
+  border: 1px solid rgba(229, 231, 235, 0.95);
+  box-shadow: var(--oh-shadow-subtle);
+  padding: 10px 12px 12px;
+}
+
+/* Cho table cuộn ngang trên mobile */
+.order-history-table-wrapper {
+  overflow-x: auto;
+}
+
+/* =========================
+   TABLE
+   ========================= */
+
+.order-history-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.order-history-table thead {
+  background: #f9fafb;
+}
+
+.order-history-table th,
+.order-history-table td {
+  padding: 9px 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.order-history-table th {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--oh-text-soft);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.order-history-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.order-history-row {
+  cursor: pointer;
+  transition: background var(--oh-transition), box-shadow var(--oh-transition),
+    transform var(--oh-transition);
+}
+
+.order-history-row:hover {
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.16);
+  transform: translateY(-1px);
+}
+
+.order-history-table td:first-child {
+  font-weight: 600;
+  color: var(--oh-text-main);
+}
+
+.order-history-table td:nth-child(2) {
+  color: var(--oh-text-muted);
+}
+
+.order-history-table td:nth-child(3) {
+  font-weight: 500;
+}
+
+/* Note dưới bảng */
+
+.order-history-note {
+  margin: 8px 2px 0;
+  font-size: 12px;
+  color: var(--oh-text-soft);
+}
+
+/* =========================
+   STATUS BADGES
+   ========================= */
+
+.order-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+  border-radius: var(--oh-radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.order-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+  border-radius: var(--oh-radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+/* UNKNOWN – XÁM */
+.order-status-unknown {
+  color: #6b7280;
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+}
+
+/* CREATED, PENDING – VÀNG / CAM */
+.order-status-created,
+.order-status-pending {
+  color: #92400e;
+  background: #fffbeb;
+  border-color: #fed7aa;
+}
+
+/* PROCESSING, CONFIRMED, SHIPPING, SHIPPED – XANH DƯƠNG */
+.order-status-processing,
+.order-status-confirmed,
+.order-status-shipping,
+.order-status-shipped {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* COMPLETED, DELIVERED – XANH LÁ */
+.order-status-completed,
+.order-status-delivered {
+  color: #166534;
+  background: #ecfdf3;
+  border-color: #bbf7d0;
+}
+
+/* CANCELLED / CANCELED – ĐỎ */
+.order-status-cancelled,
+.order-status-canceled {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+/* REFUNDED – XANH NGỌC (TEAL) */
+.order-status-refunded {
+  color: #0f766e;
+  background: #ecfdf5;
+  border-color: #6ee7b7;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .order-history-page {
+    padding: 22px 0 32px;
+    padding-top: 70px;
+  }
+
+  .order-history-card {
+    padding: 18px 14px 20px;
+    border-radius: 22px;
+  }
+
+  .order-history-table {
+    min-width: 520px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-history-header h1 {
+    font-size: 20px;
+  }
+
+  .order-history-card {
+    padding-inline: 12px;
+  }
+}
+@media (max-width: 1050px) {
+  .order-history-page {
+    padding: 22px 0 32px;
+    padding-top: 70px;
+  }
+}

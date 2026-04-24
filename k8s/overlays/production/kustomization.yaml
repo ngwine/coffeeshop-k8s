@@ -1,0 +1,60 @@
+# ============================================================
+# CoffeeShop — Production Overlay
+# Full replicas, higher resources, production-grade settings
+# ============================================================
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: production
+
+resources:
+  - ../../base
+
+commonLabels:
+  environment: production
+
+# ── Production replicas (also controlled by HPA) ──
+replicas:
+  - name: backend
+    count: 2
+  - name: frontend
+    count: 2
+
+# ── Patch: production resource limits ──
+patches:
+  # Backend: production resources
+  - target:
+      kind: Deployment
+      name: backend
+    patch: |
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: backend
+      spec:
+        template:
+          spec:
+            containers:
+              - name: backend
+                resources:
+                  requests:
+                    cpu: 100m
+                    memory: 256Mi
+                  limits:
+                    cpu: 500m
+                    memory: 512Mi
+
+  # ConfigMap: production values
+  - target:
+      kind: ConfigMap
+      name: coffeeshop-config
+    patch: |
+      apiVersion: v1
+      kind: ConfigMap
+      metadata:
+        name: coffeeshop-config
+      data:
+        CORS_ORIGINS: "https://coffeeshop.xyz,https://www.coffeeshop.xyz"
+        FRONTEND_URL: "https://coffeeshop.xyz"
+        API_BASE_URL: "https://coffeeshop.xyz/api"
+        GOOGLE_REDIRECT_URI: "https://coffeeshop.xyz/api/auth/google/callback"

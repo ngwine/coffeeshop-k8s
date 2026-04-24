@@ -1,0 +1,92 @@
+[
+  {
+    "productId": 1,
+    "customerEmail": "chi.hoang.23@example.com",
+    "customerName": "Chi Hoang",
+    "rating": 5,
+    "title": "Cà phê rất thơm",
+    "comment": "Hạt rang đều, pha phin cực kỳ thơm, hợp uống buổi sáng.",
+    "createdAt": "2025-11-01T08:00:00Z",
+    "updatedAt": "2025-11-01T08:00:00Z"
+  },
+  {
+    "productId": 1,
+    "customerEmail": "nam.do.22@example.com",
+    "customerName": "Nam Do",
+    "rating": 4,
+    "title": "Đậm, hơi mạnh",
+    "comment": "Vị khá đậm, ai quen Arabica có thể thấy hơi nặng.",
+    "createdAt": "2025-11-02T09:30:00Z",
+    "updatedAt": "2025-11-02T09:30:00Z"
+  },
+  {
+    "productId": 2,
+    "customerEmail": "huong.truong.30@example.com",
+    "customerName": "Huong Truong",
+    "rating": 5,
+    "title": "Arabica Cầu Đất chuẩn bài",
+    "comment": "Hương hoa quả rõ, dùng V60 uống rất đã.",
+    "createdAt": "2025-11-03T07:20:00Z",
+    "updatedAt": "2025-11-03T07:20:00Z"
+  },
+  {
+    "productId": 2,
+    "customerEmail": "an.truong.20@example.com",
+    "customerName": "An Truong",
+    "rating": 4,
+    "title": "Ổn trong tầm giá",
+    "comment": "Chua thanh, hậu ngọt ổn, sẽ mua lại.",
+    "createdAt": "2025-11-04T10:10:00Z",
+    "updatedAt": "2025-11-04T10:10:00Z"
+  },
+  {
+    "productId": 3,
+    "customerEmail": "hanh.nguyen.27@example.com",
+    "customerName": "Hanh Nguyen",
+    "rating": 5,
+    "title": "Premium blend ngon",
+    "comment": "Uống espresso lẫn phin đều hợp, khá dễ uống.",
+    "createdAt": "2025-11-04T14:00:00Z",
+    "updatedAt": "2025-11-04T14:00:00Z"
+  },
+  {
+    "productId": 7,
+    "customerEmail": "tu.pham.29@example.com",
+    "customerName": "Tu Pham",
+    "rating": 5,
+    "title": "Signature blend đỉnh",
+    "comment": "Mùi rang vừa, không bị cháy, hậu vị cân bằng.",
+    "createdAt": "2025-11-05T08:45:00Z",
+    "updatedAt": "2025-11-05T08:45:00Z"
+  },
+  {
+    "productId": 9,
+    "customerEmail": "chi.hoang.23@example.com",
+    "customerName": "Chi Hoang",
+    "rating": 4,
+    "title": "Combo quà tặng ổn",
+    "comment": "Đóng gói đẹp, phù hợp làm quà, chất lượng ổn với giá.",
+    "createdAt": "2025-11-05T09:15:00Z",
+    "updatedAt": "2025-11-05T09:15:00Z"
+  },
+  {
+    "productId": 19,
+    "customerEmail": "nam.do.18@example.com",
+    "customerName": "Nam Do",
+    "rating": 5,
+    "title": "Ly Highlands xịn",
+    "comment": "Ly dày, giữ nhiệt ok, màu đỏ nhìn rất sang.",
+    "createdAt": "2025-11-06T06:30:00Z",
+    "updatedAt": "2025-11-06T06:30:00Z"
+  },
+  {
+    "productId": 23,
+    "customerEmail": "huong.truong.30@example.com",
+    "customerName": "Huong Truong",
+    "rating": 5,
+    "title": "Ly giữ nhiệt TCH",
+    "comment": "Giữ nhiệt tốt, nắp kín, mang đi làm tiện.",
+    "createdAt": "2025-11-06T09:00:00Z",
+    "updatedAt": "2025-11-06T09:00:00Z"
+  }
+]

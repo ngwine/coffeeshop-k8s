@@ -1,0 +1,153 @@
+.footer {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 10px 0 10px;
+  background: transparent;
+  position: relative; /* để ::before bám theo footer */
+}
+
+/* vạch vàng full screen phía trên footer */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;  /* full theo viewport */
+  height: 1px;
+  background: #d4a574;
+}
+
+.section-divider {
+  height: 1px;
+  background: #d4a574;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  /* full màn hình giống footer */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 80px;
+}
+
+
+.footer-left .brand img {
+  width: 200px;
+  height: auto;
+  filter: brightness(0.95);
+  margin-bottom: 16px;
+}
+
+.footer-left p {
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+}
+
+.footer-socials { display: flex; gap: 14px; margin-top: 18px; opacity: 0.9; }
+.footer-socials span { font-size: 18px; }
+
+.footer-column h3,
+.footer-block h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li,
+.footer-block ul li { margin-bottom: 10px; font-size: 14px; line-height: 1.6; }
+
+.footer-column ul li p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer-column ul li span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.footer-column .closed {
+  color: #c49b63;
+  font-weight: bold;
+}
+
+.footer-column p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.location-title {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.subscribe-box {
+  display: flex;
+  margin-top: 10px;
+}
+
+.subscribe-box input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.subscribe-box button {
+  background: #c49b63;
+  border: none;
+  padding: 8px 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 16px 20px 0;
+  margin-top: 28px;
+}
+.back-to-top { 
+  background: rgba(255,255,255,0.08); 
+  color: #fff; 
+  border: none; 
+  width: 46px; 
+  height: 46px; 
+  border-radius: 50%; 
+  cursor: pointer; 
+}
+.back-to-top:hover { background: rgba(255,255,255,0.15); }
+
+
+@media (max-width: 960px) {
+  .footer-container { grid-template-columns: 1fr; }
+}
+
+
+
+

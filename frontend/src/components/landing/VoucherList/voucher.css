@@ -1,0 +1,102 @@
+.voucher-container {
+  background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 30px 5%;
+}
+
+/* Wrapper có svg ticket */
+.voucher-ticket {
+  position: relative;
+  width: 350px;
+  height: 100px;
+}
+
+.ticket-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Content nằm đè lên svg */
+.ticket-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  font-family: sans-serif;
+}
+
+/* Bên trái icon */
+.ticket-left {
+  min-width: 60px;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2px dashed #d6c5a0;
+}
+
+.ticket-left img {
+  width: 45px;
+  height: 45px;
+}
+
+/* Bên phải nội dung */
+.ticket-right {
+  flex: 1;
+  padding-left: 16px;
+  font-size: 12px;
+  color: #444;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ticket-right h4 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+
+.ticket-right p {
+  margin: 1px 0;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+/* Nút sao chép */
+.copy-btn {
+  background: #bfa065;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.copy-btn:hover {
+  background: #a68a4d;
+}
+
+/* Đã hết hạn */
+.expired {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 10px;
+  color: #999;
+  border: 1px solid #ccc;
+  padding: 2px 6px;
+  border-radius: 4px;
+}

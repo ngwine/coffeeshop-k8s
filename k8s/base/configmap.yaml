@@ -1,0 +1,25 @@
+# ============================================================
+# CoffeeShop — ConfigMap
+# Non-sensitive configuration values
+# ============================================================
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: coffeeshop-config
+  labels:
+    app: coffeeshop
+data:
+  # ── App Config ──
+  NODE_ENV: "production"
+  PORT: "3001"
+
+  # ── MongoDB (internal K8s DNS) ──
+  MONGO_URI: "mongodb://mongodb-0.mongodb:27017/CoffeeDB"
+
+  # ── CORS ──
+  CORS_ORIGINS: "https://coffeeshop.xyz,https://www.coffeeshop.xyz"
+  FRONTEND_URL: "https://coffeeshop.xyz"
+
+  # ── API ──
+  API_BASE_URL: "https://coffeeshop.xyz/api"
+  GOOGLE_REDIRECT_URI: "https://coffeeshop.xyz/api/auth/google/callback"

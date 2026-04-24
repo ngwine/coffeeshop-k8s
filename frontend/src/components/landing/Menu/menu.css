@@ -1,0 +1,91 @@
+.menu-section {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.menu-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #1f1f1f;
+}
+
+.menu-line {
+  width: 60px;
+  height: 2px;
+  background: #c08457;
+  margin: 0.75rem auto 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 4rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1.5rem;
+
+}
+
+.menu-left h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-left p {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #7c6a5a;
+}
+
+.menu-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+.menu-new {
+  font-size: 0.75rem;
+  background: #c08457;
+  color: #fff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.menu-link li a {
+  text-decoration: none;
+  color: #563705;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu-link li a:hover {
+  color: #c49b63;
+}

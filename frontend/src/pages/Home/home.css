@@ -1,0 +1,18 @@
+/* Import base/global CSS only; component-specific CSS is imported within components */
+@import '../../styles/variables.css';
+@import '../../styles/reset.css';
+@import '../../styles/landing.css';
+@import '../../styles/style.css';
+@import '../../styles/responsive.css';
+
+/* Home Page Container - Minimal styling to avoid conflicts */
+.home-page {
+  position: relative;
+  background: #000; /* nền đen toàn trang */
+}
+
+/* Mặc định các section bên trong trong suốt để nổi trên nền đen,
+   trừ những section đã có background riêng (image/video) sẽ giữ nguyên */
+.home-page > section {
+  background-color: transparent;
+}

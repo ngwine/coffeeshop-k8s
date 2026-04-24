@@ -1,0 +1,245 @@
+# ============================================================
+# CoffeeShop — K3s Cluster Setup Playbook
+# Installs K3s server (master) + agents (workers) + Helm
+# Idempotent: safe to run multiple times
+# ============================================================
+---
+- name: Common setup for all nodes
+  hosts: k3s_cluster
+  become: yes
+  tasks:
+    - name: Update system packages
+      dnf:
+        name: "*"
+        state: latest
+      register: update_result
+      changed_when: update_result.changed
+
+    - name: Install required packages
+      dnf:
+        name:
+          - curl
+          - wget
+          - git
+          - tar
+          - unzip
+          - jq
+          - python3
+          - python3-pip
+          - container-selinux
+          - iptables
+        state: present
+
+    - name: Disable SELinux (required for K3s)
+      selinux:
+        state: permissive
+        policy: targeted
+      register: selinux_result
+
+    - name: Set SELinux permissive in config
+      lineinfile:
+        path: /etc/selinux/config
+        regexp: '^SELINUX='
+        line: 'SELINUX=permissive'
+
+    - name: Open firewall ports for K3s
+      firewalld:
+        port: "{{ item }}"
+        permanent: yes
+        state: enabled
+        immediate: yes
+      loop:
+        - 6443/tcp    # K8s API
+        - 10250/tcp   # Kubelet
+        - 80/tcp      # HTTP
+        - 443/tcp     # HTTPS
+        - 8472/udp    # VXLAN (Flannel)
+        - 51820/udp   # WireGuard
+        - 30000-32767/tcp  # NodePort range
+
+    - name: Enable IP forwarding
+      sysctl:
+        name: net.ipv4.ip_forward
+        value: "1"
+        sysctl_set: yes
+        state: present
+        reload: yes
+
+    - name: Enable bridge-nf-call-iptables
+      sysctl:
+        name: "{{ item }}"
+        value: "1"
+        sysctl_set: yes
+        state: present
+        reload: yes
+      loop:
+        - net.bridge.bridge-nf-call-iptables
+        - net.bridge.bridge-nf-call-ip6tables
+
+# ── K3s Master Node Setup ────────────────────────────────────
+- name: Install K3s Server (Master)
+  hosts: master
+  become: yes
+  vars:
+    k3s_version: "v1.29.4+k3s1"
+  tasks:
+    - name: Check if K3s is already installed
+      stat:
+        path: /usr/local/bin/k3s
+      register: k3s_binary
+
+    - name: Install K3s server
+      shell: |
+        curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="{{ k3s_version }}" sh -s - server \
+          --write-kubeconfig-mode 644 \
+          --tls-san "{{ ansible_host }}" \
+          --disable local-storage \
+          --node-label "role=master"
+      when: not k3s_binary.stat.exists
+      register: k3s_install
+
+    - name: Wait for K3s to be ready
+      shell: kubectl get nodes --no-headers 2>/dev/null | grep -c "Ready"
+      register: k3s_ready
+      retries: 30
+      delay: 10
+      until: k3s_ready.stdout | int >= 1
+      changed_when: false
+
+    - name: Get K3s node token
+      slurp:
+        src: /var/lib/rancher/k3s/server/node-token
+      register: k3s_token
+
+    - name: Set K3s token fact
+      set_fact:
+        k3s_node_token: "{{ k3s_token.content | b64decode | trim }}"
+
+    - name: Get kubeconfig content
+      slurp:
+        src: /etc/rancher/k3s/k3s.yaml
+      register: kubeconfig
+
+    - name: Save kubeconfig locally
+      local_action:
+        module: copy
+        content: "{{ kubeconfig.content | b64decode | regex_replace('127.0.0.1', ansible_host) }}"
+        dest: "{{ playbook_dir }}/../kubeconfig.yaml"
+        mode: "0600"
+
+    - name: Install Helm
+      shell: |
+        curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+      args:
+        creates: /usr/local/bin/helm
+
+    - name: Add Helm repos
+      shell: |
+        helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+        helm repo add jetstack https://charts.jetstack.io
+        helm repo update
+      changed_when: false
+
+    - name: Install cert-manager CRDs
+      shell: kubectl apply -f https://github.com/cert-manager/cert-manager/releases/latest/download/cert-manager.crds.yaml
+      changed_when: false
+
+    - name: Install cert-manager via Helm
+      shell: |
+        helm upgrade --install cert-manager jetstack/cert-manager \
+          --namespace cert-manager \
+          --create-namespace \
+          --set installCRDs=false \
+          --wait
+      register: certmanager_install
+      changed_when: "'has been upgraded' in certmanager_install.stdout or 'has been installed' in certmanager_install.stdout"
+
+    - name: Create Let's Encrypt ClusterIssuer
+      shell: |
+        cat <<'EOF' | kubectl apply -f -
+        apiVersion: cert-manager.io/v1
+        kind: ClusterIssuer
+        metadata:
+          name: letsencrypt-prod
+        spec:
+          acme:
+            server: https://acme-v02.api.letsencrypt.org/directory
+            email: admin@{{ domain_name | default('coffeeshop.xyz') }}
+            privateKeySecretRef:
+              name: letsencrypt-prod-key
+            solvers:
+              - http01:
+                  ingress:
+                    class: traefik
+        EOF
+      changed_when: false
+
+    - name: Verify K3s cluster status
+      shell: |
+        echo "=== Nodes ==="
+        kubectl get nodes -o wide
+        echo ""
+        echo "=== System Pods ==="
+        kubectl get pods -n kube-system
+        echo ""
+        echo "=== cert-manager ==="
+        kubectl get pods -n cert-manager
+      register: cluster_status
+      changed_when: false
+
+    - name: Display cluster status
+      debug:
+        var: cluster_status.stdout_lines
+
+# ── K3s Worker Nodes Setup ───────────────────────────────────
+- name: Install K3s Agent (Workers)
+  hosts: workers
+  become: yes
+  vars:
+    k3s_version: "v1.29.4+k3s1"
+  tasks:
+    - name: Get master IP
+      set_fact:
+        master_ip: "{{ hostvars[groups['master'][0]]['ansible_host'] }}"
+        k3s_token: "{{ hostvars[groups['master'][0]]['k3s_node_token'] }}"
+
+    - name: Check if K3s agent is already installed
+      stat:
+        path: /usr/local/bin/k3s
+      register: k3s_agent_binary
+
+    - name: Install K3s agent
+      shell: |
+        curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="{{ k3s_version }}" K3S_URL="https://{{ master_ip }}:6443" K3S_TOKEN="{{ k3s_token }}" sh -s - agent \
+          --node-label "role=worker"
+      when: not k3s_agent_binary.stat.exists
+
+    - name: Wait for agent to join cluster
+      shell: kubectl get nodes --no-headers 2>/dev/null | grep "{{ inventory_hostname }}" | grep -c "Ready"
+      delegate_to: "{{ groups['master'][0] }}"
+      register: agent_ready
+      retries: 30
+      delay: 10
+      until: agent_ready.stdout | int >= 1
+      changed_when: false
+
+# ── Verify Full Cluster ──────────────────────────────────────
+- name: Verify complete K3s cluster
+  hosts: master
+  become: yes
+  tasks:
+    - name: Show all cluster nodes
+      shell: kubectl get nodes -o wide
+      register: final_nodes
+      changed_when: false
+
+    - name: Display final cluster state
+      debug:
+        var: final_nodes.stdout_lines
+
+    - name: Verify 3-node cluster
+      assert:
+        that:
+          - final_nodes.stdout_lines | length >= 4  # header + 3 nodes
+        fail_msg: "Expected 3 nodes in the cluster!"
+        success_msg: "✅ K3s cluster is fully operational with 3 nodes!"

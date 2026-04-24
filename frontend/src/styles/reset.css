@@ -1,0 +1,28 @@
+/* RESET & FONT */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    background: #d5d3bf;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* COLORS */
+:root {
+    --green-dark: #e7e6e1;
+    --brown: #143b36;
+    --brown-light: #7c5e3c;
+    --gold: #bfa060;
+    --black: #18120b;
+    --white: #fff;
+} 

@@ -1,0 +1,90 @@
+# ============================================================
+# CoffeeShop — Backend Deployment
+# Node.js Express API with rolling updates & health checks
+# ============================================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: coffeeshop
+    component: backend
+    app.kubernetes.io/name: backend
+    app.kubernetes.io/part-of: coffeeshop
+spec:
+  replicas: 2
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: coffeeshop
+      component: backend
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1          # Create 1 new pod before killing old
+      maxUnavailable: 0    # Zero-downtime deployment
+  template:
+    metadata:
+      labels:
+        app: coffeeshop
+        component: backend
+    spec:
+      # Security: run as non-root
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        fsGroup: 1001
+      containers:
+        - name: backend
+          image: ghcr.io/OWNER/coffeeshop-backend:latest  # Replaced by CI/CD
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3001
+              name: http
+              protocol: TCP
+          # ── Environment Variables ──
+          envFrom:
+            - configMapRef:
+                name: coffeeshop-config
+            - secretRef:
+                name: coffeeshop-secrets
+          env:
+            - name: PORT
+              value: "3001"
+            - name: NODE_ENV
+              value: "production"
+          # ── Health Checks (Self-Healing) ──
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3001
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3001
+            initialDelaySeconds: 30
+            periodSeconds: 15
+            timeoutSeconds: 5
+            failureThreshold: 3
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 3001
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 12    # 60s total startup time
+          # ── Resource Limits ──
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+      # Pull from private GHCR if needed
+      imagePullSecrets:
+        - name: ghcr-secret
