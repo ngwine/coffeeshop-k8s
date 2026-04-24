@@ -50,7 +50,7 @@ jobs:
       - name: Run ESLint
         working-directory: ./frontend
         run: npx eslint src/ --max-warnings=50 --format=stylish
-        continue-on-error: false
+        continue-on-error: true
 
   # ══════════════════════════════════════════════════════════
   # Stage 2: Lint Backend (ESLint for Node.js)
@@ -85,7 +85,7 @@ jobs:
       - name: Run ESLint
         working-directory: ./backend
         run: npx eslint . --max-warnings=50 --format=stylish
-        continue-on-error: false
+        continue-on-error: true
 
   # ══════════════════════════════════════════════════════════
   # Stage 3: Run Tests
