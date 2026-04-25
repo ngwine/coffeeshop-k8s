@@ -71,6 +71,10 @@ jobs:
       # ── Build images locally and load into K8s ──
       - name: Build and load Docker images
         run: |
+          # Bypass macOS Keychain (not accessible in service mode)
+          export DOCKER_CONFIG=$(mktemp -d)
+          echo '{"credsStore":""}' > $DOCKER_CONFIG/config.json
+
           echo "🏗️ Building backend image..."
           docker build -t ${{ env.BACKEND_IMAGE }}:${{ steps.tag.outputs.tag }} ./backend
 
@@ -189,6 +193,10 @@ jobs:
       # ── Build images locally ──
       - name: Build Docker images
         run: |
+          # Bypass macOS Keychain (not accessible in service mode)
+          export DOCKER_CONFIG=$(mktemp -d)
+          echo '{"credsStore":""}' > $DOCKER_CONFIG/config.json
+
           echo "🏗️ Building backend image..."
           docker build -t ${{ env.BACKEND_IMAGE }}:${{ steps.tag.outputs.tag }} ./backend
 
