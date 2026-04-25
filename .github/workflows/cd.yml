@@ -17,7 +17,6 @@ env:
   REGISTRY: ghcr.io
   BACKEND_IMAGE: ghcr.io/${{ github.repository_owner }}/coffeeshop-backend
   FRONTEND_IMAGE: ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend
-  PATH: /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Docker.app/Contents/Resources/bin:/opt/homebrew/bin
 
 jobs:
   # ══════════════════════════════════════════════════════════
@@ -29,6 +28,12 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     environment: staging
     steps:
+      - name: Setup PATH for macOS tools
+        run: |
+          echo "/usr/local/bin" >> $GITHUB_PATH
+          echo "/opt/homebrew/bin" >> $GITHUB_PATH
+          echo "/Applications/Docker.app/Contents/Resources/bin" >> $GITHUB_PATH
+
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -145,6 +150,12 @@ jobs:
     needs: [approval-gate]
     environment: production
     steps:
+      - name: Setup PATH for macOS tools
+        run: |
+          echo "/usr/local/bin" >> $GITHUB_PATH
+          echo "/opt/homebrew/bin" >> $GITHUB_PATH
+          echo "/Applications/Docker.app/Contents/Resources/bin" >> $GITHUB_PATH
+
       - name: Checkout code
         uses: actions/checkout@v4
 
