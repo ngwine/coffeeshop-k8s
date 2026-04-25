@@ -58,16 +58,6 @@ jobs:
         run: |
           kubectl create namespace staging --dry-run=client -o yaml | kubectl apply -f -
 
-      # ── Create/Update Secrets ──
-      - name: Update K8s secrets
-        run: |
-          kubectl create secret generic coffeeshop-secrets \
-            --from-literal=JWT_SECRET="${{ secrets.JWT_SECRET }}" \
-            --from-literal=CLOUDINARY_URL="${{ secrets.CLOUDINARY_URL }}" \
-            --from-literal=GOOGLE_CLIENT_ID="${{ secrets.GOOGLE_CLIENT_ID }}" \
-            --from-literal=GOOGLE_CLIENT_SECRET="${{ secrets.GOOGLE_CLIENT_SECRET }}" \
-            -n staging \
-            --dry-run=client -o yaml | kubectl apply -f -
 
       # ── Build images locally and load into K8s ──
       - name: Build and load Docker images
@@ -181,16 +171,6 @@ jobs:
         run: |
           kubectl create namespace production --dry-run=client -o yaml | kubectl apply -f -
 
-      # ── Create/Update Production Secrets ──
-      - name: Update production secrets
-        run: |
-          kubectl create secret generic coffeeshop-secrets \
-            --from-literal=JWT_SECRET="${{ secrets.JWT_SECRET }}" \
-            --from-literal=CLOUDINARY_URL="${{ secrets.CLOUDINARY_URL }}" \
-            --from-literal=GOOGLE_CLIENT_ID="${{ secrets.GOOGLE_CLIENT_ID }}" \
-            --from-literal=GOOGLE_CLIENT_SECRET="${{ secrets.GOOGLE_CLIENT_SECRET }}" \
-            -n production \
-            --dry-run=client -o yaml | kubectl apply -f -
 
       # ── Build images locally ──
       - name: Build Docker images
