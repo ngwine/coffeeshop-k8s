@@ -228,7 +228,6 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          platforms: linux/arm64     # Oracle ARM instances
           tags: |
             ${{ env.BACKEND_IMAGE }}:${{ steps.meta.outputs.version }}
             ${{ env.BACKEND_IMAGE }}:${{ steps.meta.outputs.short_sha }}
@@ -242,7 +241,6 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
-          platforms: linux/arm64
           tags: |
             ${{ env.FRONTEND_IMAGE }}:${{ steps.meta.outputs.version }}
             ${{ env.FRONTEND_IMAGE }}:${{ steps.meta.outputs.short_sha }}
