@@ -10,8 +10,10 @@ namespace: production
 resources:
   - ../../base
 
-commonLabels:
-  environment: production
+labels:
+  - pairs:
+      environment: production
+    includeSelectors: false
 
 # ── Production replicas (also controlled by HPA) ──
 replicas:

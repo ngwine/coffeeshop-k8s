@@ -10,8 +10,10 @@ namespace: staging
 resources:
   - ../../base
 
-commonLabels:
-  environment: staging
+labels:
+  - pairs:
+      environment: staging
+    includeSelectors: false
 
 # ── Override replicas for staging ──
 replicas:
