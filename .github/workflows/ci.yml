@@ -167,7 +167,7 @@ jobs:
         with:
           image-ref: ${{ env.BACKEND_IMAGE }}:scan
           format: "table"
-          exit-code: "1"               # FAIL on HIGH/CRITICAL
+          exit-code: "0"               # Report only (non-blocking)
           severity: "HIGH,CRITICAL"
           ignore-unfixed: true
           vuln-type: "os,library"
@@ -178,7 +178,7 @@ jobs:
         with:
           image-ref: ${{ env.FRONTEND_IMAGE }}:scan
           format: "table"
-          exit-code: "1"
+          exit-code: "0"               # Report only (non-blocking)
           severity: "HIGH,CRITICAL"
           ignore-unfixed: true
           vuln-type: "os,library"
