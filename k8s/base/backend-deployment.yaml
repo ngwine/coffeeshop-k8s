@@ -37,7 +37,7 @@ spec:
       containers:
         - name: backend
           image: ghcr.io/OWNER/coffeeshop-backend:latest  # Replaced by CI/CD
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3001
               name: http

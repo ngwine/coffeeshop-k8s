@@ -32,7 +32,7 @@ spec:
       containers:
         - name: frontend
           image: ghcr.io/OWNER/coffeeshop-frontend:latest  # Replaced by CI/CD
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
               name: http
