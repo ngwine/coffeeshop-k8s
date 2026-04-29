@@ -155,28 +155,5 @@ patches:
                       port:
                         number: 80
 
-  - target:
-      kind: Ingress
-      name: grafana-ingress
-    patch: |
-      apiVersion: networking.k8s.io/v1
-      kind: Ingress
-      metadata:
-        name: grafana-ingress
-      spec:
-        tls:
-          - hosts:
-              - grafana-staging.coffeeshopk8s.me
-            secretName: grafana-staging-tls-cert
-        rules:
-          - host: grafana-staging.coffeeshopk8s.me
-            http:
-              paths:
-                - path: /
-                  pathType: Prefix
-                  backend:
-                    service:
-                      name: monitoring-grafana
-                      port:
-                        number: 80
+
 
