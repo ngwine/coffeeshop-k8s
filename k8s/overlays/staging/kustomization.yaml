@@ -103,7 +103,80 @@ patches:
       metadata:
         name: coffeeshop-config
       data:
-        CORS_ORIGINS: "https://staging.coffeeshop.xyz"
-        FRONTEND_URL: "https://staging.coffeeshop.xyz"
-        API_BASE_URL: "https://staging.coffeeshop.xyz/api"
-        GOOGLE_REDIRECT_URI: "https://staging.coffeeshop.xyz/api/auth/google/callback"
+        CORS_ORIGINS: "https://staging.coffeeshopk8s.me"
+        FRONTEND_URL: "https://staging.coffeeshopk8s.me"
+        API_BASE_URL: "https://staging.coffeeshopk8s.me/api"
+        GOOGLE_REDIRECT_URI: "https://staging.coffeeshopk8s.me/api/auth/google/callback"
+
+  # Patch Ingress hostnames to avoid conflicts with production
+  - target:
+      kind: Ingress
+      name: coffeeshop-ingress
+    patch: |
+      apiVersion: networking.k8s.io/v1
+      kind: Ingress
+      metadata:
+        name: coffeeshop-ingress
+      spec:
+        tls:
+          - hosts:
+              - staging.coffeeshopk8s.me
+            secretName: coffeeshop-staging-tls-cert
+        rules:
+          - host: staging.coffeeshopk8s.me
+            http:
+              paths:
+                - path: /api
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: backend
+                      port:
+                        number: 3001
+                - path: /ws
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: backend
+                      port:
+                        number: 3001
+                - path: /health
+                  pathType: Exact
+                  backend:
+                    service:
+                      name: backend
+                      port:
+                        number: 3001
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: frontend
+                      port:
+                        number: 80
+
+  - target:
+      kind: Ingress
+      name: grafana-ingress
+    patch: |
+      apiVersion: networking.k8s.io/v1
+      kind: Ingress
+      metadata:
+        name: grafana-ingress
+      spec:
+        tls:
+          - hosts:
+              - grafana-staging.coffeeshopk8s.me
+            secretName: grafana-staging-tls-cert
+        rules:
+          - host: grafana-staging.coffeeshopk8s.me
+            http:
+              paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                      name: monitoring-grafana
+                      port:
+                        number: 80
+
