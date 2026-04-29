@@ -213,7 +213,7 @@ jobs:
         id: health
         run: |
           sleep 10
-          HTTP_STATUS=$(curl -sk -o /dev/null -w "%{http_code}" https://coffeeshopk8s.me/api/health --connect-timeout 10 --max-time 30 || echo "000")
+          HTTP_STATUS=$(curl -sk -o /dev/null -w "%{http_code}" https://coffeeshopk8s.me/health --connect-timeout 10 --max-time 30 || echo "000")
           if [ "$HTTP_STATUS" = "200" ]; then
             echo "healthy=true" >> $GITHUB_OUTPUT
             echo "✅ Health check PASSED (HTTP $HTTP_STATUS)"
