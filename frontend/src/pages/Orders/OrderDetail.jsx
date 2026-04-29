@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./order-detail.css";
 
 const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL || "http://localhost:3001";
+  process.env.REACT_APP_API_BASE_URL || "";
 
 function formatCurrency(value) {
   if (value == null || Number.isNaN(Number(value))) return "—";

@@ -70,16 +70,16 @@ grafana:
   # Ingress (accessible via grafana.yourdomain.com)
   ingress:
     enabled: true
-    ingressClassName: traefik
+    ingressClassName: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-      traefik.ingress.kubernetes.io/router.tls: "true"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
     hosts:
-      - grafana.coffeeshop.xyz
+      - grafana.coffeeshopk8s.me
     tls:
       - secretName: grafana-tls
         hosts:
-          - grafana.coffeeshop.xyz
+          - grafana.coffeeshopk8s.me
 
   # Default dashboards
   defaultDashboardsEnabled: true

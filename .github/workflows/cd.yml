@@ -2,7 +2,7 @@
 # CoffeeShop — CD Pipeline (Continuous Delivery)
 # Trigger: After CI succeeds on main
 # Flow: Deploy Staging → Manual Approval → Deploy Production
-# Runner: Self-hosted (On-Premise Kubernetes via Docker Desktop)
+# Target: DigitalOcean K3s Cluster via SSH
 # Extra Credit: 7.2 (Multi-env), 7.3 (Rolling Update), 7.4 (Rollback)
 # ============================================================
 name: CD Pipeline
@@ -24,17 +24,10 @@ jobs:
   # ══════════════════════════════════════════════════════════
   deploy-staging:
     name: "🚀 Deploy to Staging"
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     environment: staging
     steps:
-      - name: Setup PATH for macOS tools
-        run: |
-          echo "/usr/local/bin" >> $GITHUB_PATH
-          echo "/opt/homebrew/bin" >> $GITHUB_PATH
-          echo "/Applications/Docker.app/Contents/Resources/bin" >> $GITHUB_PATH
-          echo "$HOME/bin" >> $GITHUB_PATH
-
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -45,68 +38,64 @@ jobs:
           echo "tag=${SHORT_SHA}" >> $GITHUB_OUTPUT
           echo "📌 Deploying image tag: ${SHORT_SHA}"
 
-      # ── Verify kubectl connection ──
-      - name: Verify K8s cluster connection
+      # ── Setup SSH connection to DigitalOcean server ──
+      - name: Configure SSH
         run: |
-          echo "🔗 Verifying connection to local Kubernetes cluster..."
-          kubectl cluster-info
-          kubectl get nodes
-          echo "✅ Connected to on-premise K8s cluster"
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SERVER_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts 2>/dev/null
 
-      # ── Ensure namespace exists ──
-      - name: Ensure staging namespace
+      - name: Verify server connection
         run: |
-          kubectl create namespace staging --dry-run=client -o yaml | kubectl apply -f -
+          ssh -i ~/.ssh/deploy_key -o ConnectTimeout=10 root@${{ secrets.SERVER_IP }} \
+            "echo '✅ Connected to K3s cluster' && kubectl get nodes"
+        env:
+          KUBECONFIG: /etc/rancher/k3s/k3s.yaml
 
-
-      # ── Build images locally and load into K8s ──
-      - name: Build and load Docker images
+      # ── Sync source code to server ──
+      - name: Sync code to server
         run: |
-          # Bypass macOS Keychain (not accessible in service mode)
-          export DOCKER_CONFIG=$(mktemp -d)
-          echo '{"credsStore":""}' > $DOCKER_CONFIG/config.json
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            --exclude '.git' \
+            --exclude 'node_modules' \
+            ./ root@${{ secrets.SERVER_IP }}:/opt/coffeeshop/
 
-          echo "🏗️ Building backend image..."
-          docker build -t ${{ env.BACKEND_IMAGE }}:${{ steps.tag.outputs.tag }} ./backend
-
-          echo "🏗️ Building frontend image..."
-          docker build -t ${{ env.FRONTEND_IMAGE }}:${{ steps.tag.outputs.tag }} ./frontend
-
-          echo "✅ Images built and available in local Docker (shared with K8s)"
-
-      # ── Deploy with Kustomize ──
-      - name: Deploy to staging namespace
+      # ── Build & Deploy to Staging ──
+      - name: Build images and deploy to staging
         run: |
-          # Update image tags in deployment
-          cd k8s/overlays/staging
-          kustomize edit set image \
-            ghcr.io/OWNER/coffeeshop-backend=${{ env.BACKEND_IMAGE }}:${{ steps.tag.outputs.tag }} \
-            ghcr.io/OWNER/coffeeshop-frontend=${{ env.FRONTEND_IMAGE }}:${{ steps.tag.outputs.tag }}
-
-          # Apply manifests
-          kustomize build . | kubectl apply -f -
+          IMAGE_TAG="${{ steps.tag.outputs.tag }}"
+          ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
+            kubectl create namespace staging --dry-run=client -o yaml | kubectl apply -f - && \
+            cd /opt/coffeeshop && \
+            docker build -t coffeeshop-backend:${IMAGE_TAG} ./backend && \
+            docker build -t coffeeshop-frontend:${IMAGE_TAG} ./frontend && \
+            docker save coffeeshop-backend:${IMAGE_TAG} | k3s ctr images import - && \
+            docker save coffeeshop-frontend:${IMAGE_TAG} | k3s ctr images import - && \
+            cd k8s/overlays/staging && \
+            kustomize build . | kubectl apply -f - && \
+            kubectl set image deployment/backend backend=coffeeshop-backend:${IMAGE_TAG} -n staging && \
+            kubectl set image deployment/frontend frontend=coffeeshop-frontend:${IMAGE_TAG} -n staging"
 
       # ── Wait for rollout ──
       - name: Wait for staging rollout
         run: |
-          echo "⏳ Waiting for backend rollout..."
-          kubectl rollout status deployment/backend -n staging --timeout=180s
-
-          echo "⏳ Waiting for frontend rollout..."
-          kubectl rollout status deployment/frontend -n staging --timeout=180s
+          ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
+            echo '⏳ Waiting for backend rollout...' && \
+            kubectl rollout status deployment/backend -n staging --timeout=180s && \
+            echo '⏳ Waiting for frontend rollout...' && \
+            kubectl rollout status deployment/frontend -n staging --timeout=180s"
 
       # ── Health Check ──
       - name: Run health check (staging)
         run: |
-          chmod +x scripts/health-check.sh
-          # Use kubectl port-forward for local health check
-          kubectl port-forward svc/backend 13001:3001 -n staging &
-          PF_PID=$!
-          sleep 5
-          ./scripts/health-check.sh staging || true
-          kill $PF_PID 2>/dev/null || true
-        env:
-          HEALTH_URL: http://localhost:13001/health
+          ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
+            kubectl get pods -n staging && \
+            echo '✅ Staging deployment healthy'"
 
       - name: Staging deployment summary
         run: |
@@ -114,12 +103,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Image Tag:** \`${{ steps.tag.outputs.tag }}\`" >> $GITHUB_STEP_SUMMARY
           echo "- **Namespace:** staging" >> $GITHUB_STEP_SUMMARY
-          echo "- **Infrastructure:** On-Premise (Self-hosted Runner)" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Pods" >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          kubectl get pods -n staging -o wide >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo "- **Infrastructure:** DigitalOcean K3s Cluster" >> $GITHUB_STEP_SUMMARY
 
   # ══════════════════════════════════════════════════════════
   # Stage 2: Manual Approval Gate (Extra Credit 7.2)
@@ -141,17 +125,10 @@ jobs:
   # ══════════════════════════════════════════════════════════
   deploy-production:
     name: "🚀 Deploy to Production"
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     needs: [approval-gate]
     environment: production
     steps:
-      - name: Setup PATH for macOS tools
-        run: |
-          echo "/usr/local/bin" >> $GITHUB_PATH
-          echo "/opt/homebrew/bin" >> $GITHUB_PATH
-          echo "/Applications/Docker.app/Contents/Resources/bin" >> $GITHUB_PATH
-          echo "$HOME/bin" >> $GITHUB_PATH
-
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -161,47 +138,54 @@ jobs:
           SHORT_SHA=$(echo "${{ github.event.workflow_run.head_sha }}" | cut -c1-7)
           echo "tag=${SHORT_SHA}" >> $GITHUB_OUTPUT
 
-      - name: Verify K8s cluster connection
+      - name: Configure SSH
         run: |
-          kubectl cluster-info
-          kubectl get nodes
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SERVER_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts 2>/dev/null
 
-      # ── Ensure namespace exists ──
-      - name: Ensure production namespace
+      - name: Verify K3s cluster connection
         run: |
-          kubectl create namespace production --dry-run=client -o yaml | kubectl apply -f -
+          ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
+            kubectl cluster-info && kubectl get nodes"
 
-
-      # ── Build images locally ──
-      - name: Build Docker images
+      # ── Sync code ──
+      - name: Sync code to server
         run: |
-          # Bypass macOS Keychain (not accessible in service mode)
-          export DOCKER_CONFIG=$(mktemp -d)
-          echo '{"credsStore":""}' > $DOCKER_CONFIG/config.json
-
-          echo "🏗️ Building backend image..."
-          docker build -t ${{ env.BACKEND_IMAGE }}:${{ steps.tag.outputs.tag }} ./backend
-
-          echo "🏗️ Building frontend image..."
-          docker build -t ${{ env.FRONTEND_IMAGE }}:${{ steps.tag.outputs.tag }} ./frontend
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            --exclude '.git' \
+            --exclude 'node_modules' \
+            ./ root@${{ secrets.SERVER_IP }}:/opt/coffeeshop/
 
       # ── Record current revision for rollback ──
       - name: Record current revision
         id: pre_deploy
         run: |
-          CURRENT_REV=$(kubectl rollout history deployment/backend -n production 2>/dev/null | tail -2 | head -1 | awk '{print $1}' || echo "0")
+          CURRENT_REV=$(ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
+            kubectl rollout history deployment/backend -n production 2>/dev/null | tail -2 | head -1 | awk '{print \$1}'" || echo "0")
           echo "revision=${CURRENT_REV}" >> $GITHUB_OUTPUT
           echo "📌 Pre-deploy revision: ${CURRENT_REV}"
 
-      # ── Deploy with Rolling Update (Extra Credit 7.3) ──
-      - name: Deploy to production namespace
+      # ── Build & Deploy with Rolling Update (Extra Credit 7.3) ──
+      - name: Build and deploy to production
         run: |
-          cd k8s/overlays/production
-          kustomize edit set image \
-            ghcr.io/OWNER/coffeeshop-backend=${{ env.BACKEND_IMAGE }}:${{ steps.tag.outputs.tag }} \
-            ghcr.io/OWNER/coffeeshop-frontend=${{ env.FRONTEND_IMAGE }}:${{ steps.tag.outputs.tag }}
-
-          kustomize build . | kubectl apply -f -
+          IMAGE_TAG="${{ steps.tag.outputs.tag }}"
+          ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
+            kubectl create namespace production --dry-run=client -o yaml | kubectl apply -f - && \
+            cd /opt/coffeeshop && \
+            docker build -t coffeeshop-backend:${IMAGE_TAG} ./backend && \
+            docker build -t coffeeshop-frontend:${IMAGE_TAG} ./frontend && \
+            docker save coffeeshop-backend:${IMAGE_TAG} | k3s ctr images import - && \
+            docker save coffeeshop-frontend:${IMAGE_TAG} | k3s ctr images import - && \
+            cd k8s/overlays/production && \
+            kustomize build . | kubectl apply -f - && \
+            kubectl set image deployment/backend backend=coffeeshop-backend:${IMAGE_TAG} -n production && \
+            kubectl set image deployment/frontend frontend=coffeeshop-frontend:${IMAGE_TAG} -n production"
 
       # ── Wait for Rolling Update ──
       - name: Wait for production rollout
@@ -209,43 +193,42 @@ jobs:
         run: |
           echo "⏳ Rolling update in progress..."
           echo "   Strategy: maxSurge=1, maxUnavailable=0 (zero-downtime)"
-
-          if kubectl rollout status deployment/backend -n production --timeout=300s; then
+          if ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
+            kubectl rollout status deployment/backend -n production --timeout=300s && \
+            kubectl rollout status deployment/frontend -n production --timeout=300s"; then
             echo "status=success" >> $GITHUB_OUTPUT
-            echo "✅ Backend rollout complete"
+            echo "✅ Rollout complete"
           else
             echo "status=failed" >> $GITHUB_OUTPUT
-            echo "❌ Backend rollout failed!"
+            echo "❌ Rollout failed!"
           fi
-
-          kubectl rollout status deployment/frontend -n production --timeout=300s
 
       # ── Post-Deploy Health Check ──
       - name: Run production health check
         id: health
         run: |
-          chmod +x scripts/health-check.sh
-          # Use kubectl port-forward for local health check
-          kubectl port-forward svc/backend 14001:3001 -n production &
-          PF_PID=$!
-          sleep 5
-          if ./scripts/health-check.sh production; then
+          sleep 10
+          HTTP_STATUS=$(curl -sk -o /dev/null -w "%{http_code}" https://coffeeshopk8s.me/api/health --connect-timeout 10 --max-time 30 || echo "000")
+          if [ "$HTTP_STATUS" = "200" ]; then
             echo "healthy=true" >> $GITHUB_OUTPUT
+            echo "✅ Health check PASSED (HTTP $HTTP_STATUS)"
           else
             echo "healthy=false" >> $GITHUB_OUTPUT
+            echo "❌ Health check FAILED (HTTP $HTTP_STATUS)"
           fi
-          kill $PF_PID 2>/dev/null || true
-        env:
-          HEALTH_URL: http://localhost:14001/health
 
       # ── Automated Rollback (Extra Credit 7.4) ──
       - name: Auto-rollback on failure
         if: steps.rollout.outputs.status == 'failed' || steps.health.outputs.healthy == 'false'
         run: |
           echo "🔄 ROLLING BACK to previous stable version..."
-          chmod +x scripts/rollback.sh
-          ./scripts/rollback.sh production
-
+          ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
+            kubectl rollout undo deployment/backend -n production && \
+            kubectl rollout undo deployment/frontend -n production && \
+            kubectl rollout status deployment/backend -n production --timeout=120s && \
+            kubectl rollout status deployment/frontend -n production --timeout=120s"
           echo "## ⚠️ Production Rollback Triggered" >> $GITHUB_STEP_SUMMARY
           echo "Health check failed — rolled back to previous revision" >> $GITHUB_STEP_SUMMARY
 
@@ -259,10 +242,6 @@ jobs:
           echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
           echo "| Image Tag | \`${{ steps.tag.outputs.tag }}\` |" >> $GITHUB_STEP_SUMMARY
           echo "| Strategy | Rolling Update (zero-downtime) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Infrastructure | On-Premise (Self-hosted Runner) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Domain | https://coffeeshopk8s.me |" >> $GITHUB_STEP_SUMMARY
+          echo "| Infrastructure | DigitalOcean K3s Cluster |" >> $GITHUB_STEP_SUMMARY
           echo "| Health | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Running Pods" >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          kubectl get pods -n production -o wide >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY

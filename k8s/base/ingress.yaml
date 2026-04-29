@@ -1,5 +1,5 @@
 # ============================================================
-# CoffeeShop — Ingress (Traefik)
+# CoffeeShop — Ingress (Nginx Ingress Controller)
 # TLS termination via cert-manager + Let's Encrypt
 # Routes: / → frontend, /api/ → backend, /ws/ → backend
 # ============================================================
@@ -12,23 +12,24 @@ metadata:
   annotations:
     # cert-manager integration
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    # Traefik-specific
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    traefik.ingress.kubernetes.io/router.tls: "true"
-    # Redirect HTTP → HTTPS
-    traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
-    # WebSocket support for /ws/
-    traefik.ingress.kubernetes.io/service.sticky.cookie: "true"
+    # Nginx-specific
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    # WebSocket support
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-http-version: "1.1"
+    nginx.ingress.kubernetes.io/proxy-set-headers: "Upgrade"
 spec:
-  ingressClassName: traefik
+  ingressClassName: nginx
   tls:
     - hosts:
-        - coffeeshop.xyz
-        - www.coffeeshop.xyz
+        - coffeeshopk8s.me
+        - www.coffeeshopk8s.me
       secretName: coffeeshop-tls-cert    # Auto-created by cert-manager
   rules:
     # ── Main Domain ──
-    - host: coffeeshop.xyz
+    - host: coffeeshopk8s.me
       http:
         paths:
           # API routes → backend service
@@ -64,7 +65,7 @@ spec:
                 port:
                   number: 80
     # ── WWW Redirect ──
-    - host: www.coffeeshop.xyz
+    - host: www.coffeeshopk8s.me
       http:
         paths:
           - path: /
@@ -84,16 +85,15 @@ metadata:
   namespace: monitoring
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    traefik.ingress.kubernetes.io/router.tls: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
-  ingressClassName: traefik
+  ingressClassName: nginx
   tls:
     - hosts:
-        - grafana.coffeeshop.xyz
+        - grafana.coffeeshopk8s.me
       secretName: grafana-tls-cert
   rules:
-    - host: grafana.coffeeshop.xyz
+    - host: grafana.coffeeshopk8s.me
       http:
         paths:
           - path: /
@@ -103,5 +103,3 @@ spec:
                 name: monitoring-grafana
                 port:
                   number: 80
-
-

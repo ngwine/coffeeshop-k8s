@@ -10,7 +10,7 @@ import Navbar from "../../components/NavBar";
 import "./product-detail.css";
 
 const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL || "http://localhost:3001";
+  process.env.REACT_APP_API_BASE_URL || "";
 
 // ===== Shared helpers =====
 function resolveImage(product) {

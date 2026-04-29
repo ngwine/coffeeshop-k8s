@@ -17,9 +17,9 @@ data:
   MONGO_URI: "mongodb://mongodb-0.mongodb:27017/CoffeeDB"
 
   # ── CORS ──
-  CORS_ORIGINS: "https://coffeeshop.xyz,https://www.coffeeshop.xyz"
-  FRONTEND_URL: "https://coffeeshop.xyz"
+  CORS_ORIGINS: "https://coffeeshopk8s.me,https://www.coffeeshopk8s.me"
+  FRONTEND_URL: "https://coffeeshopk8s.me"
 
   # ── API ──
-  API_BASE_URL: "https://coffeeshop.xyz/api"
-  GOOGLE_REDIRECT_URI: "https://coffeeshop.xyz/api/auth/google/callback"
+  API_BASE_URL: "https://coffeeshopk8s.me/api"
+  GOOGLE_REDIRECT_URI: "https://coffeeshopk8s.me/api/auth/google/callback"

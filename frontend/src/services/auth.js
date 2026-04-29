@@ -1,5 +1,5 @@
 // src/services/auth.js
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+const API_URL = process.env.REACT_APP_API_URL || '';
 
 async function http(path, options = {}) {
   const url = API_URL ? `${API_URL}${path}` : path;

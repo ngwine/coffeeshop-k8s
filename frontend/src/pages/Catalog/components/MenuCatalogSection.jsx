@@ -7,7 +7,7 @@ import { updateProfile } from "../../../services/account";
 import { useCart } from "../../../contexts/CartContext";
 
 const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL || "http://localhost:3001";
+  process.env.REACT_APP_API_BASE_URL || "";
 
 // 4 fixed brands (used only for name search)
 const BRAND_OPTIONS = [

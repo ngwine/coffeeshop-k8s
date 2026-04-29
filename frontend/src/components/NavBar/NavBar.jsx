@@ -6,7 +6,7 @@ import { useCart } from "../../contexts/CartContext";
 import { useNotifications } from "../../contexts/NotificationContext";
 
 const API_BASE_URL =
-  process.env.REACT_APP_API_BASE_URL || "http://localhost:3001";
+  process.env.REACT_APP_API_BASE_URL || "";
 
 // Hiển thị thời gian dạng 29/11/2025, 14:32
 function formatNotificationTime(value) {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./coffee-origin.css";
 
 const API_BASE_URL =
-  process.env.REACT_APP_API_URL || "http://localhost:3001";
+  process.env.REACT_APP_API_URL || "";
 
 function formatVND(n) {
   return new Intl.NumberFormat("vi-VN", {

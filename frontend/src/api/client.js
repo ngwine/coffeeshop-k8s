@@ -4,7 +4,7 @@
 // - JSON by default
 // - Basic error handling và timeout support
 
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL = '/api';
 
 
 const DEFAULT_TIMEOUT_MS = 15000;
