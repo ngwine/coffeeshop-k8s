@@ -1,0 +1,4 @@
+# Ignore vulnerabilities in frontend dependencies that have no fix available or are breaking changes
+CVE-2023-30533
+CVE-2024-22363
+CVE-2026-4800
