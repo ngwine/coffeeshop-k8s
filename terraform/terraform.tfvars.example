@@ -1,5 +1,5 @@
 # ============================================================
-# EduAI — Terraform Variables Example
+# CoffeeShop — Terraform Variables Example
 # Copy this file to terraform.tfvars and fill in your values
 # ============================================================
 
@@ -15,13 +15,14 @@ compartment_ocid = "ocid1.compartment.oc1..aaaaaaaa_YOUR_COMPARTMENT"
 ssh_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQ... your-key"
 
 # Project
-project_name = "eduai"
+project_name = "coffeeshop"
 
 # Domain
-domain_name = "eduai.xyz"
+domain_name = "coffeeshopk8s.me"
 
 # Compute sizing (Oracle Always Free defaults)
 master_ocpus  = 1
 master_memory = 6
 worker_ocpus  = 1.5
 worker_memory = 9
+

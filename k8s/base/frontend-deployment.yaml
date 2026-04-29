@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/OWNER/coffeeshop-frontend:latest  # Replaced by CI/CD
+          image: ghcr.io/ngwine/coffeeshop-frontend:v1.0.0  # Overridden by CI/CD pipeline
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80

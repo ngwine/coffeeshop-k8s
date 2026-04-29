@@ -1,5 +1,5 @@
 # ============================================================
-# CoffeeShop — Ingress (Nginx Ingress Controller)
+# CoffeeShop — Ingress (Traefik — K3s built-in)
 # TLS termination via cert-manager + Let's Encrypt
 # Routes: / → frontend, /api/ → backend, /ws/ → backend
 # ============================================================
@@ -12,16 +12,10 @@ metadata:
   annotations:
     # cert-manager integration
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    # Nginx-specific
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    # WebSocket support
-    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
-    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
-    nginx.ingress.kubernetes.io/proxy-http-version: "1.1"
-    nginx.ingress.kubernetes.io/proxy-set-headers: "Upgrade"
+    # Traefik (built-in K3s ingress controller)
+    traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   tls:
     - hosts:
         - coffeeshopk8s.me

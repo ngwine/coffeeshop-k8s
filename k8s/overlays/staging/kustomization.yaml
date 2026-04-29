@@ -108,21 +108,20 @@ patches:
         API_BASE_URL: "https://staging.coffeeshopk8s.me/api"
         GOOGLE_REDIRECT_URI: "https://staging.coffeeshopk8s.me/api/auth/google/callback"
 
-  # Patch Ingress hostnames to avoid conflicts with production
+  # Patch Ingress hostnames for staging environment
   - target:
       kind: Ingress
       name: coffeeshop-ingress
-    patch: |
-      apiVersion: networking.k8s.io/v1
-      kind: Ingress
-      metadata:
-        name: coffeeshop-ingress
-      spec:
-        tls:
+    patch: |-
+      - op: replace
+        path: /spec/tls
+        value:
           - hosts:
               - staging.coffeeshopk8s.me
             secretName: coffeeshop-staging-tls-cert
-        rules:
+      - op: replace
+        path: /spec/rules
+        value:
           - host: staging.coffeeshopk8s.me
             http:
               paths:

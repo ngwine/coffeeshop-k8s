@@ -41,7 +41,7 @@
                     └─────────────────┬────────────────────┘
                                       │
               ┌───────────────────────▼───────────────────────┐
-              │        Oracle Cloud (Always Free Tier)         │
+              │        DigitalOcean K3s Cluster                │
               │                                                │
               │  ┌──────────┐  ┌───────────┐  ┌───────────┐  │
               │  │  Master   │  │ Worker 1  │  │ Worker 2  │  │
@@ -69,13 +69,13 @@
 | **Orchestration** | K3s (CNCF-certified Kubernetes) |
 | **CI/CD** | GitHub Actions |
 | **Registry** | GitHub Container Registry (ghcr.io) |
-| **IaC** | Terraform (OCI provider) |
+| **IaC** | Terraform + Ansible |
 | **Config Mgmt** | Ansible |
 | **Ingress** | Traefik (built-in K3s) |
 | **TLS** | Let's Encrypt via cert-manager |
 | **Monitoring** | Prometheus + Grafana + Alertmanager |
 | **Security** | Trivy (container scanning) |
-| **Cloud** | Oracle Cloud Infrastructure (Free Tier) |
+| **Cloud** | DigitalOcean |
 
 ---
 
@@ -137,11 +137,11 @@ coffeeshop/
 ### Option A: Infrastructure as Code (Recommended)
 
 ```bash
-# 1. Configure OCI credentials
+# 1. Configure cloud credentials
 cp terraform/terraform.tfvars.example terraform/terraform.tfvars
-# Edit terraform.tfvars with your OCI details
+# Edit terraform.tfvars with your cloud provider details
 
-# 2. Provision 3 VMs on Oracle Cloud
+# 2. Provision K3s cluster VMs
 cd terraform
 terraform init
 terraform plan
@@ -155,7 +155,7 @@ ansible-playbook -i inventory.ini playbook.yml
 
 ### Option B: Manual Provisioning
 
-1. Create 3 ARM VMs in Oracle Cloud Console
+1. Create VMs in DigitalOcean Console
 2. SSH into each and follow the Ansible playbook steps manually
 
 ### Idempotency Proof
@@ -227,7 +227,7 @@ helm install monitoring prometheus-community/kube-prometheus-stack \
 
 | Component | URL | Purpose |
 |-----------|-----|---------|
-| Grafana | `https://grafana.yourdomain.com` | Dashboards & visualization |
+| Grafana | `https://grafana.coffeeshopk8s.me` | Dashboards & visualization |
 | Prometheus | Internal | Metrics collection (15s interval) |
 | Alertmanager | Internal | Alert routing |
 
@@ -265,7 +265,7 @@ helm install monitoring prometheus-community/kube-prometheus-stack \
 2. **Commit & Push**: `git commit -m "feat: update title"` → `git push`
 3. **CI Runs**: Lint ✅ → Test ✅ → Build ✅ → Trivy ✅ → Push ✅
 4. **CD Runs**: Deploy Staging ✅ → Approve → Deploy Production ✅
-5. **Verify**: Access `https://yourdomain.com` → confirm change
+5. **Verify**: Access `https://coffeeshopk8s.me` → confirm change
 6. **Monitoring**: Open Grafana → show live metrics
 7. **Failure Sim**: `kubectl delete pod <backend>` → K8s self-heals → Grafana shows restart
 

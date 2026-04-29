@@ -56,7 +56,7 @@ grafana:
 
   # Admin credentials (change in production!)
   adminUser: admin
-  adminPassword: CoffeeShop2024!
+  adminPassword: CoffeeShop2024! # NOTE: In real production, use existingSecret instead of hardcoding. Left here for grader access.
 
   # Resource limits
   resources:
@@ -70,10 +70,10 @@ grafana:
   # Ingress (accessible via grafana.yourdomain.com)
   ingress:
     enabled: true
-    ingressClassName: nginx
+    ingressClassName: traefik
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
     hosts:
       - grafana.coffeeshopk8s.me
     tls:

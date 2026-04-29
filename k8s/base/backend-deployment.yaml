@@ -36,7 +36,7 @@ spec:
         fsGroup: 1001
       containers:
         - name: backend
-          image: ghcr.io/OWNER/coffeeshop-backend:latest  # Replaced by CI/CD
+          image: ghcr.io/ngwine/coffeeshop-backend:v1.0.0  # Overridden by CI/CD pipeline
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3001

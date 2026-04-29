@@ -1,7 +1,7 @@
 # ============================================================
 # CoffeeShop — Terraform Main Configuration
-# Oracle Cloud Infrastructure (OCI) — Always Free Tier
-# Provisions: 3x ARM Ampere A1 VMs + VCN + K3s-ready networking
+# Infrastructure as Code (IaC) — Cloud VM Provisioning
+# Provisions: 3x VMs + VCN + K3s-ready networking
 # ============================================================
 
 terraform {

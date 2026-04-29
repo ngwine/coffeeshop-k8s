@@ -64,22 +64,23 @@ jobs:
             --exclude 'node_modules' \
             ./ root@${{ secrets.SERVER_IP }}:/opt/coffeeshop/
 
-      # ── Build & Deploy to Staging ──
-      - name: Build images and deploy to staging
+      # ── Pull from GHCR & Deploy to Staging ──
+      - name: Pull images and deploy to staging
         run: |
           IMAGE_TAG="${{ steps.tag.outputs.tag }}"
           ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
             export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
             kubectl create namespace staging --dry-run=client -o yaml | kubectl apply -f - && \
             cd /opt/coffeeshop && \
-            docker build -t coffeeshop-backend:${IMAGE_TAG} ./backend && \
-            docker build -t coffeeshop-frontend:${IMAGE_TAG} ./frontend && \
-            docker save coffeeshop-backend:${IMAGE_TAG} | k3s ctr images import - && \
-            docker save coffeeshop-frontend:${IMAGE_TAG} | k3s ctr images import - && \
+            echo '${{ secrets.GITHUB_TOKEN }}' | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin && \
+            docker pull ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} && \
+            docker pull ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} && \
+            docker save ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} | k3s ctr images import - && \
+            docker save ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} | k3s ctr images import - && \
             cd k8s/overlays/staging && \
             kustomize build . | kubectl apply -f - && \
-            kubectl set image deployment/backend backend=coffeeshop-backend:${IMAGE_TAG} -n staging && \
-            kubectl set image deployment/frontend frontend=coffeeshop-frontend:${IMAGE_TAG} -n staging"
+            kubectl set image deployment/backend backend=ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} -n staging && \
+            kubectl set image deployment/frontend frontend=ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} -n staging"
 
       # ── Wait for rollout ──
       - name: Wait for staging rollout
@@ -173,22 +174,23 @@ jobs:
           echo "revision=${CURRENT_REV}" >> $GITHUB_OUTPUT
           echo "📌 Pre-deploy revision: ${CURRENT_REV}"
 
-      # ── Build & Deploy with Rolling Update (Extra Credit 7.3) ──
-      - name: Build and deploy to production
+      # ── Pull from GHCR & Deploy with Rolling Update (Extra Credit 7.3) ──
+      - name: Pull images and deploy to production
         run: |
           IMAGE_TAG="${{ steps.tag.outputs.tag }}"
           ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
             export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
             kubectl create namespace production --dry-run=client -o yaml | kubectl apply -f - && \
             cd /opt/coffeeshop && \
-            docker build -t coffeeshop-backend:${IMAGE_TAG} ./backend && \
-            docker build -t coffeeshop-frontend:${IMAGE_TAG} ./frontend && \
-            docker save coffeeshop-backend:${IMAGE_TAG} | k3s ctr images import - && \
-            docker save coffeeshop-frontend:${IMAGE_TAG} | k3s ctr images import - && \
+            echo '${{ secrets.GITHUB_TOKEN }}' | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin && \
+            docker pull ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} && \
+            docker pull ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} && \
+            docker save ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} | k3s ctr images import - && \
+            docker save ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} | k3s ctr images import - && \
             cd k8s/overlays/production && \
             kustomize build . | kubectl apply -f - && \
-            kubectl set image deployment/backend backend=coffeeshop-backend:${IMAGE_TAG} -n production && \
-            kubectl set image deployment/frontend frontend=coffeeshop-frontend:${IMAGE_TAG} -n production"
+            kubectl set image deployment/backend backend=ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} -n production && \
+            kubectl set image deployment/frontend frontend=ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} -n production"
 
       # ── Wait for Rolling Update ──
       - name: Wait for production rollout
