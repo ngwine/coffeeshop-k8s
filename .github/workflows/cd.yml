@@ -214,14 +214,21 @@ jobs:
         id: health
         run: |
           sleep 10
-          HTTP_STATUS=$(curl -sk -o /dev/null -w "%{http_code}" https://coffeeshopk8s.me/health --connect-timeout 10 --max-time 30 || echo "000")
-          if [ "$HTTP_STATUS" = "200" ]; then
+          # Check pod readiness directly on the cluster (avoids DNS/TLS dependency)
+          HEALTH_RESULT=$(ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
+            READY=\$(kubectl get pods -n production -l app=backend -o jsonpath='{.items[*].status.conditions[?(@.type==\"Ready\")].status}') && \
+            if echo \"\$READY\" | grep -q 'True'; then echo 'healthy'; else echo 'unhealthy'; fi" || echo "unhealthy")
+          if [ "$HEALTH_RESULT" = "healthy" ]; then
             echo "healthy=true" >> $GITHUB_OUTPUT
-            echo "✅ Health check PASSED (HTTP $HTTP_STATUS)"
+            echo "✅ Health check PASSED (backend pods Ready)"
           else
             echo "healthy=false" >> $GITHUB_OUTPUT
-            echo "❌ Health check FAILED (HTTP $HTTP_STATUS)"
+            echo "❌ Health check FAILED (backend pods not Ready)"
           fi
+          # Also try external URL (informational only, does not affect rollback)
+          HTTP_STATUS=$(curl -sk -o /dev/null -w "%{http_code}" https://coffeeshopk8s.me/health --connect-timeout 10 --max-time 30 || echo "000")
+          echo "ℹ️ External URL health: HTTP $HTTP_STATUS"
 
       # ── Automated Rollback (Extra Credit 7.4) ──
       - name: Auto-rollback on failure
