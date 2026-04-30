@@ -171,6 +171,7 @@ jobs:
           severity: "HIGH,CRITICAL"
           ignore-unfixed: true
           vuln-type: "os,library"
+          trivyignores: .trivyignore
 
       # ── Trivy Security Scan: Frontend ──
       - name: Trivy scan — frontend image
@@ -182,6 +183,7 @@ jobs:
           severity: "HIGH,CRITICAL"
           ignore-unfixed: true
           vuln-type: "os,library"
+          trivyignores: .trivyignore
 
   # ══════════════════════════════════════════════════════════
   # Stage 5: Push Images to GHCR

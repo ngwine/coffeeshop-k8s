@@ -84,3 +84,6 @@ docker-compose.override.yml
 *.key
 id_rsa
 id_rsa.pub
+
+# Trivy binary (local testing only)
+trivy

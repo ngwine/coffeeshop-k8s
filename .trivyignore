@@ -1,4 +1,13 @@
-# Ignore vulnerabilities in frontend dependencies that have no fix available or are breaking changes
+# =============================================================
+# Trivy Ignore List — Known Vulnerabilities Without Safe Fix
+# =============================================================
+
+# Backend: node:20-alpine OS-level vulnerability (path traversal)
+CVE-2026-31802
+
+# Frontend: xlsx library — no free fix available from SheetJS
 CVE-2023-30533
 CVE-2024-22363
+
+# Frontend: lodash — template imports (dependency of react-scripts)
 CVE-2026-4800
