@@ -172,6 +172,7 @@ jobs:
           ignore-unfixed: true
           vuln-type: "library"          # Scan app deps only (OS vulns in base image are outside our control)
           trivyignores: .trivyignore
+          skip-dirs: "usr/local/lib/node_modules/npm,opt/yarn-v1.22.22"
 
       # ── Trivy Security Scan: Frontend ──
       - name: Trivy scan — frontend image
@@ -184,6 +185,7 @@ jobs:
           ignore-unfixed: true
           vuln-type: "library"          # Scan app deps only (OS vulns in base image are outside our control)
           trivyignores: .trivyignore
+          skip-dirs: "usr/local/lib/node_modules/npm,opt/yarn-v1.22.22"
 
   # ══════════════════════════════════════════════════════════
   # Stage 5: Push Images to GHCR
