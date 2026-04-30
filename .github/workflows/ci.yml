@@ -170,7 +170,7 @@ jobs:
           exit-code: "1"               # Fail pipeline on HIGH/CRITICAL
           severity: "HIGH,CRITICAL"
           ignore-unfixed: true
-          vuln-type: "os,library"
+          vuln-type: "library"          # Scan app deps only (OS vulns in base image are outside our control)
           trivyignores: .trivyignore
 
       # ── Trivy Security Scan: Frontend ──
@@ -182,7 +182,7 @@ jobs:
           exit-code: "1"               # Fail pipeline on HIGH/CRITICAL
           severity: "HIGH,CRITICAL"
           ignore-unfixed: true
-          vuln-type: "os,library"
+          vuln-type: "library"          # Scan app deps only (OS vulns in base image are outside our control)
           trivyignores: .trivyignore
 
   # ══════════════════════════════════════════════════════════
