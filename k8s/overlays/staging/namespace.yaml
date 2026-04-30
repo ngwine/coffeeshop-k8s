@@ -1,0 +1,8 @@
+# Staging namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: staging
+  labels:
+    app.kubernetes.io/part-of: coffeeshop
+    environment: staging

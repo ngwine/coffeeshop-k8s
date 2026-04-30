@@ -9,6 +9,7 @@ namespace: production
 
 resources:
   - ../../base
+  - namespace.yaml
 
 labels:
   - pairs:
