@@ -71,6 +71,17 @@ jobs:
           ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
             export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
             kubectl create namespace staging --dry-run=client -o yaml | kubectl apply -f - && \
+            kubectl create secret generic coffeeshop-secrets \
+              --from-literal=JWT_SECRET='${{ secrets.JWT_SECRET }}' \
+              --from-literal=CLOUDINARY_URL='${{ secrets.CLOUDINARY_URL }}' \
+              --from-literal=GOOGLE_CLIENT_ID='${{ secrets.GOOGLE_CLIENT_ID }}' \
+              --from-literal=GOOGLE_CLIENT_SECRET='${{ secrets.GOOGLE_CLIENT_SECRET }}' \
+              -n staging --dry-run=client -o yaml | kubectl apply -f - && \
+            kubectl create secret docker-registry ghcr-secret \
+              --docker-server=ghcr.io \
+              --docker-username=${{ github.repository_owner }} \
+              --docker-password='${{ secrets.GITHUB_TOKEN }}' \
+              -n staging --dry-run=client -o yaml | kubectl apply -f - && \
             cd /opt/coffeeshop && \
             echo '${{ secrets.GITHUB_TOKEN }}' | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin && \
             docker pull ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} && \
@@ -181,6 +192,17 @@ jobs:
           ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
             export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
             kubectl create namespace production --dry-run=client -o yaml | kubectl apply -f - && \
+            kubectl create secret generic coffeeshop-secrets \
+              --from-literal=JWT_SECRET='${{ secrets.JWT_SECRET }}' \
+              --from-literal=CLOUDINARY_URL='${{ secrets.CLOUDINARY_URL }}' \
+              --from-literal=GOOGLE_CLIENT_ID='${{ secrets.GOOGLE_CLIENT_ID }}' \
+              --from-literal=GOOGLE_CLIENT_SECRET='${{ secrets.GOOGLE_CLIENT_SECRET }}' \
+              -n production --dry-run=client -o yaml | kubectl apply -f - && \
+            kubectl create secret docker-registry ghcr-secret \
+              --docker-server=ghcr.io \
+              --docker-username=${{ github.repository_owner }} \
+              --docker-password='${{ secrets.GITHUB_TOKEN }}' \
+              -n production --dry-run=client -o yaml | kubectl apply -f - && \
             cd /opt/coffeeshop && \
             echo '${{ secrets.GITHUB_TOKEN }}' | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin && \
             docker pull ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} && \
@@ -209,17 +231,31 @@ jobs:
             echo "❌ Rollout failed!"
           fi
 
+      # ── Wait for MongoDB to be ready ──
+      - name: Wait for MongoDB
+        run: |
+          echo "⏳ Waiting for MongoDB to be ready..."
+          ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+            export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
+            kubectl rollout status statefulset/mongodb -n production --timeout=180s 2>/dev/null || echo 'MongoDB StatefulSet not yet available'"
+
       # ── Post-Deploy Health Check ──
       - name: Run production health check
         id: health
         run: |
-          sleep 10
+          sleep 15
           # Check pod readiness directly on the cluster (avoids DNS/TLS dependency)
-          HEALTH_RESULT=$(ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
+          HEALTH_OUTPUT=$(ssh -i ~/.ssh/deploy_key root@${{ secrets.SERVER_IP }} "\
             export KUBECONFIG=/etc/rancher/k3s/k3s.yaml && \
-            READY=\$(kubectl get pods -n production -l app=backend -o jsonpath='{.items[*].status.conditions[?(@.type==\"Ready\")].status}') && \
-            if echo \"\$READY\" | grep -q 'True'; then echo 'healthy'; else echo 'unhealthy'; fi" || echo "unhealthy")
-          if [ "$HEALTH_RESULT" = "healthy" ]; then
+            echo '--- Pod Status ---' && \
+            kubectl get pods -n production -o wide && \
+            echo '--- Recent Events ---' && \
+            kubectl get events -n production --sort-by=.lastTimestamp 2>/dev/null | tail -10 && \
+            READY=\$(kubectl get pods -n production -l component=backend -o jsonpath='{.items[*].status.conditions[?(@.type==\"Ready\")].status}') && \
+            if echo \"\$READY\" | grep -q 'True'; then echo 'HEALTH_OK'; else echo 'HEALTH_FAIL'; fi" || echo "HEALTH_FAIL")
+          echo "$HEALTH_OUTPUT"
+          FINAL=$(echo "$HEALTH_OUTPUT" | tail -1)
+          if [ "$FINAL" = "HEALTH_OK" ]; then
             echo "healthy=true" >> $GITHUB_OUTPUT
             echo "✅ Health check PASSED (backend pods Ready)"
           else
