@@ -1,28 +1,28 @@
 # ============================================================
-# CoffeeShop — Terraform Variables Example
+# CoffeeShop — Terraform Variables Example (DigitalOcean)
 # Copy this file to terraform.tfvars and fill in your values
 # ============================================================
 
-# OCI Authentication
-tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaa_YOUR_TENANCY"
-user_ocid        = "ocid1.user.oc1..aaaaaaaa_YOUR_USER"
-fingerprint      = "aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99"
-private_key_path = "~/.oci/oci_api_key.pem"
-region           = "ap-singapore-1"
-compartment_ocid = "ocid1.compartment.oc1..aaaaaaaa_YOUR_COMPARTMENT"
+# DigitalOcean API Token (generate at https://cloud.digitalocean.com/account/api/tokens)
+do_token = "dop_v1_YOUR_DIGITALOCEAN_API_TOKEN"
 
-# SSH (paste your public key content)
+# SSH key name (must match a key registered in DigitalOcean → Settings → Security)
+ssh_key_name = "coffeeshop-deploy"
+
+# SSH public key content (paste your public key)
 ssh_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQ... your-key"
 
 # Project
 project_name = "coffeeshop"
 
+# Region (sgp1 = Singapore)
+region = "sgp1"
+
+# Droplet size (s-2vcpu-4gb recommended for K3s)
+droplet_size = "s-2vcpu-4gb"
+
 # Domain
 domain_name = "coffeeshopk8s.me"
 
-# Compute sizing (Oracle Always Free defaults)
-master_ocpus  = 1
-master_memory = 6
-worker_ocpus  = 1.5
-worker_memory = 9
-
+# VPC CIDR
+vpc_cidr = "10.10.10.0/24"

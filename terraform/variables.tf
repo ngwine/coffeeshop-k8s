@@ -1,43 +1,23 @@
 # ============================================================
-# CoffeeShop — Terraform Variables
+# CoffeeShop — Terraform Variables (DigitalOcean)
 # ============================================================
 
-# ── OCI Authentication ────────────────────────────────────────
-variable "tenancy_ocid" {
-  description = "OCID of the OCI tenancy"
+# ── DigitalOcean Authentication ──────────────────────────────
+variable "do_token" {
+  description = "DigitalOcean API token"
   type        = string
-}
-
-variable "user_ocid" {
-  description = "OCID of the OCI user"
-  type        = string
-}
-
-variable "fingerprint" {
-  description = "Fingerprint of the API signing key"
-  type        = string
-}
-
-variable "private_key_path" {
-  description = "Path to the OCI API private key file"
-  type        = string
-  default     = "~/.oci/oci_api_key.pem"
-}
-
-variable "region" {
-  description = "OCI region (e.g., ap-singapore-1)"
-  type        = string
-  default     = "ap-singapore-1"
-}
-
-variable "compartment_ocid" {
-  description = "OCID of the compartment to deploy into"
-  type        = string
+  sensitive   = true
 }
 
 # ── SSH Access ────────────────────────────────────────────────
+variable "ssh_key_name" {
+  description = "Name of the SSH key registered in DigitalOcean"
+  type        = string
+  default     = "coffeeshop-deploy"
+}
+
 variable "ssh_public_key" {
-  description = "Public SSH key for VM access"
+  description = "Public SSH key content for VM access"
   type        = string
 }
 
@@ -48,48 +28,30 @@ variable "project_name" {
   default     = "coffeeshop"
 }
 
+# ── Region ────────────────────────────────────────────────────
+variable "region" {
+  description = "DigitalOcean region (e.g., sgp1 for Singapore)"
+  type        = string
+  default     = "sgp1"
+}
+
+# ── Compute: Droplet Size ─────────────────────────────────────
+variable "droplet_size" {
+  description = "Droplet size slug (e.g., s-2vcpu-4gb)"
+  type        = string
+  default     = "s-2vcpu-4gb"
+}
+
 # ── Networking ────────────────────────────────────────────────
-variable "vcn_cidr_block" {
-  description = "CIDR block for the VCN"
+variable "vpc_cidr" {
+  description = "CIDR block for the VPC"
   type        = string
-  default     = "10.0.0.0/16"
-}
-
-variable "public_subnet_cidr" {
-  description = "CIDR block for the public subnet"
-  type        = string
-  default     = "10.0.1.0/24"
-}
-
-# ── Compute: Master Node ─────────────────────────────────────
-variable "master_ocpus" {
-  description = "Number of OCPUs for master node"
-  type        = number
-  default     = 1
-}
-
-variable "master_memory" {
-  description = "Memory in GB for master node"
-  type        = number
-  default     = 6
-}
-
-# ── Compute: Worker Nodes ────────────────────────────────────
-variable "worker_ocpus" {
-  description = "Number of OCPUs per worker node"
-  type        = number
-  default     = 1.5
-}
-
-variable "worker_memory" {
-  description = "Memory in GB per worker node"
-  type        = number
-  default     = 9
+  default     = "10.10.10.0/24"
 }
 
 # ── Domain ────────────────────────────────────────────────────
 variable "domain_name" {
-  description = "Domain name for the application (e.g., coffeeshop.xyz)"
+  description = "Domain name for the application"
   type        = string
-  default     = "coffeeshop.xyz"
+  default     = "coffeeshopk8s.me"
 }

@@ -48,7 +48,7 @@
               │  │  1CPU/6GB │  │ 1.5CPU/9GB│  │ 1.5CPU/9GB│  │
               │  │           │  │           │  │           │  │
               │  │ K3s Ctrl  │  │ Frontend  │  │ MongoDB   │  │
-              │  │ Traefik   │  │ Backend   │  │ Prometheus│  │
+              │  │ Nginx IC  │  │ Backend   │  │ Prometheus│  │
               │  │ Ingress   │  │ (HPA)     │  │ Grafana   │  │
               │  └──────────┘  └───────────┘  └───────────┘  │
               │                                                │
@@ -71,7 +71,7 @@
 | **Registry** | GitHub Container Registry (ghcr.io) |
 | **IaC** | Terraform + Ansible |
 | **Config Mgmt** | Ansible |
-| **Ingress** | Traefik (built-in K3s) |
+| **Ingress** | Nginx Ingress Controller |
 | **TLS** | Let's Encrypt via cert-manager |
 | **Monitoring** | Prometheus + Grafana + Alertmanager |
 | **Security** | Trivy (container scanning) |
@@ -87,11 +87,10 @@ coffeeshop/
 │   ├── ci.yml                    # CI: lint → test → build → scan → push
 │   └── cd.yml                    # CD: staging → approve → production
 ├── terraform/
-│   ├── main.tf                   # OCI provider + 3 ARM VMs
+│   ├── main.tf                   # DigitalOcean provider + 3 Droplets + VPC + Firewall
 │   ├── variables.tf              # Input variables
 │   ├── outputs.tf                # IPs, SSH commands, inventory
-│   ├── terraform.tfvars.example  # Example values
-│   └── modules/networking/       # VCN, subnet, firewall rules
+│   └── terraform.tfvars.example  # Example values
 ├── ansible/
 │   ├── playbook.yml              # K3s cluster setup (idempotent)
 │   └── inventory.ini             # Node inventory
@@ -106,7 +105,7 @@ coffeeshop/
 │   │   ├── mongodb-service.yaml
 │   │   ├── configmap.yaml
 │   │   ├── secrets.yaml          # Template only
-│   │   ├── ingress.yaml          # Traefik + TLS
+│   │   ├── ingress.yaml          # Nginx Ingress + TLS
 │   │   ├── hpa.yaml              # Horizontal Pod Autoscaler
 │   │   └── kustomization.yaml
 │   ├── overlays/

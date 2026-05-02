@@ -170,7 +170,7 @@
             solvers:
               - http01:
                   ingress:
-                    class: traefik
+                    class: nginx
         EOF
       changed_when: false
 

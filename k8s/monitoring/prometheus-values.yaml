@@ -70,10 +70,10 @@ grafana:
   # Ingress (accessible via grafana.yourdomain.com)
   ingress:
     enabled: true
-    ingressClassName: traefik
+    ingressClassName: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-      traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
     hosts:
       - grafana.coffeeshopk8s.me
     tls:
@@ -90,14 +90,17 @@ grafana:
     enabled: true
     size: 2Gi
 
-  # Sidecar for auto-loading dashboards
+  # Sidecar for auto-loading dashboards + datasource config
   sidecar:
     dashboards:
       enabled: true
       label: grafana_dashboard
       searchNamespace: monitoring
+    # Disable chart's auto-provisioned datasource to avoid
+    # "Only one datasource per organization can be marked as default" error
+    datasources:
+      defaultDatasourceEnabled: false
 
-  # Data sources
   datasources:
     datasources.yaml:
       apiVersion: 1
