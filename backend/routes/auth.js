@@ -1,6 +1,6 @@
 // backend/routes/auth.js
 const express = require("express");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const Customer = require("../models/Customer");
 const AuthRepository = require("../patterns/repository/AuthRepository");
 const AuthController = require("../controllers/AuthController");
