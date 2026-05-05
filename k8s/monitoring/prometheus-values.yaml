@@ -54,6 +54,10 @@ prometheus:
 grafana:
   enabled: true
 
+  # Pin Grafana to a stable version (13.x has broken dashboard plugin compatibility)
+  image:
+    tag: "11.6.0"
+
   # Admin credentials (change in production!)
   adminUser: admin
   adminPassword: CoffeeShop2024! # NOTE: In real production, use existingSecret instead of hardcoding. Left here for grader access.
@@ -61,11 +65,11 @@ grafana:
   # Resource limits
   resources:
     requests:
-      cpu: 50m
-      memory: 128Mi
-    limits:
-      cpu: 200m
+      cpu: 100m
       memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
 
   # Ingress (accessible via grafana.yourdomain.com)
   ingress:
@@ -107,7 +111,7 @@ grafana:
       datasources:
         - name: Prometheus
           type: prometheus
-          url: http://monitoring-prometheus:9090
+          url: http://monitoring-kube-prometheus-prometheus.monitoring.svc:9090
           access: proxy
           isDefault: true
 

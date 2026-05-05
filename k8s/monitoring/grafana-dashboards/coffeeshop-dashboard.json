@@ -50,18 +50,18 @@
             ]
           },
           "mappings": [
-            { "options": { "0": { "color": "red", "text": "DOWN" }, "1": { "color": "green", "text": "UP" } }, "type": "value" }
+            { "options": { "0": { "color": "red", "text": "NOT READY" }, "1": { "color": "green", "text": "READY" } }, "type": "value" }
           ]
         }
       },
       "gridPos": { "h": 4, "w": 4, "x": 0, "y": 1 },
       "id": 1,
       "options": { "colorMode": "background", "graphMode": "none", "reduceOptions": { "calcs": ["lastNotNull"] } },
-      "title": "Backend Status",
+      "title": "Backend Pods Ready",
       "type": "stat",
       "targets": [
         {
-          "expr": "up{job=\"coffeeshop-backend\"}",
+          "expr": "kube_pod_status_ready{namespace=\"production\", condition=\"true\", pod=~\"backend.*\"}",
           "legendFormat": "{{pod}}"
         }
       ]
@@ -140,7 +140,7 @@
       "type": "stat",
       "targets": [
         {
-          "expr": "count(kube_pod_status_phase{namespace=~\"production|staging\", phase=\"Failed\"}) or vector(0)",
+          "expr": "count(kube_pod_status_phase{namespace=~\"production|staging\", phase=\"Failed\"} == 1) or vector(0)",
           "legendFormat": "Failed"
         }
       ]
