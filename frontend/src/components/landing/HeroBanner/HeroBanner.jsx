@@ -25,7 +25,7 @@ const HeroBanner = () => {
       </video>
       <div className="hero-content">
         <p className="subtitle">NOW YOU CAN FEEL THE ENERGY</p>
-        <h1>Start your day with <br/> a black Coffee!</h1>
+        <h1>Start your day with <br/> a perfect Coffee!</h1>
         <button className="btn-buy" onClick={handleScrollToProducts}>
           BUY NOW
         </button>
