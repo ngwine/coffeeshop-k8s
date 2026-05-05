@@ -34,53 +34,52 @@
 The system follows a Tier 5 (Kubernetes) architecture deployed on DigitalOcean infrastructure, provisioned via Terraform and configured via Ansible. The CI/CD pipeline is fully automated through GitHub Actions, deploying containerized services to a K3s cluster with multi-environment support.
 
 ```
-                         ┌─────────────────────────────────┐
-                         │        Developer Workflow        │
-                         │   git push → GitHub Actions      │
-                         └────────────┬────────────────────┘
-                                      │
-                    ┌─────────────────▼──────────────────┐
-                    │    CI Pipeline (GitHub Actions)      │
-                    │                                      │
-                    │  ① Lint (ESLint — Frontend + Backend)│
-                    │  ② Test (Jest — Unit Tests)          │
-                    │  ③ Build (Docker Multi-stage)        │
-                    │  ④ Security Scan (Trivy — FAIL on    │
-                    │     HIGH/CRITICAL vulnerabilities)    │
-                    │  ⑤ Push to GHCR (version-tagged)     │
-                    └─────────────────┬────────────────────┘
-                                      │ workflow_run trigger
-                    ┌─────────────────▼──────────────────┐
-                    │    CD Pipeline (GitHub Actions)      │
-                    │                                      │
-                    │  ⑥ Deploy to Staging (automatic)     │
-                    │  ⑦ Manual Approval Gate              │
-                    │  ⑧ Deploy to Production              │
-                    │     (Rolling Update — zero downtime) │
-                    │  ⑨ Health Check + Auto Rollback      │
-                    └─────────────────┬────────────────────┘
-                                      │
-              ┌───────────────────────▼───────────────────────┐
-              │          DigitalOcean K3s Cluster              │
-              │          Region: SGP1 (Singapore)              │
-              │                                                │
-              │  ┌──────────┐  ┌───────────┐  ┌───────────┐  │
-              │  │  Master   │  │ Worker 1  │  │ Worker 2  │  │
-              │  │ 2vCPU/4GB│  │ 2vCPU/4GB │  │ 2vCPU/4GB │  │
-              │  │           │  │           │  │           │  │
-              │  │ K3s API   │  │ Frontend  │  │ MongoDB   │  │
-              │  │ Nginx IC  │  │ Backend   │  │ Prometheus│  │
-              │  │ Cert-Mgr  │  │ HPA       │  │ Grafana   │  │
-              │  └──────────┘  └───────────┘  └───────────┘  │
-              │                                                │
-              │  ┌────────────────────────────────────────┐   │
-              │  │  Networking & Security                  │   │
-              │  │  • VPC (private network: 10.10.10.0/24)│   │
-              │  │  • Cloud Firewall (SSH, HTTP/S, K8s)    │   │
-              │  │  • TLS via Let's Encrypt + cert-manager │   │
-              │  │  • Nginx Ingress Controller             │   │
-              │  └────────────────────────────────────────┘   │
-              └────────────────────────────────────────────────┘
+               ┌─────────────────────────────────────────┐
+               │           Developer Workflow            │
+               │       git push → GitHub Actions         │
+               └───────────────────┬─────────────────────┘
+                                   │
+               ┌───────────────────▼─────────────────────┐
+               │      CI Pipeline (GitHub Actions)       │
+               │                                         │
+               │ ① Lint (ESLint — Frontend + Backend)   │
+               │ ② Test (Jest — Unit Tests)             │
+               │ ③ Build (Docker Multi-stage)           │
+               │ ④ Security Scan (Trivy — FAIL on       │
+               │    HIGH/CRITICAL vulnerabilities)       │
+               │ ⑤ Push to GHCR (version-tagged)        │
+               └───────────────────┬─────────────────────┘
+                                   │ workflow_run trigger
+               ┌───────────────────▼─────────────────────┐
+               │      CD Pipeline (GitHub Actions)       │
+               │                                         │
+               │ ⑥ Deploy to Staging (automatic)        │
+               │ ⑦ Manual Approval Gate                 │
+               │ ⑧ Deploy to Production                 │
+               │    (Rolling Update — zero downtime)     │
+               │ ⑨ Health Check + Auto Rollback         │
+               └───────────────────┬─────────────────────┘
+                                   │
+               ┌───────────────────▼─────────────────────┐
+               │        DigitalOcean K3s Cluster         │
+               │        Region: SGP1 (Singapore)         │
+               │                                         │
+               │ ┌─────────────────────────────────────┐ │
+               │ │ Single Node (control-plane + worker)│ │
+               │ │ 8GB RAM / 160GB Disk / Ubuntu 24.04 │ │
+               │ │                                     │ │
+               │ │ K3s API    │ Frontend   │ MongoDB   │ │
+               │ │ Nginx IC   │ Backend    │ Prometheus│ │
+               │ │ Cert-Mgr   │ HPA        │ Grafana   │ │
+               │ └─────────────────────────────────────┘ │
+               │                                         │
+               │ ┌─────────────────────────────────────┐ │
+               │ │        Networking & Security        │ │
+               │ │ • Cloud Firewall (SSH, HTTP/S, K8s) │ │
+               │ │ • TLS (Let's Encrypt + cert-manager)│ │
+               │ │ • Nginx Ingress Controller          │ │
+               │ └─────────────────────────────────────┘ │
+               └─────────────────────────────────────────┘
 ```
 
 ### Deployment Flow
@@ -128,7 +127,7 @@ coffeeshop-k8s/
 │   └── cd.yml                         # CD: Staging → Approval Gate → Production (Rolling Update)
 │
 ├── terraform/                         # Infrastructure as Code (DigitalOcean)
-│   ├── main.tf                        # 3x Droplets + VPC + Cloud Firewall + DO Project
+│   ├── main.tf                        # 1x Droplet + VPC + Cloud Firewall + DO Project
 │   ├── variables.tf                   # Input variables (token, region, size)
 │   ├── outputs.tf                     # Public IPs, SSH commands, Ansible inventory
 │   └── terraform.tfvars.example       # Example variable values (no secrets)
@@ -197,10 +196,12 @@ Terraform provisions all cloud resources on DigitalOcean:
 
 | Resource | Type | Configuration |
 |----------|------|---------------|
-| 3× Droplets | `s-2vcpu-4gb` | Rocky Linux 9, 1 master + 2 workers |
+| 1× Droplet | `s-4vcpu-8gb` | Ubuntu 24.04, single-node K3s (control-plane + worker) |
 | VPC | Private network | `10.10.10.0/24`, region `sgp1` |
-| Cloud Firewall | Security rules | SSH, HTTP/S, K8s API, NodePort, VXLAN |
-| Project | Resource grouping | All Droplets under one DO Project |
+| Cloud Firewall | Security rules | SSH, HTTP/S, K8s API, NodePort |
+| Project | Resource grouping | All resources under one DO Project |
+
+> **Note**: Terraform configuration supports multi-node expansion (1 master + 2 workers). Currently deployed as a single-node cluster for cost optimization.
 
 ```bash
 # Provision infrastructure
@@ -222,10 +223,10 @@ Ansible configures the K3s cluster with a single idempotent playbook:
 
 | Play | Target | Actions |
 |------|--------|---------|
-| Common Setup | All nodes | System packages, firewall rules, SELinux, IP forwarding |
+| Common Setup | All nodes | System packages, firewall rules, IP forwarding |
 | K3s Server | Master | Install K3s, Helm, cert-manager, Let's Encrypt ClusterIssuer |
-| K3s Agent | Workers | Join workers to cluster with node token |
-| Verification | Master | Assert 3-node cluster is fully operational |
+| K3s Agent | Workers | Join workers to cluster with node token (when multi-node) |
+| Verification | Master | Assert cluster is fully operational |
 
 ```bash
 # Configure cluster
@@ -244,11 +245,11 @@ All tasks use `when` conditionals and `changed_when` to ensure idempotent execut
 Triggered automatically on every `push` or `pull_request` to `main`.
 
 ```
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│  Lint (ESLint)│────▶│  Test (Jest)  │────▶│ Build Images │────▶│ Trivy Scan   │────▶│ Push to GHCR │
+┌───────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│  Lint (ESLint)│────▶│  Test (Jest) │────▶│ Build Images │────▶│ Trivy Scan   │────▶│ Push to GHCR │
 │  Frontend +   │     │  Backend     │     │ Backend +    │     │ HIGH/CRITICAL│     │ SHA-tagged   │
 │  Backend      │     │  Unit Tests  │     │ Frontend     │     │ = FAIL ❌    │     │ images       │
-└──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
+└───────────────┘     └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
 ```
 
 | Stage | Tool | Details |
@@ -270,7 +271,7 @@ Triggered automatically when CI pipeline completes successfully on `main`.
 ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
 │ Deploy to    │────▶│ Manual       │────▶│ Deploy to    │────▶│ Health Check │────▶│ ✅ Done /    │
 │ Staging      │     │ Approval     │     │ Production   │     │ Pod Ready?   │     │ 🔄 Rollback  │
-│ (automatic)  │     │ Gate 🔐      │     │ Rolling Update│    │ HTTP 200?    │     │              │
+│ (automatic)  │     │ Gate 🔐      │     │ Rolling Upd. │     │ HTTP 200?    │     │              │
 └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
 ```
 
