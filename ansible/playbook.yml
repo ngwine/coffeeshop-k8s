@@ -9,14 +9,14 @@
   become: yes
   tasks:
     - name: Update system packages
-      dnf:
-        name: "*"
-        state: latest
+      apt:
+        update_cache: yes
+        upgrade: dist
       register: update_result
       changed_when: update_result.changed
 
     - name: Install required packages
-      dnf:
+      apt:
         name:
           - curl
           - wget
@@ -26,36 +26,23 @@
           - jq
           - python3
           - python3-pip
-          - container-selinux
           - iptables
         state: present
 
-    - name: Disable SELinux (required for K3s)
-      selinux:
-        state: permissive
-        policy: targeted
-      register: selinux_result
-
-    - name: Set SELinux permissive in config
-      lineinfile:
-        path: /etc/selinux/config
-        regexp: '^SELINUX='
-        line: 'SELINUX=permissive'
 
     - name: Open firewall ports for K3s
-      firewalld:
-        port: "{{ item }}"
-        permanent: yes
-        state: enabled
-        immediate: yes
+      ufw:
+        rule: allow
+        port: "{{ item.port }}"
+        proto: "{{ item.proto }}"
       loop:
-        - 6443/tcp    # K8s API
-        - 10250/tcp   # Kubelet
-        - 80/tcp      # HTTP
-        - 443/tcp     # HTTPS
-        - 8472/udp    # VXLAN (Flannel)
-        - 51820/udp   # WireGuard
-        - 30000-32767/tcp  # NodePort range
+        - { port: '6443', proto: 'tcp' }       # K8s API
+        - { port: '10250', proto: 'tcp' }      # Kubelet
+        - { port: '80', proto: 'tcp' }         # HTTP
+        - { port: '443', proto: 'tcp' }        # HTTPS
+        - { port: '8472', proto: 'udp' }       # VXLAN (Flannel)
+        - { port: '51820', proto: 'udp' }      # WireGuard
+        - { port: '30000:32767', proto: 'tcp' } # NodePort range
 
     - name: Enable IP forwarding
       sysctl:

@@ -38,7 +38,7 @@ resource "digitalocean_droplet" "k3s_master" {
   name     = "${var.project_name}-k3s-master"
   region   = var.region
   size     = var.droplet_size
-  image    = "rockylinux-9-x64"
+  image    = "ubuntu-24-04-x64"
   vpc_uuid = digitalocean_vpc.k3s_vpc.id
 
   ssh_keys = [data.digitalocean_ssh_key.deploy.id]
@@ -53,15 +53,15 @@ resource "digitalocean_droplet" "k3s_master" {
   user_data = <<-EOF
     #!/bin/bash
     echo "K3s Master node initialized" > /tmp/init.log
-    # Firewall rules for K3s
-    firewall-cmd --permanent --add-port=6443/tcp   # K8s API
-    firewall-cmd --permanent --add-port=10250/tcp  # Kubelet
-    firewall-cmd --permanent --add-port=80/tcp     # HTTP
-    firewall-cmd --permanent --add-port=443/tcp    # HTTPS
-    firewall-cmd --permanent --add-port=8472/udp   # VXLAN (Flannel)
-    firewall-cmd --permanent --add-port=51820/udp  # WireGuard
-    firewall-cmd --permanent --add-port=30000-32767/tcp  # NodePort
-    firewall-cmd --reload
+    # UFW rules for K3s
+    ufw allow 6443/tcp   # K8s API
+    ufw allow 10250/tcp  # Kubelet
+    ufw allow 80/tcp     # HTTP
+    ufw allow 443/tcp    # HTTPS
+    ufw allow 8472/udp   # VXLAN (Flannel)
+    ufw allow 51820/udp  # WireGuard
+    ufw allow 30000:32767/tcp  # NodePort
+    ufw reload
   EOF
 
   lifecycle {
