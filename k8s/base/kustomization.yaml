@@ -6,7 +6,6 @@ kind: Kustomization
 
 resources:
   - configmap.yaml
-  - secrets.yaml
   - mongodb-statefulset.yaml
   - mongodb-service.yaml
   - backend-deployment.yaml
