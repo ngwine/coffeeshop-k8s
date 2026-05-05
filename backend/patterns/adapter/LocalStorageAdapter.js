@@ -6,6 +6,8 @@ const Storage = require('./Storage');
 
 class LocalStorageAdapter extends Storage {
   constructor() {
+    super();
+    // eslint-disable-next-line no-undef
     this.storage = typeof window !== 'undefined' ? window.localStorage : null;
   }
 
