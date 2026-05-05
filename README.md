@@ -201,7 +201,6 @@ Terraform provisions all cloud resources on DigitalOcean:
 | Cloud Firewall | Security rules | SSH, HTTP/S, K8s API, NodePort |
 | Project | Resource grouping | All resources under one DO Project |
 
-> **Note**: Terraform configuration supports multi-node expansion (1 master + 2 workers). Currently deployed as a single-node cluster for cost optimization.
 
 ```bash
 # Provision infrastructure
@@ -225,7 +224,6 @@ Ansible configures the K3s cluster with a single idempotent playbook:
 |------|--------|---------|
 | Common Setup | All nodes | System packages, firewall rules, IP forwarding |
 | K3s Server | Master | Install K3s, Helm, cert-manager, Let's Encrypt ClusterIssuer |
-| K3s Agent | Workers | Join workers to cluster with node token (when multi-node) |
 | Verification | Master | Assert cluster is fully operational |
 
 ```bash

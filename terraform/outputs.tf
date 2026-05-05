@@ -7,15 +7,7 @@ output "master_public_ip" {
   value       = digitalocean_droplet.k3s_master.ipv4_address
 }
 
-output "worker_1_public_ip" {
-  description = "Public IP of K3s worker node 1"
-  value       = digitalocean_droplet.k3s_worker_1.ipv4_address
-}
 
-output "worker_2_public_ip" {
-  description = "Public IP of K3s worker node 2"
-  value       = digitalocean_droplet.k3s_worker_2.ipv4_address
-}
 
 output "master_private_ip" {
   description = "Private IP of the K3s master node (VPC)"
@@ -32,15 +24,7 @@ output "ssh_command_master" {
   value       = "ssh root@${digitalocean_droplet.k3s_master.ipv4_address}"
 }
 
-output "ssh_command_worker_1" {
-  description = "SSH command to connect to worker 1"
-  value       = "ssh root@${digitalocean_droplet.k3s_worker_1.ipv4_address}"
-}
 
-output "ssh_command_worker_2" {
-  description = "SSH command to connect to worker 2"
-  value       = "ssh root@${digitalocean_droplet.k3s_worker_2.ipv4_address}"
-}
 
 output "kubeconfig_fetch_command" {
   description = "Command to fetch kubeconfig from master"
@@ -53,12 +37,7 @@ output "ansible_inventory" {
     [master]
     ${digitalocean_droplet.k3s_master.ipv4_address} ansible_user=root
 
-    [workers]
-    ${digitalocean_droplet.k3s_worker_1.ipv4_address} ansible_user=root
-    ${digitalocean_droplet.k3s_worker_2.ipv4_address} ansible_user=root
-
     [k3s_cluster:children]
     master
-    workers
   EOT
 }

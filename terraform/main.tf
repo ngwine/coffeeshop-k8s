@@ -1,7 +1,7 @@
 # ============================================================
 # CoffeeShop — Terraform Main Configuration (DigitalOcean)
 # Infrastructure as Code (IaC) — Cloud VM Provisioning
-# Provisions: 1x Master + 2x Workers + VPC + Firewall
+# Provisions: 1x Single-Node K3s + VPC + Firewall
 # ============================================================
 
 terraform {
@@ -69,67 +69,7 @@ resource "digitalocean_droplet" "k3s_master" {
   }
 }
 
-# ── K3s Worker Node 1 ─────────────────────────────────────────
-resource "digitalocean_droplet" "k3s_worker_1" {
-  name     = "${var.project_name}-k3s-worker-1"
-  region   = var.region
-  size     = var.droplet_size
-  image    = "rockylinux-9-x64"
-  vpc_uuid = digitalocean_vpc.k3s_vpc.id
 
-  ssh_keys = [data.digitalocean_ssh_key.deploy.id]
-
-  tags = [
-    var.project_name,
-    "k3s-worker",
-    "production"
-  ]
-
-  user_data = <<-EOF
-    #!/bin/bash
-    echo "K3s Worker 1 initialized" > /tmp/init.log
-    firewall-cmd --permanent --add-port=10250/tcp
-    firewall-cmd --permanent --add-port=8472/udp
-    firewall-cmd --permanent --add-port=51820/udp
-    firewall-cmd --permanent --add-port=30000-32767/tcp
-    firewall-cmd --reload
-  EOF
-
-  lifecycle {
-    create_before_destroy = true
-  }
-}
-
-# ── K3s Worker Node 2 ─────────────────────────────────────────
-resource "digitalocean_droplet" "k3s_worker_2" {
-  name     = "${var.project_name}-k3s-worker-2"
-  region   = var.region
-  size     = var.droplet_size
-  image    = "rockylinux-9-x64"
-  vpc_uuid = digitalocean_vpc.k3s_vpc.id
-
-  ssh_keys = [data.digitalocean_ssh_key.deploy.id]
-
-  tags = [
-    var.project_name,
-    "k3s-worker",
-    "production"
-  ]
-
-  user_data = <<-EOF
-    #!/bin/bash
-    echo "K3s Worker 2 initialized" > /tmp/init.log
-    firewall-cmd --permanent --add-port=10250/tcp
-    firewall-cmd --permanent --add-port=8472/udp
-    firewall-cmd --permanent --add-port=51820/udp
-    firewall-cmd --permanent --add-port=30000-32767/tcp
-    firewall-cmd --reload
-  EOF
-
-  lifecycle {
-    create_before_destroy = true
-  }
-}
 
 # ── Firewall ──────────────────────────────────────────────────
 # DigitalOcean Cloud Firewall (applied to all K3s nodes)
@@ -138,8 +78,6 @@ resource "digitalocean_firewall" "k3s_firewall" {
 
   droplet_ids = [
     digitalocean_droplet.k3s_master.id,
-    digitalocean_droplet.k3s_worker_1.id,
-    digitalocean_droplet.k3s_worker_2.id,
   ]
 
   # ── Inbound Rules ──
@@ -236,7 +174,5 @@ resource "digitalocean_project" "coffeeshop" {
 
   resources = [
     digitalocean_droplet.k3s_master.urn,
-    digitalocean_droplet.k3s_worker_1.urn,
-    digitalocean_droplet.k3s_worker_2.urn,
   ]
 }
