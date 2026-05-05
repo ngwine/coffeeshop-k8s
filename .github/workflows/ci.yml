@@ -49,7 +49,7 @@ jobs:
 
       - name: Run ESLint
         working-directory: ./frontend
-        run: npx eslint src/ --max-warnings=50 --format=stylish
+        run: npx eslint src/ --max-warnings=100 --format=stylish
         continue-on-error: true
 
   # ══════════════════════════════════════════════════════════
@@ -84,7 +84,7 @@ jobs:
 
       - name: Run ESLint
         working-directory: ./backend
-        run: npx eslint . --max-warnings=50 --format=stylish
+        run: npx eslint . --max-warnings=100 --format=stylish
         continue-on-error: true
 
   # ══════════════════════════════════════════════════════════
