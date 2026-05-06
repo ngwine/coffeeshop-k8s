@@ -89,9 +89,9 @@ jobs:
             docker save ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} | k3s ctr images import - && \
             docker save ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} | k3s ctr images import - && \
             cd k8s/overlays/staging && \
-            kustomize build . | kubectl apply -f - && \
-            kubectl set image deployment/backend backend=ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} -n staging && \
-            kubectl set image deployment/frontend frontend=ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} -n staging"
+            kustomize edit set image ghcr.io/ngwine/coffeeshop-backend=ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} && \
+            kustomize edit set image ghcr.io/ngwine/coffeeshop-frontend=ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} && \
+            kustomize build . | kubectl apply -f -"
 
       # ── Wait for rollout ──
       - name: Wait for staging rollout
@@ -210,9 +210,9 @@ jobs:
             docker save ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} | k3s ctr images import - && \
             docker save ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} | k3s ctr images import - && \
             cd k8s/overlays/production && \
-            kustomize build . | kubectl apply -f - && \
-            kubectl set image deployment/backend backend=ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} -n production && \
-            kubectl set image deployment/frontend frontend=ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} -n production"
+            kustomize edit set image ghcr.io/ngwine/coffeeshop-backend=ghcr.io/${{ github.repository_owner }}/coffeeshop-backend:${IMAGE_TAG} && \
+            kustomize edit set image ghcr.io/ngwine/coffeeshop-frontend=ghcr.io/${{ github.repository_owner }}/coffeeshop-frontend:${IMAGE_TAG} && \
+            kustomize build . | kubectl apply -f -"
 
       # ── Wait for Rolling Update ──
       - name: Wait for production rollout
