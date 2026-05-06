@@ -27,10 +27,9 @@ data "digitalocean_ssh_key" "deploy" {
 }
 
 # ── VPC (Private Network) ────────────────────────────────────
-resource "digitalocean_vpc" "k3s_vpc" {
-  name     = "${var.project_name}-vpc"
-  region   = var.region
-  ip_range = var.vpc_cidr
+# Reference existing VPC (provisioned during initial setup)
+data "digitalocean_vpc" "k3s_vpc" {
+  name = "default-sgp1"
 }
 
 # ── K3s Master Node ───────────────────────────────────────────
@@ -39,7 +38,7 @@ resource "digitalocean_droplet" "k3s_master" {
   region   = var.region
   size     = var.droplet_size
   image    = "ubuntu-24-04-x64"
-  vpc_uuid = digitalocean_vpc.k3s_vpc.id
+  vpc_uuid = data.digitalocean_vpc.k3s_vpc.id
 
   ssh_keys = [data.digitalocean_ssh_key.deploy.id]
 
@@ -66,6 +65,7 @@ resource "digitalocean_droplet" "k3s_master" {
 
   lifecycle {
     create_before_destroy = true
+    ignore_changes        = [user_data, ssh_keys, image, public_networking, vpc_uuid]
   }
 }
 
@@ -171,6 +171,7 @@ resource "digitalocean_project" "coffeeshop" {
   description = "CoffeeShop K3s Production Cluster"
   purpose     = "Service or API"
   environment = "Production"
+  is_default  = true
 
   resources = [
     digitalocean_droplet.k3s_master.urn,

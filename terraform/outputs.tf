@@ -16,7 +16,7 @@ output "master_private_ip" {
 
 output "vpc_id" {
   description = "ID of the created VPC"
-  value       = digitalocean_vpc.k3s_vpc.id
+  value       = data.digitalocean_vpc.k3s_vpc.id
 }
 
 output "ssh_command_master" {
