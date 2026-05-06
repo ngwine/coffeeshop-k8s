@@ -18,8 +18,8 @@ project_name = "coffeeshop"
 # Region (sgp1 = Singapore)
 region = "sgp1"
 
-# Droplet size (s-2vcpu-4gb recommended for K3s)
-droplet_size = "s-2vcpu-4gb"
+# Droplet size (s-4vcpu-8gb recommended for K3s)
+droplet_size = "s-4vcpu-8gb"
 
 # Domain
 domain_name = "coffeeshopk8s.me"

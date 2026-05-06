@@ -37,9 +37,9 @@ variable "region" {
 
 # ── Compute: Droplet Size ─────────────────────────────────────
 variable "droplet_size" {
-  description = "Droplet size slug (e.g., s-2vcpu-4gb)"
+  description = "Droplet size slug (e.g., s-4vcpu-8gb)"
   type        = string
-  default     = "s-2vcpu-4gb"
+  default     = "s-4vcpu-8gb"
 }
 
 # ── Networking ────────────────────────────────────────────────
